@@ -1,0 +1,758 @@
+Equals,Index,Counter
+Device Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+idVendor,x,0
+idProduct,x,0
+bcdDevice,x,0
+bNumConfigurations,x,0
+,,
+Configuration Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Interface Descriptor,,
+bLength,x,0
+bInterfaceNumber,x,0
+bAlternateSetting,x,0
+bNumEndpoints,x,0
+bInterfaceClass,x,0
+bInterfaceSubClass,x,0
+bInterfaceProtocol,x,0
+,,
+HID Descriptor,,
+bLength,x,0
+bcdHID,x,0
+bCountryCode,x,0
+bNumDescriptors,x,0
+bDescriptorType,x,0
+wDescriptorLength,x,0
+,,
+Endpoint Descriptor,,
+bLength,x,0
+bEndpointAddress,x,0
+bmAttributes,x,0
+wMaxPacketSize,x,0
+bInterval,x,0
+,,
+String Descriptor,,
+bLength,x,0
+iManufacturer,x,0
+iProduct,x,0
+iSerialNumber,x,0
+iConfiguration,x,0
+iInterface,x,0
+,,
+Device Qualifier Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+bNumConfigurations,x,0
+bReserved,x,0
+,,
+Other Speed Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Required Memory Address Bit Length,1,
+Memory Address Max Index,0,
+Memory Address Max Count,0,
+,,
+,,
+NotEquals,Index,Counter
+Device Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+idVendor,x,0
+idProduct,x,0
+bcdDevice,x,0
+bNumConfigurations,x,0
+,,
+Configuration Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Interface Descriptor,,
+bLength,x,0
+bInterfaceNumber,x,0
+bAlternateSetting,x,0
+bNumEndpoints,x,0
+bInterfaceClass,x,0
+bInterfaceSubClass,x,0
+bInterfaceProtocol,x,0
+,,
+HID Descriptor,,
+bLength,x,0
+bcdHID,x,0
+bCountryCode,x,0
+bNumDescriptors,x,0
+bDescriptorType,x,0
+wDescriptorLength,x,0
+,,
+Endpoint Descriptor,,
+bLength,x,0
+bEndpointAddress,x,0
+bmAttributes,x,0
+wMaxPacketSize,x,0
+bInterval,x,0
+,,
+String Descriptor,,
+bLength,x,0
+iManufacturer,x,0
+iProduct,x,0
+iSerialNumber,x,0
+iConfiguration,x,0
+iInterface,x,0
+,,
+Device Qualifier Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+bNumConfigurations,x,0
+bReserved,x,0
+,,
+Other Speed Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Required Memory Address Bit Length,1,
+Memory Address Max Index,0,
+Memory Address Max Count,0,
+,,
+,,
+Greater,Index,Counter
+Device Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+idVendor,x,0
+idProduct,x,0
+bcdDevice,x,0
+bNumConfigurations,x,0
+,,
+Configuration Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Interface Descriptor,,
+bLength,x,0
+bInterfaceNumber,x,0
+bAlternateSetting,x,0
+bNumEndpoints,x,0
+bInterfaceClass,x,0
+bInterfaceSubClass,x,0
+bInterfaceProtocol,x,0
+,,
+HID Descriptor,,
+bLength,x,0
+bcdHID,x,0
+bCountryCode,x,0
+bNumDescriptors,x,0
+bDescriptorType,x,0
+wDescriptorLength,x,0
+,,
+Endpoint Descriptor,,
+bLength,x,0
+bEndpointAddress,x,0
+bmAttributes,x,0
+wMaxPacketSize,x,0
+bInterval,x,0
+,,
+String Descriptor,,
+bLength,x,0
+iManufacturer,x,0
+iProduct,x,0
+iSerialNumber,x,0
+iConfiguration,x,0
+iInterface,x,0
+,,
+Device Qualifier Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+bNumConfigurations,x,0
+bReserved,x,0
+,,
+Other Speed Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Required Memory Address Bit Length,1,
+Memory Address Max Index,0,
+Memory Address Max Count,0,
+,,
+,,
+GreaterEquals,Index,Counter
+Device Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+idVendor,x,0
+idProduct,x,0
+bcdDevice,x,0
+bNumConfigurations,x,0
+,,
+Configuration Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Interface Descriptor,,
+bLength,x,0
+bInterfaceNumber,x,0
+bAlternateSetting,x,0
+bNumEndpoints,x,0
+bInterfaceClass,x,0
+bInterfaceSubClass,x,0
+bInterfaceProtocol,x,0
+,,
+HID Descriptor,,
+bLength,x,0
+bcdHID,x,0
+bCountryCode,x,0
+bNumDescriptors,x,0
+bDescriptorType,x,0
+wDescriptorLength,x,0
+,,
+Endpoint Descriptor,,
+bLength,x,0
+bEndpointAddress,x,0
+bmAttributes,x,0
+wMaxPacketSize,x,0
+bInterval,x,0
+,,
+String Descriptor,,
+bLength,x,0
+iManufacturer,x,0
+iProduct,x,0
+iSerialNumber,x,0
+iConfiguration,x,0
+iInterface,x,0
+,,
+Device Qualifier Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+bNumConfigurations,x,0
+bReserved,x,0
+,,
+Other Speed Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Required Memory Address Bit Length,1,
+Memory Address Max Index,0,
+Memory Address Max Count,0,
+,,
+,,
+Less,Index,Counter
+Device Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+idVendor,x,0
+idProduct,x,0
+bcdDevice,x,0
+bNumConfigurations,x,0
+,,
+Configuration Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Interface Descriptor,,
+bLength,x,0
+bInterfaceNumber,x,0
+bAlternateSetting,x,0
+bNumEndpoints,x,0
+bInterfaceClass,x,0
+bInterfaceSubClass,x,0
+bInterfaceProtocol,x,0
+,,
+HID Descriptor,,
+bLength,x,0
+bcdHID,x,0
+bCountryCode,x,0
+bNumDescriptors,x,0
+bDescriptorType,x,0
+wDescriptorLength,x,0
+,,
+Endpoint Descriptor,,
+bLength,x,0
+bEndpointAddress,x,0
+bmAttributes,x,0
+wMaxPacketSize,x,0
+bInterval,x,0
+,,
+String Descriptor,,
+bLength,x,0
+iManufacturer,x,0
+iProduct,x,0
+iSerialNumber,x,0
+iConfiguration,x,0
+iInterface,x,0
+,,
+Device Qualifier Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+bNumConfigurations,x,0
+bReserved,x,0
+,,
+Other Speed Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Required Memory Address Bit Length,1,
+Memory Address Max Index,0,
+Memory Address Max Count,0,
+,,
+,,
+LessEquals,Index,Counter
+Device Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+idVendor,x,0
+idProduct,x,0
+bcdDevice,x,0
+bNumConfigurations,x,0
+,,
+Configuration Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Interface Descriptor,,
+bLength,x,0
+bInterfaceNumber,x,0
+bAlternateSetting,x,0
+bNumEndpoints,x,0
+bInterfaceClass,x,0
+bInterfaceSubClass,x,0
+bInterfaceProtocol,x,0
+,,
+HID Descriptor,,
+bLength,x,0
+bcdHID,x,0
+bCountryCode,x,0
+bNumDescriptors,x,0
+bDescriptorType,x,0
+wDescriptorLength,x,0
+,,
+Endpoint Descriptor,,
+bLength,x,0
+bEndpointAddress,x,0
+bmAttributes,x,0
+wMaxPacketSize,x,0
+bInterval,x,0
+,,
+String Descriptor,,
+bLength,x,0
+iManufacturer,x,0
+iProduct,x,0
+iSerialNumber,x,0
+iConfiguration,x,0
+iInterface,x,0
+,,
+Device Qualifier Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+bNumConfigurations,x,0
+bReserved,x,0
+,,
+Other Speed Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Required Memory Address Bit Length,1,
+Memory Address Max Index,0,
+Memory Address Max Count,0,
+,,
+,,
+StartsWith,Index,Counter
+Device Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+idVendor,x,0
+idProduct,x,0
+bcdDevice,x,0
+bNumConfigurations,x,0
+,,
+Configuration Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Interface Descriptor,,
+bLength,x,0
+bInterfaceNumber,x,0
+bAlternateSetting,x,0
+bNumEndpoints,x,0
+bInterfaceClass,x,0
+bInterfaceSubClass,x,0
+bInterfaceProtocol,x,0
+,,
+HID Descriptor,,
+bLength,x,0
+bcdHID,x,0
+bCountryCode,x,0
+bNumDescriptors,x,0
+bDescriptorType,x,0
+wDescriptorLength,x,0
+,,
+Endpoint Descriptor,,
+bLength,x,0
+bEndpointAddress,x,0
+bmAttributes,x,0
+wMaxPacketSize,x,0
+bInterval,x,0
+,,
+String Descriptor,,
+bLength,x,0
+iManufacturer,x,0
+iProduct,x,0
+iSerialNumber,x,0
+iConfiguration,x,0
+iInterface,x,0
+,,
+Device Qualifier Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+bNumConfigurations,x,0
+bReserved,x,0
+,,
+Other Speed Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Required Memory Address Bit Length,1,
+Memory Address Max Index,0,
+Memory Address Max Count,0,
+,,
+,,
+EndsWith,Index,Counter
+Device Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+idVendor,x,0
+idProduct,x,0
+bcdDevice,x,0
+bNumConfigurations,x,0
+,,
+Configuration Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Interface Descriptor,,
+bLength,x,0
+bInterfaceNumber,x,0
+bAlternateSetting,x,0
+bNumEndpoints,x,0
+bInterfaceClass,x,0
+bInterfaceSubClass,x,0
+bInterfaceProtocol,x,0
+,,
+HID Descriptor,,
+bLength,x,0
+bcdHID,x,0
+bCountryCode,x,0
+bNumDescriptors,x,0
+bDescriptorType,x,0
+wDescriptorLength,x,0
+,,
+Endpoint Descriptor,,
+bLength,x,0
+bEndpointAddress,x,0
+bmAttributes,x,0
+wMaxPacketSize,x,0
+bInterval,x,0
+,,
+String Descriptor,,
+bLength,x,0
+iManufacturer,x,0
+iProduct,x,0
+iSerialNumber,x,0
+iConfiguration,x,0
+iInterface,x,0
+,,
+Device Qualifier Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+bNumConfigurations,x,0
+bReserved,x,0
+,,
+Other Speed Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Required Memory Address Bit Length,1,
+Memory Address Max Index,0,
+Memory Address Max Count,0,
+,,
+,,
+Contains,Index,Counter
+Device Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+idVendor,x,0
+idProduct,x,0
+bcdDevice,x,0
+bNumConfigurations,x,0
+,,
+Configuration Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Interface Descriptor,,
+bLength,x,0
+bInterfaceNumber,x,0
+bAlternateSetting,x,0
+bNumEndpoints,x,0
+bInterfaceClass,x,0
+bInterfaceSubClass,x,0
+bInterfaceProtocol,x,0
+,,
+HID Descriptor,,
+bLength,x,0
+bcdHID,x,0
+bCountryCode,x,0
+bNumDescriptors,x,0
+bDescriptorType,x,0
+wDescriptorLength,x,0
+,,
+Endpoint Descriptor,,
+bLength,x,0
+bEndpointAddress,x,0
+bmAttributes,x,0
+wMaxPacketSize,x,0
+bInterval,x,0
+,,
+String Descriptor,,
+bLength,x,0
+iManufacturer,x,0
+iProduct,x,0
+iSerialNumber,x,0
+iConfiguration,x,0
+iInterface,x,0
+,,
+Device Qualifier Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+bNumConfigurations,x,0
+bReserved,x,0
+,,
+Other Speed Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Required Memory Address Bit Length,1,
+Memory Address Max Index,0,
+Memory Address Max Count,0,
+,,
+,,
+NotContains,Index,Counter
+Device Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+idVendor,x,0
+idProduct,x,0
+bcdDevice,x,0
+bNumConfigurations,x,0
+,,
+Configuration Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Interface Descriptor,,
+bLength,x,0
+bInterfaceNumber,x,0
+bAlternateSetting,x,0
+bNumEndpoints,x,0
+bInterfaceClass,x,0
+bInterfaceSubClass,x,0
+bInterfaceProtocol,x,0
+,,
+HID Descriptor,,
+bLength,x,0
+bcdHID,x,0
+bCountryCode,x,0
+bNumDescriptors,x,0
+bDescriptorType,x,0
+wDescriptorLength,x,0
+,,
+Endpoint Descriptor,,
+bLength,x,0
+bEndpointAddress,x,0
+bmAttributes,x,0
+wMaxPacketSize,x,0
+bInterval,x,0
+,,
+String Descriptor,,
+bLength,x,0
+iManufacturer,x,0
+iProduct,x,0
+iSerialNumber,x,0
+iConfiguration,x,0
+iInterface,x,0
+,,
+Device Qualifier Descriptor,,
+bLength,x,0
+bcdUsb,x,0
+bDeviceClass,x,0
+bDeviceSubClass,x,0
+bDeviceProtocol,x,0
+bMaxPacketSize0,x,0
+bNumConfigurations,x,0
+bReserved,x,0
+,,
+Other Speed Descriptor,,
+bLength,x,0
+wTotalLength,x,0
+bNumInterfaces,x,0
+bConfigurationValue,x,0
+bmAttributes,x,0
+bMaxPower,x,0
+,,
+Required Memory Address Bit Length,1,
+Memory Address Max Index,0,
+Memory Address Max Count,0,

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Testbench_NRZIClockRecovery_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Testbench_NRZIClockRecovery" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,000.001 ns"></ZoomEndTime>
+      <Cursor1Time time="705.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="154"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject type="other" fp_name="/Testbench_NRZIClockRecovery/uut/SYS_CLOCK_HZ">
+      <obj_property name="ElementShortName">SYS_CLOCK_HZ</obj_property>
+      <obj_property name="ObjectShortName">SYS_CLOCK_HZ</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_NRZIClockRecovery/uut/USB_SPEED_BPS">
+      <obj_property name="ElementShortName">USB_SPEED_BPS</obj_property>
+      <obj_property name="ObjectShortName">USB_SPEED_BPS</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_NRZIClockRecovery/uut/PHASE_ACCUMULATOR_MAX_VALUE">
+      <obj_property name="ElementShortName">PHASE_ACCUMULATOR_MAX_VALUE</obj_property>
+      <obj_property name="ObjectShortName">PHASE_ACCUMULATOR_MAX_VALUE</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_NRZIClockRecovery/uut/PHASE_CENTER_VALUE">
+      <obj_property name="ElementShortName">PHASE_CENTER_VALUE</obj_property>
+      <obj_property name="ObjectShortName">PHASE_CENTER_VALUE</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIClockRecovery/uut/K_VALUE">
+      <obj_property name="ElementShortName">K_VALUE</obj_property>
+      <obj_property name="ObjectShortName">K_VALUE</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIClockRecovery/uut/J_VALUE">
+      <obj_property name="ElementShortName">J_VALUE</obj_property>
+      <obj_property name="ObjectShortName">J_VALUE</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider115" type="divider">
+      <obj_property name="label">NRZI Data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIClockRecovery/sys_clock">
+      <obj_property name="ElementShortName">sys_clock</obj_property>
+      <obj_property name="ObjectShortName">sys_clock</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIClockRecovery/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIClockRecovery/nrzi_data">
+      <obj_property name="ElementShortName">nrzi_data</obj_property>
+      <obj_property name="ObjectShortName">nrzi_data</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIClockRecovery/nrzi_data_verif">
+      <obj_property name="ElementShortName">nrzi_data_verif</obj_property>
+      <obj_property name="ObjectShortName">nrzi_data_verif</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider20" type="divider">
+      <obj_property name="label">NRZI Edges</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIClockRecovery/uut/k_edge_reg">
+      <obj_property name="ElementShortName">k_edge_reg</obj_property>
+      <obj_property name="ObjectShortName">k_edge_reg</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIClockRecovery/uut/j_edge_reg">
+      <obj_property name="ElementShortName">j_edge_reg</obj_property>
+      <obj_property name="ObjectShortName">j_edge_reg</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_NRZIClockRecovery/uut/nrzi_phase_accumulator">
+      <obj_property name="ElementShortName">nrzi_phase_accumulator</obj_property>
+      <obj_property name="ObjectShortName">nrzi_phase_accumulator</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider74" type="divider">
+      <obj_property name="label">NRZI Sync</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIClockRecovery/uut/nrzi_clock_enable_reg">
+      <obj_property name="ElementShortName">nrzi_clock_enable_reg</obj_property>
+      <obj_property name="ObjectShortName">nrzi_clock_enable_reg</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIClockRecovery/uut/o_nrzi_clock">
+      <obj_property name="ElementShortName">o_nrzi_clock</obj_property>
+      <obj_property name="ObjectShortName">o_nrzi_clock</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_NRZIClockRecovery/uut/nrzi_sync_pattern_reg">
+      <obj_property name="ElementShortName">nrzi_sync_pattern_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">nrzi_sync_pattern_reg[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_NRZIClockRecovery/uut/state">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+</wave_config>

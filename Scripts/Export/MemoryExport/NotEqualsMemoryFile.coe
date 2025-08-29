@@ -1,0 +1,6 @@
+; Memory Configuration - NotEquals Operator
+; Memory Row Format: Value Part Number (8 bits) - Expected Value (24 bits) - Value Quartet Enable (6 bits) - Mandatory Level (1 bit)
+; Memory Format: Depth=0, Width=39 bits
+MEMORY_INITIALIZATION_RADIX=2;
+MEMORY_INITIALIZATION_VECTOR=
+;

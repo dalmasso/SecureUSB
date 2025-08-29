@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Testbench_USBVerifier_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Testbench_USBVerifier" />
+            <top_module name="glbl" />
+            <top_module name="usbdescriptorfields" />
+            <top_module name="usbdescriptorvalues" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="708.653 ns"></ZoomEndTime>
+      <Cursor1Time time="325.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="156"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject type="logic" fp_name="/Testbench_USBVerifier/sys_clock">
+      <obj_property name="ElementShortName">sys_clock</obj_property>
+      <obj_property name="ObjectShortName">sys_clock</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_USBVerifier/enable">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_USBVerifier/descriptor_field">
+      <obj_property name="ElementShortName">descriptor_field[11:0]</obj_property>
+      <obj_property name="ObjectShortName">descriptor_field[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_USBVerifier/descriptor_field_available">
+      <obj_property name="ElementShortName">descriptor_field_available</obj_property>
+      <obj_property name="ObjectShortName">descriptor_field_available</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_USBVerifier/descriptor_value">
+      <obj_property name="ElementShortName">descriptor_value[23:0]</obj_property>
+      <obj_property name="ObjectShortName">descriptor_value[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_USBVerifier/descriptor_value_en">
+      <obj_property name="ElementShortName">descriptor_value_en[5:0]</obj_property>
+      <obj_property name="ObjectShortName">descriptor_value_en[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_USBVerifier/descriptor_value_total_part_number">
+      <obj_property name="ElementShortName">descriptor_value_total_part_number[7:0]</obj_property>
+      <obj_property name="ObjectShortName">descriptor_value_total_part_number[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_USBVerifier/descriptor_value_part_number">
+      <obj_property name="ElementShortName">descriptor_value_part_number[7:0]</obj_property>
+      <obj_property name="ObjectShortName">descriptor_value_part_number[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_USBVerifier/descriptor_value_new_part">
+      <obj_property name="ElementShortName">descriptor_value_new_part</obj_property>
+      <obj_property name="ObjectShortName">descriptor_value_new_part</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_USBVerifier/descriptor_value_next_part_request">
+      <obj_property name="ElementShortName">descriptor_value_next_part_request</obj_property>
+      <obj_property name="ObjectShortName">descriptor_value_next_part_request</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_USBVerifier/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_USBVerifier/result">
+      <obj_property name="ElementShortName">result</obj_property>
+      <obj_property name="ObjectShortName">result</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider215" type="divider">
+      <obj_property name="label">Operators Enable</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_USBVerifier/uut/USBVerifier/operators_next_part_request">
+      <obj_property name="ElementShortName">operators_next_part_request</obj_property>
+      <obj_property name="ObjectShortName">operators_next_part_request</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_USBVerifier/uut/USBVerifier/operators_ready">
+      <obj_property name="ElementShortName">operators_ready</obj_property>
+      <obj_property name="ObjectShortName">operators_ready</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_USBVerifier/uut/USBVerifier/operators_result">
+      <obj_property name="ElementShortName">operators_result</obj_property>
+      <obj_property name="ObjectShortName">operators_result</obj_property>
+   </wvobject>
+</wave_config>

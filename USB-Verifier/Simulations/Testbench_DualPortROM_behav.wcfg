@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Testbench_DualPortROM_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Testbench_DualPortROM" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="189.201 ns"></ZoomEndTime>
+      <Cursor1Time time="45.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="148"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject type="other" fp_name="/Testbench_DualPortROM/MEMORY_ADDR_LENGTH">
+      <obj_property name="ElementShortName">MEMORY_ADDR_LENGTH</obj_property>
+      <obj_property name="ObjectShortName">MEMORY_ADDR_LENGTH</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_DualPortROM/MEMORY_DATA_LENGTH">
+      <obj_property name="ElementShortName">MEMORY_DATA_LENGTH</obj_property>
+      <obj_property name="ObjectShortName">MEMORY_DATA_LENGTH</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_DualPortROM/sys_clock">
+      <obj_property name="ElementShortName">sys_clock</obj_property>
+      <obj_property name="ObjectShortName">sys_clock</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_DualPortROM/ena">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_DualPortROM/enb">
+      <obj_property name="ElementShortName">enb</obj_property>
+      <obj_property name="ObjectShortName">enb</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider17" type="divider">
+      <obj_property name="label">ROM Port A</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_DualPortROM/addra">
+      <obj_property name="ElementShortName">addra[1:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_DualPortROM/uut/douta_reg">
+      <obj_property name="ElementShortName">douta_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">douta_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_DualPortROM/douta">
+      <obj_property name="ElementShortName">douta[1:0]</obj_property>
+      <obj_property name="ObjectShortName">douta[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider16" type="divider">
+      <obj_property name="label">ROM Port B</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_DualPortROM/addrb">
+      <obj_property name="ElementShortName">addrb[1:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_DualPortROM/uut/doutb_reg">
+      <obj_property name="ElementShortName">doutb_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_DualPortROM/doutb">
+      <obj_property name="ElementShortName">doutb[1:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb[1:0]</obj_property>
+   </wvobject>
+</wave_config>

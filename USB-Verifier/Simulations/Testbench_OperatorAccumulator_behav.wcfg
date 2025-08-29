@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Testbench_OperatorAccumulator_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Testbench_OperatorAccumulator" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="166.666 ns"></ZoomStartTime>
+      <ZoomEndTime time="573.534 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="131"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="25" />
+   <wvobject type="other" fp_name="/Testbench_OperatorAccumulator/uut/OPERATORS_NUMBER">
+      <obj_property name="ElementShortName">OPERATORS_NUMBER</obj_property>
+      <obj_property name="ObjectShortName">OPERATORS_NUMBER</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_OperatorAccumulator/uut/WATCHDOG_LIMIT">
+      <obj_property name="ElementShortName">WATCHDOG_LIMIT</obj_property>
+      <obj_property name="ObjectShortName">WATCHDOG_LIMIT</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_OperatorAccumulator/sys_clock">
+      <obj_property name="ElementShortName">sys_clock</obj_property>
+      <obj_property name="ObjectShortName">sys_clock</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_OperatorAccumulator/enable">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider450" type="divider">
+      <obj_property name="label">Operator Inputs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_OperatorAccumulator/operators_ready">
+      <obj_property name="ElementShortName">operators_ready[2:0]</obj_property>
+      <obj_property name="ObjectShortName">operators_ready[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_OperatorAccumulator/operators_result">
+      <obj_property name="ElementShortName">operators_result[2:0]</obj_property>
+      <obj_property name="ObjectShortName">operators_result[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_OperatorAccumulator/operators_next_part_request">
+      <obj_property name="ElementShortName">operators_next_part_request[2:0]</obj_property>
+      <obj_property name="ObjectShortName">operators_next_part_request[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider457" type="divider">
+      <obj_property name="label">Accumulator In</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_OperatorAccumulator/uut/state">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_OperatorAccumulator/uut/enable_reg">
+      <obj_property name="ElementShortName">enable_reg</obj_property>
+      <obj_property name="ObjectShortName">enable_reg</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_OperatorAccumulator/uut/operators_ready_reg">
+      <obj_property name="ElementShortName">operators_ready_reg[2:0]</obj_property>
+      <obj_property name="ObjectShortName">operators_ready_reg[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_OperatorAccumulator/uut/operators_result_reg">
+      <obj_property name="ElementShortName">operators_result_reg[2:0]</obj_property>
+      <obj_property name="ObjectShortName">operators_result_reg[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_OperatorAccumulator/uut/operators_next_part_request_reg">
+      <obj_property name="ElementShortName">operators_next_part_request_reg[2:0]</obj_property>
+      <obj_property name="ObjectShortName">operators_next_part_request_reg[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_OperatorAccumulator/uut/operators_error">
+      <obj_property name="ElementShortName">operators_error[2:0]</obj_property>
+      <obj_property name="ObjectShortName">operators_error[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_OperatorAccumulator/uut/operators_end_cycle">
+      <obj_property name="ElementShortName">operators_end_cycle[2:0]</obj_property>
+      <obj_property name="ObjectShortName">operators_end_cycle[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider452" type="divider">
+      <obj_property name="label">Accumulator Out</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_OperatorAccumulator/uut/o_next_part_request">
+      <obj_property name="ElementShortName">o_next_part_request</obj_property>
+      <obj_property name="ObjectShortName">o_next_part_request</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_OperatorAccumulator/uut/o_ready">
+      <obj_property name="ElementShortName">o_ready</obj_property>
+      <obj_property name="ObjectShortName">o_ready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_OperatorAccumulator/uut/o_result">
+      <obj_property name="ElementShortName">o_result</obj_property>
+      <obj_property name="ObjectShortName">o_result</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider445" type="divider">
+      <obj_property name="label">Watchdog</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_OperatorAccumulator/uut/watchdog_en">
+      <obj_property name="ElementShortName">watchdog_en</obj_property>
+      <obj_property name="ObjectShortName">watchdog_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_OperatorAccumulator/uut/operatorAccuWatchdog/watching_inputs_transition">
+      <obj_property name="ElementShortName">watching_inputs_transition</obj_property>
+      <obj_property name="ObjectShortName">watching_inputs_transition</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Testbench_OperatorAccumulator/uut/operatorAccuWatchdog/watchdog_counter">
+      <obj_property name="ElementShortName">watchdog_counter</obj_property>
+      <obj_property name="ObjectShortName">watchdog_counter</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_OperatorAccumulator/uut/watchdog_trigger">
+      <obj_property name="ElementShortName">watchdog_trigger</obj_property>
+      <obj_property name="ObjectShortName">watchdog_trigger</obj_property>
+   </wvobject>
+</wave_config>

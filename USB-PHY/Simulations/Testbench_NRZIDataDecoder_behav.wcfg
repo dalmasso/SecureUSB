@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Testbench_NRZIDataDecoder_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Testbench_NRZIDataDecoder" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,000.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="168"></NameColumnWidth>
+      <ValueColumnWidth column_width="68"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject type="array" fp_name="/Testbench_NRZIDataDecoder/uut/se0_pattern">
+      <obj_property name="ElementShortName">se0_pattern[1:0]</obj_property>
+      <obj_property name="ObjectShortName">se0_pattern[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_NRZIDataDecoder/uut/se1_pattern">
+      <obj_property name="ElementShortName">se1_pattern[1:0]</obj_property>
+      <obj_property name="ObjectShortName">se1_pattern[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_NRZIDataDecoder/uut/logical_0">
+      <obj_property name="ElementShortName">logical_0[1:0]</obj_property>
+      <obj_property name="ObjectShortName">logical_0[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_NRZIDataDecoder/uut/logical_1">
+      <obj_property name="ElementShortName">logical_1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">logical_1[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench_NRZIDataDecoder/uut/i_usb_data">
+      <obj_property name="ElementShortName">i_usb_data[1:0]</obj_property>
+      <obj_property name="ObjectShortName">i_usb_data[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIDataDecoder/uut/o_type">
+      <obj_property name="ElementShortName">o_type</obj_property>
+      <obj_property name="ObjectShortName">o_type</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench_NRZIDataDecoder/uut/o_data">
+      <obj_property name="ElementShortName">o_data</obj_property>
+      <obj_property name="ObjectShortName">o_data</obj_property>
+   </wvobject>
+</wave_config>
