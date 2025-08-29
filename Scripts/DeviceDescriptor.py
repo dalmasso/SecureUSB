@@ -117,6 +117,72 @@ class DeviceDescriptor:
     bcdDeviceSourceIndexPattern = "DEVICE_BCDDEVICE_INDEX => "
     bcdDeviceSourceCountPattern = "DEVICE_BCDDEVICE_COUNT => "
 
+    # Device String Special Field
+    # iManufacturer bLength (1 byte)
+    iManufacturerbLength = []
+    iManufacturerbLengthLength = 255
+    iManufacturerbLengthFormat = FieldFormatEnum.NUMBER
+    iManufacturerbLengthName = "iManufacturerbLength"
+    iManufacturerbLengthMatch = iManufacturerbLengthName.casefold()
+    iManufacturerbLengthLastMandatoryValueIndex = 0
+    iManufacturerbLengthSourceIndexPattern = "DEVICE_IMANUFACTURER_BLENGTH_INDEX => "
+    iManufacturerbLengthSourceCountPattern = "DEVICE_IMANUFACTURER_BLENGTH_COUNT => "
+
+    # Device String Special Field
+    # iManufacturer (253 bytes)
+    iManufacturer = []
+    iManufacturerLength = 253
+    iManufacturerFormat = FieldFormatEnum.STRING
+    iManufacturerName = "iManufacturer"
+    iManufacturerMatch = iManufacturerName.casefold()
+    iManufacturerLastMandatoryValueIndex = 0
+    iManufacturerSourceIndexPattern = "DEVICE_IMANUFACTURER_INDEX => "
+    iManufacturerSourceCountPattern = "DEVICE_IMANUFACTURER_COUNT => "
+
+    # Device String Special Field
+    # iProduct bLength (1 byte)
+    iProductbLength = []
+    iProductbLengthLength = 255
+    iProductbLengthFormat = FieldFormatEnum.NUMBER
+    iProductbLengthName = "iProductbLength"
+    iProductbLengthMatch = iProductbLengthName.casefold()
+    iProductbLengthLastMandatoryValueIndex = 0
+    iProductbLengthSourceIndexPattern = "DEVICE_IPRODUCT_BLENGTH_INDEX => "
+    iProductbLengthSourceCountPattern = "DEVICE_IPRODUCT_BLENGTH_COUNT => "
+
+    # Device String Special Field
+    # iProduct (253 bytes)
+    iProduct = []
+    iProductLength = 253
+    iProductFormat = FieldFormatEnum.STRING
+    iProductName = "iProduct"
+    iProductMatch = iProductName.casefold()
+    iProductLastMandatoryValueIndex = 0
+    iProductSourceIndexPattern = "DEVICE_IPRODUCT_INDEX => "
+    iProductSourceCountPattern = "DEVICE_IPRODUCT_COUNT => "
+
+    # Device String Special Field
+    # iSerialNumber bLength (1 byte)
+    iSerialNumberbLength = []
+    iSerialNumberbLengthLength = 255
+    iSerialNumberbLengthFormat = FieldFormatEnum.NUMBER
+    iSerialNumberbLengthName = "iSerialNumberbLength"
+    iSerialNumberbLengthMatch = iSerialNumberbLengthName.casefold()
+    iSerialNumberbLengthLastMandatoryValueIndex = 0
+    iSerialNumberbLengthSourceIndexPattern = "DEVICE_ISERIALNUMBER_BLENGTH_INDEX => "
+    iSerialNumberbLengthSourceCountPattern = "DEVICE_ISERIALNUMBER_BLENGTH_COUNT => "
+
+    # Device String Special Field
+    # iSerialNumber (253 bytes)
+    iSerialNumber = []
+    iSerialNumberLength = 253
+    iSerialNumberFormat = FieldFormatEnum.STRING
+    iSerialNumberName = "iSerialNumber"
+    iSerialNumberMatch = iSerialNumberName.casefold()
+    iSerialNumberLastMandatoryValueIndex = 0
+    iSerialNumberSourceIndexPattern = "DEVICE_ISERIALNUMBER_INDEX => "
+    iSerialNumberSourceCountPattern = "DEVICE_ISERIALNUMBER_COUNT => "
+
     # bNumConfigurations (1 byte)
     bNumConfigurations = []
     bNumConfigurationsLength = 255
@@ -273,6 +339,96 @@ class DeviceDescriptor:
                 # Optional New Value (add the end of the list)
                 else:
                     self.bcdDevice.append(newValue)
+
+            # iManufacturer bLength
+            case self.iManufacturerbLengthMatch:
+                # New Value to Add
+                newValue = VerificationValue(value, self.iManufacturerbLengthLength, self.iManufacturerbLengthFormat, verificationLevel, operator)
+
+                # Handle Verification Level Priority (Mandatory First)
+                if (VerificationLevelEnum.MANDATORY == newValue.verificationLevel):
+                    # Add New Mandatory Value
+                    self.iManufacturerbLength.insert(self.iManufacturerbLengthLastMandatoryValueIndex, newValue)
+                    self.iManufacturerbLengthLastMandatoryValueIndex += 1
+
+                # Optional New Value (add the end of the list)
+                else:
+                    self.iManufacturerbLength.append(newValue)
+
+            # iManufacturer
+            case self.iManufacturerMatch:
+                # New Value to Add
+                newValue = VerificationValue(value, self.iManufacturerLength, self.iManufacturerFormat, verificationLevel, operator)
+
+                # Handle Verification Level Priority (Mandatory First)
+                if (VerificationLevelEnum.MANDATORY == newValue.verificationLevel):
+                    # Add New Mandatory Value
+                    self.iManufacturer.insert(self.iManufacturerLastMandatoryValueIndex, newValue)
+                    self.iManufacturerLastMandatoryValueIndex += 1
+
+                # Optional New Value (add the end of the list)
+                else:
+                    self.iManufacturer.append(newValue)
+
+            # iProduct bLength
+            case self.iProductbLengthMatch:
+                # New Value to Add
+                newValue = VerificationValue(value, self.iProductbLengthLength, self.iProductbLengthFormat, verificationLevel, operator)
+
+                # Handle Verification Level Priority (Mandatory First)
+                if (VerificationLevelEnum.MANDATORY == newValue.verificationLevel):
+                    # Add New Mandatory Value
+                    self.iProductbLength.insert(self.iProductbLengthLastMandatoryValueIndex, newValue)
+                    self.iProductbLengthLastMandatoryValueIndex += 1
+
+                # Optional New Value (add the end of the list)
+                else:
+                    self.iProductbLength.append(newValue)
+
+            # iProduct
+            case self.iProductMatch:
+                # New Value to Add
+                newValue = VerificationValue(value, self.iProductLength, self.iProductFormat, verificationLevel, operator)
+
+                # Handle Verification Level Priority (Mandatory First)
+                if (VerificationLevelEnum.MANDATORY == newValue.verificationLevel):
+                    # Add New Mandatory Value
+                    self.iProduct.insert(self.iProductLastMandatoryValueIndex, newValue)
+                    self.iProductLastMandatoryValueIndex += 1
+
+                # Optional New Value (add the end of the list)
+                else:
+                    self.iProduct.append(newValue)
+
+            # iSerialNumber bLength
+            case self.iSerialNumberbLengthMatch:
+                # New Value to Add
+                newValue = VerificationValue(value, self.iSerialNumberbLengthLength, self.iSerialNumberbLengthFormat, verificationLevel, operator)
+
+                # Handle Verification Level Priority (Mandatory First)
+                if (VerificationLevelEnum.MANDATORY == newValue.verificationLevel):
+                    # Add New Mandatory Value
+                    self.iSerialNumberbLength.insert(self.iSerialNumberbLengthLastMandatoryValueIndex, newValue)
+                    self.iSerialNumberbLengthLastMandatoryValueIndex += 1
+
+                # Optional New Value (add the end of the list)
+                else:
+                    self.iSerialNumberbLength.append(newValue)
+
+            # iSerialNumber
+            case self.iSerialNumberMatch:
+                # New Value to Add
+                newValue = VerificationValue(value, self.iSerialNumberLength, self.iSerialNumberFormat, verificationLevel, operator)
+
+                # Handle Verification Level Priority (Mandatory First)
+                if (VerificationLevelEnum.MANDATORY == newValue.verificationLevel):
+                    # Add New Mandatory Value
+                    self.iSerialNumber.insert(self.iSerialNumberLastMandatoryValueIndex, newValue)
+                    self.iSerialNumberLastMandatoryValueIndex += 1
+
+                # Optional New Value (add the end of the list)
+                else:
+                    self.iSerialNumber.append(newValue)
             
             # bNumConfigurations
             case self.bNumConfigurationsMatch:
@@ -360,6 +516,48 @@ class DeviceDescriptor:
                 else:
                     self.bcdDevice = [el for el in self.bcdDevice if el.value != value and el.operator != operator]
 
+            # iManufacturer bLength
+            case self.iManufacturerbLengthMatch:
+                if (operator == None):
+                    self.iManufacturerbLength = [el for el in self.iManufacturerbLength if el.value != value]
+                else:
+                    self.iManufacturerbLength = [el for el in self.iManufacturerbLength if el.value != value and el.operator != operator]
+
+            # iManufacturer
+            case self.iManufacturerMatch:
+                if (operator == None):
+                    self.iManufacturer = [el for el in self.iManufacturer if el.value != value]
+                else:
+                    self.iManufacturer = [el for el in self.iManufacturer if el.value != value and el.operator != operator]
+
+            # iProduct bLength
+            case self.iProductbLengthMatch:
+                if (operator == None):
+                    self.iProductbLength = [el for el in self.iProductbLength if el.value != value]
+                else:
+                    self.iProductbLength = [el for el in self.iProductbLength if el.value != value and el.operator != operator]
+
+            # iProduct
+            case self.iProductMatch:
+                if (operator == None):
+                    self.iProduct = [el for el in self.iProduct if el.value != value]
+                else:
+                    self.iProduct = [el for el in self.iProduct if el.value != value and el.operator != operator]
+
+            # iSerialNumber bLength
+            case self.iSerialNumberbLengthMatch:
+                if (operator == None):
+                    self.iSerialNumberbLength = [el for el in self.iSerialNumberbLength if el.value != value]
+                else:
+                    self.iSerialNumberbLength = [el for el in self.iSerialNumberbLength if el.value != value and el.operator != operator]
+
+            # iSerialNumber
+            case self.iSerialNumberMatch:
+                if (operator == None):
+                    self.iSerialNumber = [el for el in self.iSerialNumber if el.value != value]
+                else:
+                    self.iSerialNumber = [el for el in self.iSerialNumber if el.value != value and el.operator != operator]
+
             # bNumConfigurations
             case self.bNumConfigurationsMatch:
                 if (operator == None):
@@ -420,6 +618,36 @@ class DeviceDescriptor:
                 print(self.bcdDeviceName + ":\n")
                 for el in self.bcdDevice: el.showDetails()
 
+            # iManufacturer bLength
+            case self.iManufacturerbLengthMatch:
+                print(self.iManufacturerbLengthName + ":\n")
+                for el in self.iManufacturerbLength: el.showDetails()
+
+            # iManufacturer
+            case self.iManufacturerMatch:
+                print(self.iManufacturerName + ":\n")
+                for el in self.iManufacturer: el.showDetails()
+
+            # iProduct bLength
+            case self.iProductbLengthMatch:
+                print(self.iProductbLengthName + ":\n")
+                for el in self.iProductbLength: el.showDetails()
+
+            # iProduct
+            case self.iProductMatch:
+                print(self.iProductName + ":\n")
+                for el in self.iProduct: el.showDetails()
+
+            # iSerialNumber bLength
+            case self.iSerialNumberbLengthMatch:
+                print(self.iSerialNumberbLengthName + ":\n")
+                for el in self.iSerialNumberbLength: el.showDetails()
+
+            # iSerialNumber
+            case self.iSerialNumberMatch:
+                print(self.iSerialNumberName + ":\n")
+                for el in self.iSerialNumber: el.showDetails()
+
             # bNumConfigurations
             case self.bNumConfigurationsMatch:
                 print(self.bNumConfigurationsName + ":\n")
@@ -460,6 +688,24 @@ class DeviceDescriptor:
 
         # bcdDevice
         self.displayVerificationValues(self.bcdDeviceName)
+
+        # iManufacturer bLength
+        self.displayVerificationValues(self.iManufacturerbLengthName)
+
+        # iManufacturer
+        self.displayVerificationValues(self.iManufacturerName)
+
+        # iProduct bLength
+        self.displayVerificationValues(self.iProductbLengthName)
+
+        # iProduct
+        self.displayVerificationValues(self.iProductName)
+
+        # iSerialNumber bLength
+        self.displayVerificationValues(self.iSerialNumberbLengthName)
+
+        # iSerialNumber
+        self.displayVerificationValues(self.iSerialNumberName)
 
         # bNumConfigurations
         self.displayVerificationValues(self.bNumConfigurationsName)
@@ -504,6 +750,30 @@ class DeviceDescriptor:
         # bcdDevice
         for el in self.bcdDevice:
             valueList.append([self.bcdDeviceName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
+
+        # iManufacturer bLength
+        for el in self.iManufacturerbLength:
+            valueList.append([self.iManufacturerbLengthName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
+        
+        # iManufacturer
+        for el in self.iManufacturer:
+            valueList.append([self.iManufacturerName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
+        
+        # iProduct bLength
+        for el in self.iProductbLength:
+            valueList.append([self.iProductbLengthName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
+        
+        # iProduct
+        for el in self.iProduct:
+            valueList.append([self.iProductName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
+        
+        # iSerialNumber bLength
+        for el in self.iSerialNumberbLength:
+            valueList.append([self.iSerialNumberbLengthName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
+        
+        # iSerialNumber
+        for el in self.iSerialNumber:
+            valueList.append([self.iSerialNumberName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
 
         # bNumConfigurations
         for el in self.bNumConfigurations:
@@ -593,9 +863,63 @@ class DeviceDescriptor:
         for el in self.bcdDevice:
             if (operator == el.operator):
                 count += el.getMemoryUsage()
-        
+    
         # Add Result & Reset Counter
         result.append([self.bcdDeviceName, count])
+        count = 0
+
+        # iManufacturer bLength
+        for el in self.iManufacturerbLength:
+            if (operator == el.operator):
+                count += el.getMemoryUsage()
+    
+        # Add Result & Reset Counter
+        result.append([self.iManufacturerbLengthName, count])
+        count = 0
+
+        # iManufacturer
+        for el in self.iManufacturer:
+            if (operator == el.operator):
+                count += el.getMemoryUsage()
+    
+        # Add Result & Reset Counter
+        result.append([self.iManufacturerName, count])
+        count = 0
+
+        # iProduct bLength
+        for el in self.iProductbLength:
+            if (operator == el.operator):
+                count += el.getMemoryUsage()
+    
+        # Add Result & Reset Counter
+        result.append([self.iProductbLengthName, count])
+        count = 0
+
+        # iProduct
+        for el in self.iProduct:
+            if (operator == el.operator):
+                count += el.getMemoryUsage()
+    
+        # Add Result & Reset Counter
+        result.append([self.iProductName, count])
+        count = 0
+
+        # iSerialNumber bLength
+        for el in self.iSerialNumberbLength:
+            if (operator == el.operator):
+                count += el.getMemoryUsage()
+    
+        # Add Result & Reset Counter
+        result.append([self.iSerialNumberbLengthName, count])
+        count = 0
+
+        # iSerialNumber
+        for el in self.iSerialNumber:
+            if (operator == el.operator):
+                count += el.getMemoryUsage()
+    
+        # Add Result & Reset Counter
+        result.append([self.iSerialNumberName, count])
         count = 0
 
         # bNumConfigurations
@@ -655,6 +979,36 @@ class DeviceDescriptor:
 
         # bcdDevice
         for el in self.bcdDevice:
+            if (operator == el.operator):
+                return True
+
+        # iManufacturer bLength
+        for el in self.iManufacturerbLength:
+            if (operator == el.operator):
+                return True
+
+        # iManufacturer
+        for el in self.iManufacturer:
+            if (operator == el.operator):
+                return True
+
+        # iProduct bLength
+        for el in self.iProductbLength:
+            if (operator == el.operator):
+                return True
+
+        # iProduct
+        for el in self.iProduct:
+            if (operator == el.operator):
+                return True
+
+        # iSerialNumber bLength
+        for el in self.iSerialNumberbLength:
+            if (operator == el.operator):
+                return True
+
+        # iSerialNumber
+        for el in self.iSerialNumber:
             if (operator == el.operator):
                 return True
 
@@ -778,6 +1132,78 @@ class DeviceDescriptor:
         for el in VerificationValue.generateMemoryValues(memoryValueConfig):
             result.append(el)
 
+        # iManufacturer bLength
+        memoryValueConfig = []
+        for el in self.iManufacturerbLength:
+            if (operator == el.operator):
+                # Convert Memory Configurations
+                for e in el.convertToMemConfig():
+                    memoryValueConfig.append(e)
+
+        # Order & Add Memory Values
+        for el in VerificationValue.generateMemoryValues(memoryValueConfig):
+            result.append(el)
+
+        # iManufacturer
+        memoryValueConfig = []
+        for el in self.iManufacturer:
+            if (operator == el.operator):
+                # Convert Memory Configurations
+                for e in el.convertToMemConfig():
+                    memoryValueConfig.append(e)
+
+        # Order & Add Memory Values
+        for el in VerificationValue.generateMemoryValues(memoryValueConfig):
+            result.append(el)
+
+        # iProduct bLength
+        memoryValueConfig = []
+        for el in self.iProductbLength:
+            if (operator == el.operator):
+                # Convert Memory Configurations
+                for e in el.convertToMemConfig():
+                    memoryValueConfig.append(e)
+
+        # Order & Add Memory Values
+        for el in VerificationValue.generateMemoryValues(memoryValueConfig):
+            result.append(el)
+
+        # iProduct
+        memoryValueConfig = []
+        for el in self.iProduct:
+            if (operator == el.operator):
+                # Convert Memory Configurations
+                for e in el.convertToMemConfig():
+                    memoryValueConfig.append(e)
+
+        # Order & Add Memory Values
+        for el in VerificationValue.generateMemoryValues(memoryValueConfig):
+            result.append(el)
+
+        # iSerialNumber bLength
+        memoryValueConfig = []
+        for el in self.iSerialNumberbLength:
+            if (operator == el.operator):
+                # Convert Memory Configurations
+                for e in el.convertToMemConfig():
+                    memoryValueConfig.append(e)
+
+        # Order & Add Memory Values
+        for el in VerificationValue.generateMemoryValues(memoryValueConfig):
+            result.append(el)
+
+        # iSerialNumber
+        memoryValueConfig = []
+        for el in self.iSerialNumber:
+            if (operator == el.operator):
+                # Convert Memory Configurations
+                for e in el.convertToMemConfig():
+                    memoryValueConfig.append(e)
+
+        # Order & Add Memory Values
+        for el in VerificationValue.generateMemoryValues(memoryValueConfig):
+            result.append(el)
+
         # bNumConfigurations
         memoryValueConfig = []
         for el in self.bNumConfigurations:
@@ -824,6 +1250,24 @@ class DeviceDescriptor:
         # bcdDevice
         largestPartVerif = self.__getLargestVerificationNumber(self.bcdDevice, largestPartVerif)
 
+        # iManufacturer bLength
+        largestPartVerif = self.__getLargestVerificationNumber(self.iManufacturerbLength, largestPartVerif)
+
+        # iManufacturer
+        largestPartVerif = self.__getLargestVerificationNumber(self.iManufacturer, largestPartVerif)
+
+        # iProduct bLength
+        largestPartVerif = self.__getLargestVerificationNumber(self.iProductbLength, largestPartVerif)
+
+        # iProduct
+        largestPartVerif = self.__getLargestVerificationNumber(self.iProduct, largestPartVerif)
+
+        # iSerialNumber bLength
+        largestPartVerif = self.__getLargestVerificationNumber(self.iSerialNumberbLength, largestPartVerif)
+
+        # iSerialNumber
+        largestPartVerif = self.__getLargestVerificationNumber(self.iSerialNumber, largestPartVerif)
+
         # bNumConfigurations
         largestPartVerif = self.__getLargestVerificationNumber(self.bNumConfigurations, largestPartVerif)
         return largestPartVerif
@@ -866,6 +1310,30 @@ class DeviceDescriptor:
 
         # bcdDevice
         for el in self.bcdDevice:
+            return True
+
+        # iManufacturer bLength
+        for el in self.iManufacturerbLength:
+            return True
+
+        # iManufacturer
+        for el in self.iManufacturer:
+            return True
+
+        # iProduct bLength
+        for el in self.iProductbLength:
+            return True
+
+        # iProduct
+        for el in self.iProduct:
+            return True
+
+        # iSerialNumber bLength
+        for el in self.iSerialNumberbLength:
+            return True
+
+        # iSerialNumber
+        for el in self.iSerialNumber:
             return True
 
         # bNumConfigurations
@@ -920,6 +1388,30 @@ class DeviceDescriptor:
             # bcdDevice
             case DeviceDescriptor.bcdDeviceName:
                 return (DeviceDescriptor.bcdDeviceSourceIndexPattern, DeviceDescriptor.bcdDeviceSourceCountPattern)
+
+            # iManufacturer bLength
+            case DeviceDescriptor.iManufacturerbLengthName:
+                return (DeviceDescriptor.iManufacturerbLengthSourceIndexPattern, DeviceDescriptor.iManufacturerbLengthSourceCountPattern)
+
+            # iManufacturer
+            case DeviceDescriptor.iManufacturerName:
+                return (DeviceDescriptor.iManufacturerSourceIndexPattern, DeviceDescriptor.iManufacturerSourceCountPattern)
+
+            # iProduct bLength
+            case DeviceDescriptor.iProductbLengthName:
+                return (DeviceDescriptor.iProductbLengthSourceIndexPattern, DeviceDescriptor.iProductbLengthSourceCountPattern)
+
+            # iProduct
+            case DeviceDescriptor.iProductName:
+                return (DeviceDescriptor.iProductSourceIndexPattern, DeviceDescriptor.iProductSourceCountPattern)
+
+            # iSerialNumber bLength
+            case DeviceDescriptor.iSerialNumberbLengthName:
+                return (DeviceDescriptor.iSerialNumberbLengthSourceIndexPattern, DeviceDescriptor.iSerialNumberbLengthSourceCountPattern)
+
+            # iSerialNumber
+            case DeviceDescriptor.iSerialNumberName:
+                return (DeviceDescriptor.iSerialNumberSourceIndexPattern, DeviceDescriptor.iSerialNumberSourceCountPattern)
 
             # bNumConfigurations
             case DeviceDescriptor.bNumConfigurationsName:

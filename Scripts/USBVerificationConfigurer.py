@@ -16,7 +16,6 @@ from ConfigurationDescriptor import ConfigurationDescriptor
 from InterfaceDescriptor import InterfaceDescriptor
 from HIDDescriptor import HIDDescriptor
 from EndpointDescriptor import EndpointDescriptor
-from StringDescriptor import StringDescriptor
 from DeviceQualifierDescriptor import DeviceQualifierDescriptor
 from OtherSpeedDescriptor import OtherSpeedDescriptor
 
@@ -103,9 +102,6 @@ hidDescriptor = HIDDescriptor()
 # Endpoint Descriptor
 endpointDescriptor = EndpointDescriptor()
 
-# String Descriptor
-stringDescriptor = StringDescriptor()
-
 # Device Qualifier Descriptor
 deviceQualifierDescriptor = DeviceQualifierDescriptor()
 
@@ -146,10 +142,6 @@ def getDescriptor(userInputValue):
     # Endpoint Descriptor
     if (endpointDescriptor.isRequestedDescriptor(userInputValue)):
         return endpointDescriptor
-
-    # String Descriptor
-    if (stringDescriptor.isRequestedDescriptor(userInputValue)):
-        return stringDescriptor
 
     # Device Qualifier Descriptor
     if (deviceQualifierDescriptor.isRequestedDescriptor(userInputValue)):
@@ -351,14 +343,6 @@ def exportDescriptorVerificationValues(exportDir):
         # Write Empty Line
         fileWriter.writerow(["", "", "", ""])
 
-        # String Descriptor
-        fileWriter.writerow(["String Descriptor Fields", DESCRIPTOR_VALUES_HEADER_OPERATOR, DESCRIPTOR_VALUES_HEADER_VALUE, DESCRIPTOR_VALUES_HEADER_VERIF_LEVEL])
-        for el in stringDescriptor.getVerificationValues():
-            fileWriter.writerow(el)
-
-        # Write Empty Line
-        fileWriter.writerow(["", "", "", ""])
-
         # Device Qualifier Descriptor
         fileWriter.writerow(["Device Qualifier Descriptor Fields", DESCRIPTOR_VALUES_HEADER_OPERATOR, DESCRIPTOR_VALUES_HEADER_VALUE, DESCRIPTOR_VALUES_HEADER_VERIF_LEVEL])
         for el in deviceQualifierDescriptor.getVerificationValues():
@@ -389,7 +373,6 @@ def extractDescriptorEnable():
     descriptorEnables.update({interfaceDescriptor.DESCRIPTOR_NAME: False})
     descriptorEnables.update({hidDescriptor.DESCRIPTOR_NAME: False})
     descriptorEnables.update({endpointDescriptor.DESCRIPTOR_NAME: False})
-    descriptorEnables.update({stringDescriptor.DESCRIPTOR_NAME: False})
     descriptorEnables.update({deviceQualifierDescriptor.DESCRIPTOR_NAME: False})
     descriptorEnables.update({otherSpeedDescriptor.DESCRIPTOR_NAME: False})
 
@@ -417,17 +400,6 @@ def extractDescriptorEnable():
     if (configurationDescriptor.isDescriptorInUse()):
         descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: True})
         descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: True})
-
-    # String Descriptor may require Device/Configuration/Interface Descriptor(s)
-    inUseStringDescriptor = stringDescriptor.isDescriptorInUse()
-    if (inUseStringDescriptor[0] == True):
-        for desc in inUseStringDescriptor[1]:
-            if (desc == StringDescriptor.DEVICE_DEPENDENCY):
-                descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: True})
-            elif (desc == StringDescriptor.CONFIGURATION_DEPENDENCY):
-                descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: True})
-            elif (desc == StringDescriptor.INTERFACE_DEPENDENCY):
-                descriptorEnables.update({interfaceDescriptor.DESCRIPTOR_NAME: True})
 
     return descriptorEnables
 
@@ -601,35 +573,6 @@ def exportOperatorMemoryConfigurations(exportDir):
 
             fileWriter.writerow(["", "", ""])
 
-            # String Descriptor [USB Field, Counter of Operator Value]
-            fileWriter.writerow([stringDescriptor.DESCRIPTOR_NAME, "", ""])
-            for el in stringDescriptor.countPerOperator(op):    
-                # Check Count Value
-                if (el[1] == 0):
-                    # No Value, Disable Field (x)
-                    fileWriter.writerow([el[0], VerificationValue.getMemoryDisableFieldStr(), el[1]])
-                    operatorConfigList.append((stringDescriptor, el[0], VerificationValue.getMemoryDisableFieldLogic(), el[1]))
-
-                else:
-                    # Value, Enable Field
-                    fileWriter.writerow([el[0], index, el[1]])
-                    operatorConfigList.append((stringDescriptor, el[0], index, el[1]))
-
-                    # Set Last Index (-1 to handle Index 0)
-                    last_index = index + el[1] -1
-
-                    # Set new Max Index
-                    max_index = index
-
-                    # Check Max Count Value
-                    if (el[1] > max_count):
-                        max_count = el[1]
-                
-                # Increment Index (for Next Value)
-                index += el[1]
-
-            fileWriter.writerow(["", "", ""])
-
             # Device Qualifier Descriptor [USB Field, Counter of Operator Value]
             fileWriter.writerow([deviceQualifierDescriptor.DESCRIPTOR_NAME, "", ""])
             for el in deviceQualifierDescriptor.countPerOperator(op):
@@ -760,10 +703,6 @@ def exportOperatorMemoryValuesConfigurations(exportDir, operatorConfigList):
             for el in endpointDescriptor.getConvertedVerificationValues(operator):
                 valueToWrite.append(el)
 
-            # String Descriptor
-            for el in stringDescriptor.getConvertedVerificationValues(operator):
-                valueToWrite.append(el)
-
             # Device Qualifier Descriptor
             for el in deviceQualifierDescriptor.getConvertedVerificationValues(operator):
                 valueToWrite.append(el)
@@ -814,7 +753,7 @@ def exportOperatorSummary(exportDir):
         for op in VerificationOperatorEnum:
 
             # Check if Operator is used (at least 1)
-            isInUse = deviceDescriptor.isOperatorInUse(op) or configurationDescriptor.isOperatorInUse(op) or interfaceDescriptor.isOperatorInUse(op) or hidDescriptor.isOperatorInUse(op) or endpointDescriptor.isOperatorInUse(op) or stringDescriptor.isOperatorInUse(op) or deviceQualifierDescriptor.isOperatorInUse(op) or otherSpeedDescriptor.isOperatorInUse(op)
+            isInUse = deviceDescriptor.isOperatorInUse(op) or configurationDescriptor.isOperatorInUse(op) or interfaceDescriptor.isOperatorInUse(op) or hidDescriptor.isOperatorInUse(op) or endpointDescriptor.isOperatorInUse(op) or deviceQualifierDescriptor.isOperatorInUse(op) or otherSpeedDescriptor.isOperatorInUse(op)
             if (isInUse):
                 fileWriter.writerow([op.name, VerificationValue.getOperatorEnableStr()])
                 inUseOperators += 1
@@ -846,9 +785,6 @@ def exportOperatorSummary(exportDir):
     
         # Endpoint Descriptor
         largestVerifNumber = endpointDescriptor.getLargestVerificationNumber(largestVerifNumber)
-
-        # String Descriptor
-        largestVerifNumber = stringDescriptor.getLargestVerificationNumber(largestVerifNumber)
 
         # Device Qualifier Descriptor
         largestVerifNumber = deviceQualifierDescriptor.getLargestVerificationNumber(largestVerifNumber)
@@ -898,7 +834,6 @@ def summaryVerificationValues(userInputValues):
         interfaceDescriptor.displayAllVerificationValues()
         hidDescriptor.displayAllVerificationValues()
         endpointDescriptor.displayAllVerificationValues()
-        stringDescriptor.displayAllVerificationValues()
         deviceQualifierDescriptor.displayAllVerificationValues()
         otherSpeedDescriptor.displayAllVerificationValues()
 

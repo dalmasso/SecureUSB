@@ -8,8 +8,6 @@ HID Descriptor Fields,Operator,Value,Verification Level
 ,,,
 Endpoint Descriptor Fields,Operator,Value,Verification Level
 ,,,
-String Descriptor Fields,Operator,Value,Verification Level
-,,,
 Device Qualifier Descriptor Fields,Operator,Value,Verification Level
 ,,,
 Other Speed Descriptor Fields,Operator,Value,Verification Level

@@ -71,6 +71,28 @@ class ConfigurationDescriptor:
     bConfigurationValueSourceIndexPattern = "CONFIGURATION_BCONFIGURATIONVALUE_INDEX => "
     bConfigurationValueSourceCountPattern = "CONFIGURATION_BCONFIGURATIONVALUE_COUNT => "
 
+    # Configuration String Special Field
+    # iConfiguration bLength (1 byte)
+    iConfigurationbLength = []
+    iConfigurationbLengthLength = 255
+    iConfigurationbLengthFormat = FieldFormatEnum.NUMBER
+    iConfigurationbLengthName = "iConfigurationbLength"
+    iConfigurationbLengthMatch = iConfigurationbLengthName.casefold()
+    iConfigurationbLengthLastMandatoryValueIndex = 0
+    iConfigurationbLengthSourceIndexPattern = "CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX => "
+    iConfigurationbLengthSourceCountPattern = "CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT => "
+
+    # Configuration String Special Field
+    # iConfiguration (253 bytes)
+    iConfiguration = []
+    iConfigurationLength = 253
+    iConfigurationFormat = FieldFormatEnum.STRING
+    iConfigurationName = "iConfiguration"
+    iConfigurationMatch = iConfigurationName.casefold()
+    iConfigurationLastMandatoryValueIndex = 0
+    iConfigurationSourceIndexPattern = "CONFIGURATION_ICONFIGURATION_INDEX => "
+    iConfigurationSourceCountPattern = "CONFIGURATION_ICONFIGURATION_COUNT => "
+
     # bmAttributes (1 byte)
     bmAttributes = []
     bmAttributesLength = 2
@@ -163,6 +185,36 @@ class ConfigurationDescriptor:
                 else:
                     self.bConfigurationValue.append(newValue)
 
+            # iConfiguration bLength
+            case self.iConfigurationbLengthMatch:
+                # New Value to Add
+                newValue = VerificationValue(value, self.iConfigurationbLengthLength, self.iConfigurationbLengthFormat, verificationLevel, operator)
+
+                # Handle Verification Level Priority (Mandatory First)
+                if (VerificationLevelEnum.MANDATORY == newValue.verificationLevel):
+                    # Add New Mandatory Value
+                    self.iConfigurationbLength.insert(self.iConfigurationbLengthLastMandatoryValueIndex, newValue)
+                    self.iConfigurationbLengthLastMandatoryValueIndex += 1
+
+                # Optional New Value (add the end of the list)
+                else:
+                    self.iConfigurationbLength.append(newValue)
+
+            # iConfiguration
+            case self.iConfigurationMatch:
+                # New Value to Add
+                newValue = VerificationValue(value, self.iConfigurationLength, self.iConfigurationFormat, verificationLevel, operator)
+
+                # Handle Verification Level Priority (Mandatory First)
+                if (VerificationLevelEnum.MANDATORY == newValue.verificationLevel):
+                    # Add New Mandatory Value
+                    self.iConfiguration.insert(self.iConfigurationLastMandatoryValueIndex, newValue)
+                    self.iConfigurationLastMandatoryValueIndex += 1
+
+                # Optional New Value (add the end of the list)
+                else:
+                    self.iConfiguration.append(newValue)
+
             # bmAttributes
             case self.bmAttributesMatch:
                 # New Value to Add
@@ -229,6 +281,20 @@ class ConfigurationDescriptor:
                 else:
                     self.bConfigurationValue = [el for el in self.bConfigurationValue if el.value != value and el.operator != operator]
 
+            # iConfiguration bLength
+            case self.iConfigurationbLengthMatch:
+                if (operator == None):
+                    self.iConfigurationbLength = [el for el in self.iConfigurationbLength if el.value != value]
+                else:
+                    self.iConfigurationbLength = [el for el in self.iConfigurationbLength if el.value != value and el.operator != operator]
+
+            # iConfiguration
+            case self.iConfigurationMatch:
+                if (operator == None):
+                    self.iConfiguration = [el for el in self.iConfiguration if el.value != value]
+                else:
+                    self.iConfiguration = [el for el in self.iConfiguration if el.value != value and el.operator != operator]
+
             # bmAttributes
             case self.bmAttributesMatch:
                 if (operator == None):
@@ -271,6 +337,16 @@ class ConfigurationDescriptor:
                 print(self.bConfigurationValueName + ":\n")
                 for el in self.bConfigurationValue: el.showDetails()
 
+            # iConfiguration bLength
+            case self.iConfigurationbLengthMatch:
+                print(self.iConfigurationbLengthName + ":\n")
+                for el in self.iConfigurationbLength: el.showDetails()
+
+            # iConfiguration
+            case self.iConfigurationMatch:
+                print(self.iConfigurationName + ":\n")
+                for el in self.iConfiguration: el.showDetails()
+
             # bmAttributes
             case self.bmAttributesMatch:
                 print(self.bmAttributesName + ":\n")
@@ -301,6 +377,12 @@ class ConfigurationDescriptor:
         # bConfigurationValue
         self.displayVerificationValues(self.bConfigurationValueName)
 
+        # iConfiguration bLength
+        self.displayVerificationValues(self.iConfigurationbLengthName)
+
+        # iConfiguration
+        self.displayVerificationValues(self.iConfigurationName)
+
         # bmAttributes
         self.displayVerificationValues(self.bmAttributesName)
 
@@ -327,6 +409,14 @@ class ConfigurationDescriptor:
         # bConfigurationValue
         for el in self.bConfigurationValue:
             valueList.append([self.bConfigurationValueName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
+
+        # iConfiguration bLength
+        for el in self.iConfigurationbLength:
+            valueList.append([self.iConfigurationbLengthName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
+
+        # iConfiguration
+        for el in self.iConfiguration:
+            valueList.append([self.iConfigurationName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
 
         # bmAttributes
         for el in self.bmAttributes:
@@ -380,6 +470,24 @@ class ConfigurationDescriptor:
         result.append([self.bConfigurationValueName, count])
         count = 0
 
+        # iConfiguration bLength
+        for el in self.iConfigurationbLength:
+            if (operator == el.operator):
+                count += el.getMemoryUsage()
+
+        # Add Result & Reset Counter
+        result.append([self.iConfigurationbLengthName, count])
+        count = 0
+
+        # iConfiguration
+        for el in self.iConfiguration:
+            if (operator == el.operator):
+                count += el.getMemoryUsage()
+
+        # Add Result & Reset Counter
+        result.append([self.iConfigurationName, count])
+        count = 0
+
         # bmAttributes
         for el in self.bmAttributes:
             if (operator == el.operator):
@@ -421,6 +529,16 @@ class ConfigurationDescriptor:
 
         # bConfigurationValue
         for el in self.bConfigurationValue:
+            if (operator == el.operator):
+                return True
+
+        # iConfiguration bLength
+        for el in self.iConfigurationbLength:
+            if (operator == el.operator):
+                return True
+
+        # iConfiguration
+        for el in self.iConfiguration:
             if (operator == el.operator):
                 return True
 
@@ -489,6 +607,30 @@ class ConfigurationDescriptor:
         for el in VerificationValue.generateMemoryValues(memoryValueConfig):
             result.append(el)
 
+        # iConfiguration bLength
+        memoryValueConfig = []
+        for el in self.iConfigurationbLength:
+            if (operator == el.operator):
+                # Convert Memory Configurations
+                for e in el.convertToMemConfig():
+                    memoryValueConfig.append(e)
+
+        # Order & Add Memory Values
+        for el in VerificationValue.generateMemoryValues(memoryValueConfig):
+            result.append(el)
+
+        # iConfiguration
+        memoryValueConfig = []
+        for el in self.iConfiguration:
+            if (operator == el.operator):
+                # Convert Memory Configurations
+                for e in el.convertToMemConfig():
+                    memoryValueConfig.append(e)
+
+        # Order & Add Memory Values
+        for el in VerificationValue.generateMemoryValues(memoryValueConfig):
+            result.append(el)
+
         # bmAttributes
         memoryValueConfig = []
         for el in self.bmAttributes:
@@ -532,6 +674,12 @@ class ConfigurationDescriptor:
         # bConfigurationValue
         largestPartVerif = self.__getLargestVerificationNumber(self.bConfigurationValue, largestPartVerif)
 
+        # iConfiguration bLength
+        largestPartVerif = self.__getLargestVerificationNumber(self.iConfigurationbLength, largestPartVerif)
+
+        # iConfiguration
+        largestPartVerif = self.__getLargestVerificationNumber(self.iConfiguration, largestPartVerif)
+
         # bmAttributes
         largestPartVerif = self.__getLargestVerificationNumber(self.bmAttributes, largestPartVerif)
 
@@ -557,6 +705,14 @@ class ConfigurationDescriptor:
 
         # bConfigurationValue
         for el in self.bConfigurationValue:
+            return True
+
+        # iConfiguration bLength
+        for el in self.iConfigurationbLength:
+            return True
+
+        # iConfiguration
+        for el in self.iConfiguration:
             return True
 
         # bmAttributes
@@ -611,6 +767,14 @@ class ConfigurationDescriptor:
             # bConfigurationValue
             case ConfigurationDescriptor.bConfigurationValueName:
                 return (ConfigurationDescriptor.bConfigurationValueSourceIndexPattern, ConfigurationDescriptor.bConfigurationValueSourceCountPattern)
+
+            # iConfiguration bLength
+            case ConfigurationDescriptor.iConfigurationbLengthName:
+                return (ConfigurationDescriptor.iConfigurationbLengthSourceIndexPattern, ConfigurationDescriptor.iConfigurationbLengthSourceCountPattern)
+
+            # iConfiguration
+            case ConfigurationDescriptor.iConfigurationName:
+                return (ConfigurationDescriptor.iConfigurationSourceIndexPattern, ConfigurationDescriptor.iConfigurationSourceCountPattern)
 
             # bmAttributes
             case ConfigurationDescriptor.bmAttributesName:

@@ -97,6 +97,28 @@ class InterfaceDescriptor:
     bInterfaceProtocolSourceIndexPattern = "INTERFACE_BINTERFACEPROTOCOL_INDEX => "
     bInterfaceProtocolSourceCountPattern = "INTERFACE_BINTERFACEPROTOCOL_COUNT => "
 
+    # Interface String Special Field
+    # iInterface bLength (1 byte)
+    iInterfacebLength = []
+    iInterfacebLengthLength = 255
+    iInterfacebLengthFormat = FieldFormatEnum.NUMBER
+    iInterfacebLengthName = "iInterfacebLength"
+    iInterfacebLengthMatch = iInterfacebLengthName.casefold()
+    iInterfacebLengthLastMandatoryValueIndex = 0
+    iInterfacebLengthSourceIndexPattern = "INTERFACE_IINTERFACE_BLENGTH_INDEX => "
+    iInterfacebLengthSourceCountPattern = "INTERFACE_IINTERFACE_BLENGTH_COUNT => "
+
+    # Interface String Special Field
+    # iInterface (253 bytes)
+    iInterface = []
+    iInterfaceLength = 253
+    iInterfaceFormat = FieldFormatEnum.STRING
+    iInterfaceName = "iInterface"
+    iInterfaceMatch = iInterfaceName.casefold()
+    iInterfaceLastMandatoryValueIndex = 0
+    iInterfaceSourceIndexPattern = "INTERFACE_IINTERFACE_INDEX => "
+    iInterfaceSourceCountPattern = "INTERFACE_IINTERFACE_COUNT => "
+
     #########################################
     ## Public Interface Descriptor Methods ##
     #########################################
@@ -214,6 +236,36 @@ class InterfaceDescriptor:
                 else:
                     self.bInterfaceProtocol.append(newValue)
 
+            # iInterface bLength
+            case self.iInterfacebLengthMatch:
+                # New Value to Add
+                newValue = VerificationValue(value, self.iInterfacebLengthLength, self.iInterfacebLengthFormat, verificationLevel, operator)
+
+                # Handle Verification Level Priority (Mandatory First)
+                if (VerificationLevelEnum.MANDATORY == newValue.verificationLevel):
+                    # Add New Mandatory Value
+                    self.iInterfacebLength.insert(self.iInterfacebLengthLastMandatoryValueIndex, newValue)
+                    self.iInterfacebLengthLastMandatoryValueIndex += 1
+
+                # Optional New Value (add the end of the list)
+                else:
+                    self.iInterfacebLength.append(newValue)
+
+            # iInterface
+            case self.iInterfaceMatch:
+                # New Value to Add
+                newValue = VerificationValue(value, self.iInterfaceLength, self.iInterfaceFormat, verificationLevel, operator)
+
+                # Handle Verification Level Priority (Mandatory First)
+                if (VerificationLevelEnum.MANDATORY == newValue.verificationLevel):
+                    # Add New Mandatory Value
+                    self.iInterface.insert(self.iInterfaceLastMandatoryValueIndex, newValue)
+                    self.iInterfaceLastMandatoryValueIndex += 1
+
+                # Optional New Value (add the end of the list)
+                else:
+                    self.iInterface.append(newValue)
+
             # Unknown Field
             case _:
                 raise Exception("Unkown " + self.DESCRIPTOR_NAME + " Field: " + fieldName)
@@ -271,6 +323,20 @@ class InterfaceDescriptor:
                 else:
                     self.bInterfaceProtocol = [el for el in self.bInterfaceProtocol if el.value != value and el.operator != operator]
 
+            # iInterface bLength
+            case self.iInterfacebLengthMatch:
+                if (operator == None):
+                    self.iInterfacebLength = [el for el in self.iInterfacebLength if el.value != value]
+                else:
+                    self.iInterfaceLength = [el for el in self.iInterfacebLength if el.value != value and el.operator != operator]
+
+            # iInterface
+            case self.iInterfaceMatch:
+                if (operator == None):
+                    self.iInterface = [el for el in self.iInterface if el.value != value]
+                else:
+                    self.iInterface = [el for el in self.iInterface if el.value != value and el.operator != operator]
+
             # Unknown Field
             case _:
                 raise Exception("Unkown " + self.DESCRIPTOR_NAME + " Field: " + fieldName)
@@ -314,6 +380,16 @@ class InterfaceDescriptor:
                 print(self.bInterfaceProtocolName + ":\n")
                 for el in self.bInterfaceProtocol: el.showDetails()
 
+            # iInterface bLength
+            case self.iInterfacebLengthMatch:
+                print(self.iInterfacebLengthName + ":\n")
+                for el in self.iInterfacebLength: el.showDetails()
+
+            # iInterface
+            case self.iInterfaceMatch:
+                print(self.iInterfaceName + ":\n")
+                for el in self.iInterface: el.showDetails()
+
             # Unknown Field
             case _:
                 raise Exception("Unkown " + self.DESCRIPTOR_NAME + " Field: " + fieldName)
@@ -342,6 +418,12 @@ class InterfaceDescriptor:
 
         # bInterfaceProtocol
         self.displayVerificationValues(self.bInterfaceProtocolName)
+
+        # iInterface bLength
+        self.displayVerificationValues(self.iInterfacebLengthName)
+
+        # iInterface
+        self.displayVerificationValues(self.iInterfaceName)
 
     ### Get Verification Values ###
     ### Return: [ [USB Field, Operator, Value, Verification Level] ]
@@ -375,6 +457,14 @@ class InterfaceDescriptor:
         # bInterfaceProtocol
         for el in self.bInterfaceProtocol:
             valueList.append([self.bInterfaceProtocolName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
+
+        # iInterface bLength
+        for el in self.iInterfacebLength:
+            valueList.append([self.iInterfacebLengthName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
+
+        # iInterface
+        for el in self.iInterface:
+            valueList.append([self.iInterfaceName, el.operator.name.capitalize(), el.value, el.verificationLevel.name])
 
         return valueList
 
@@ -446,6 +536,22 @@ class InterfaceDescriptor:
         # Add Result & Reset Counter
         result.append([self.bInterfaceProtocolName, count])
 
+        # iInterface bLength
+        for el in self.iInterfacebLength:
+            if (operator == el.operator):
+                count += el.getMemoryUsage()
+
+        # Add Result & Reset Counter
+        result.append([self.iInterfacebLengthName, count])
+
+        # iInterface
+        for el in self.iInterface:
+            if (operator == el.operator):
+                count += el.getMemoryUsage()
+
+        # Add Result & Reset Counter
+        result.append([self.iInterfaceName, count])
+
         # End of Process
         return result
 
@@ -485,6 +591,16 @@ class InterfaceDescriptor:
 
         # bInterfaceProtocol
         for el in self.bInterfaceProtocol:
+            if (operator == el.operator):
+                return True
+
+        # iInterface bLength
+        for el in self.iInterfacebLength:
+            if (operator == el.operator):
+                return True
+
+        # iInterface
+        for el in self.iInterface:
             if (operator == el.operator):
                 return True
 
@@ -579,6 +695,30 @@ class InterfaceDescriptor:
         for el in VerificationValue.generateMemoryValues(memoryValueConfig):
             result.append(el)
 
+        # iInterface bLength
+        memoryValueConfig = []
+        for el in self.iInterfacebLength:
+            if (operator == el.operator):
+                # Convert Memory Configurations
+                for e in el.convertToMemConfig():
+                    memoryValueConfig.append(e)
+
+        # Order & Add Memory Values
+        for el in VerificationValue.generateMemoryValues(memoryValueConfig):
+            result.append(el)
+            
+        # iInterface
+        memoryValueConfig = []
+        for el in self.iInterface:
+            if (operator == el.operator):
+                # Convert Memory Configurations
+                for e in el.convertToMemConfig():
+                    memoryValueConfig.append(e)
+
+        # Order & Add Memory Values
+        for el in VerificationValue.generateMemoryValues(memoryValueConfig):
+            result.append(el)
+
         # End of Process
         return result
 
@@ -606,6 +746,13 @@ class InterfaceDescriptor:
 
         # bInterfaceProtocol
         largestPartVerif = self.__getLargestVerificationNumber(self.bInterfaceProtocol, largestPartVerif)        
+
+        # iInterface bLength
+        largestPartVerif = self.__getLargestVerificationNumber(self.iInterfacebLength, largestPartVerif)        
+
+        # iInterface
+        largestPartVerif = self.__getLargestVerificationNumber(self.iInterface, largestPartVerif)        
+
         return largestPartVerif
 
     ### Check if the Descriptor is InUse (at least on Value) ###
@@ -638,6 +785,14 @@ class InterfaceDescriptor:
 
         # bInterfaceProtocol
         for el in self.bInterfaceProtocol:
+            return True
+
+        # iInterface bLength
+        for el in self.iInterfacebLength:
+            return True
+
+        # iInterface
+        for el in self.iInterface:
             return True
 
         # Descriptor not used
@@ -680,6 +835,14 @@ class InterfaceDescriptor:
             # bInterfaceProtocol
             case InterfaceDescriptor.bInterfaceProtocolName:
                 return (InterfaceDescriptor.bInterfaceProtocolSourceIndexPattern, InterfaceDescriptor.bInterfaceProtocolSourceCountPattern)
+
+            # iInterface bLength
+            case InterfaceDescriptor.iInterfacebLengthName:
+                return (InterfaceDescriptor.iInterfacebLengthSourceIndexPattern, InterfaceDescriptor.iInterfacebLengthSourceCountPattern)
+
+            # iInterface
+            case InterfaceDescriptor.iInterfaceName:
+                return (InterfaceDescriptor.iInterfaceSourceIndexPattern, InterfaceDescriptor.iInterfaceSourceCountPattern)
 
             # Unknown Field
             case _:
