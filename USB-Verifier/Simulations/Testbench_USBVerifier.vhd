@@ -34,7 +34,7 @@
 --		CONTAINS_OPERATOR_ENABLE: Define if the Contains Operator is Enable/Disable ('0': Disabled, '1': Enabled)
 --		NOT_CONTAINS_OPERATOR_ENABLE: Define if the NotContains Operator is Enable/Disable ('0': Disabled, '1': Enabled)
 --		WATCHDOG_LIMIT: Define the maximum number of allowed verification clock cycles (in line with all operators latency)
-
+--
 --		EQUALS_MEMORY_ADDR_LENGTH: Define the Memory Address Bus Length for Equals Operator (in line with the maximum index value)
 --		EQUALS_MEMORY_ADDR_MAX_INDEX: Define the Memory Maximum Address for Equals Operator (in line with the maximum index value)
 --		EQUALS_MEMORY_ADDR_MAX_COUNT: Define the Memory Maximum Address Count for Equals Operator (in line with the maximum count value)
@@ -56,8 +56,76 @@
 --		EQUALS_DEVICE_IDPRODUCT_COUNT: Device Descriptor Product USB Field Count for Equals Operator
 --		EQUALS_DEVICE_BCDDEVICE_INDEX: Device Descriptor Device Release Number USB Field Index for Equals Operator
 --		EQUALS_DEVICE_BCDDEVICE_COUNT: Device Descriptor Device Release Number USB Field Count for Equals Operator
+--		EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: Device Descriptor String Manufacturer Length USB Field Index for Equals Operator
+--		EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: Device Descriptor String Manufacturer Length USB Field Count for Equals Operator
+--		EQUALS_DEVICE_IMANUFACTURER_INDEX: Device Descriptor String Manufacturer USB Field Index for Equals Operator
+--		EQUALS_DEVICE_IMANUFACTURER_COUNT: Device Descriptor String Manufacturer USB Field Count for Equals Operator
+--		EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX: Device Descriptor String Product Length USB Field Index for Equals Operator
+--		EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT: Device Descriptor String Product Length USB Field Count for Equals Operator
+--		EQUALS_DEVICE_IPRODUCT_INDEX: Device Descriptor String Product USB Field Index for Equals Operator
+--		EQUALS_DEVICE_IPRODUCT_COUNT: Device Descriptor String Product USB Field Count for Equals Operator
+--		EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: Device Descriptor String Serial Number Length USB Field Index for Equals Operator
+--		EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: Device Descriptor String Serial Number Length USB Field Count for Equals Operator
+--		EQUALS_DEVICE_ISERIALNUMBER_INDEX: Device Descriptor String Serial Number USB Field Index for Equals Operator
+--		EQUALS_DEVICE_ISERIALNUMBER_COUNT: Device Descriptor String Serial Number USB Field Count for Equals Operator
 --		EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX: Device Descriptor Num Configuration USB Field Index for Equals Operator
 --		EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT: Device Descriptor Num Configuration USB Field Count for Equals Operator
+--		EQUALS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for Equals Operator
+--		EQUALS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for Equals Operator
+--		EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for Equals Operator
+--		EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for Equals Operator
+--		EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for Equals Operator
+--		EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for Equals Operator
+--		EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for Equals Operator
+--		EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for Equals Operator
+--		EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: Configuration Descriptor String Configuration Length USB Field Index for Equals Operator
+--		EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: Configuration Descriptor String Configuration Length USB Field Count for Equals Operator
+--		EQUALS_CONFIGURATION_ICONFIGURATION_INDEX: Configuration Descriptor String Configuration USB Field Index for Equals Operator
+--		EQUALS_CONFIGURATION_ICONFIGURATION_COUNT: Configuration Descriptor String Configuration USB Field Coubt for Equals Operator
+--		EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for Equals Operator
+--		EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for Equals Operator
+--		EQUALS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for Equals Operator
+--		EQUALS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for Equals Operator
+--		EQUALS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for Equals Operator
+--		EQUALS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for Equals Operator
+--		EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for Equals Operator
+--		EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for Equals Operator
+--		EQUALS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for Equals Operator
+--		EQUALS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for Equals Operator
+--		EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for Equals Operator
+--		EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for Equals Operator
+--		EQUALS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for Equals Operator
+--		EQUALS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for Equals Operator
+--		EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for Equals Operator
+--		EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for Equals Operator
+--		EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for Equals Operator
+--		EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for Equals Operator
+--		EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX: Interface Descriptor String Interface Length USB Field Index for Equals Operator
+--		EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT: Interface Descriptor String Interface Length USB Field Count for Equals Operator
+--		EQUALS_INTERFACE_IINTERFACE_INDEX: Interface Descriptor String Interface USB Field Index for Equals Operator
+--		EQUALS_INTERFACE_IINTERFACE_COUNT: Interface Descriptor String Interface USB Field Count for Equals Operator
+--		EQUALS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for Equals Operator
+--		EQUALS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for Equals Operator
+--		EQUALS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for Equals Operator
+--		EQUALS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for Equals Operator
+--		EQUALS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for Equals Operator
+--		EQUALS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for Equals Operator
+--		EQUALS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for Equals Operator
+--		EQUALS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for Equals Operator
+--		EQUALS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for Equals Operator
+--		EQUALS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for Equals Operator
+--		EQUALS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for Equals Operator
+--		EQUALS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for Equals Operator
+--		EQUALS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for Equals Operator
+--		EQUALS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for Equals Operator
+--		EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for Equals Operator
+--		EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for Equals Operator
+--		EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for Equals Operator
+--		EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for Equals Operator
+--		EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for Equals Operator
+--		EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for Equals Operator
+--		EQUALS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for Equals Operator
+--		EQUALS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for Equals Operator
 --		EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX: Device Qualifier Descriptor Length USB Field Index for Equals Operator
 --		EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT: Device Qualifier Descriptor Length USB Field Count for Equals Operator
 --		EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX: Device Qualifier Descriptor USB Release Number Field Index for Equals Operator
@@ -74,18 +142,6 @@
 --		EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: Device Qualifier Descriptor Num Configuration USB Field Count for Equals Operator
 --		EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX: Device Qualifier Descriptor Reserved USB Field Index for Equals Operator
 --		EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT: Device Qualifier Descriptor Reserved USB Field Count for Equals Operator
---		EQUALS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for Equals Operator
---		EQUALS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for Equals Operator
---		EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for Equals Operator
---		EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for Equals Operator
---		EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for Equals Operator
---		EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for Equals Operator
---		EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for Equals Operator
---		EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for Equals Operator
---		EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for Equals Operator
---		EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for Equals Operator
---		EQUALS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for Equals Operator
---		EQUALS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for Equals Operator
 --		EQUALS_OTHER_SPEED_BLENGTH_INDEX: Other Speed Descriptor Length USB Field Index for Equals Operator
 --		EQUALS_OTHER_SPEED_BLENGTH_COUNT: Other Speed Descriptor Length USB Field Count for Equals Operator
 --		EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX: Other Speed Descriptor Total Length USB Field Index for Equals Operator
@@ -94,58 +150,14 @@
 --		EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT: Other Speed Descriptor Num Interfaces USB Field Count for Equals Operator
 --		EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: Other Speed Descriptor Configuration Value USB Field Index for Equals Operator
 --		EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: Other Speed Descriptor Configuration Value USB Field Count for Equals Operator
+--		EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: Other Speed Descriptor String Configuration Length USB Field Index for Equals Operator
+--		EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: Other Speed Descriptor String Configuration Length USB Field Count for Equals Operator
+--		EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX: Other Speed Descriptor String Configuration USB Field Index for Equals Operator
+--		EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT: Other Speed Descriptor String Configuration USB Field Count for Equals Operator
 --		EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX: Other Speed Descriptor Attributes USB Field Index for Equals Operator
 --		EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT: Other Speed Descriptor Attributes USB Field Count for Equals Operator
 --		EQUALS_OTHER_SPEED_BMAXPOWER_INDEX: Other Speed Descriptor Max Power USB Field Index for Equals Operator
 --		EQUALS_OTHER_SPEED_BMAXPOWER_COUNT: Other Speed Descriptor Max Power USB Field Count for Equals Operator
---		EQUALS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for Equals Operator
---		EQUALS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for Equals Operator
---		EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for Equals Operator
---		EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for Equals Operator
---		EQUALS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for Equals Operator
---		EQUALS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for Equals Operator
---		EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for Equals Operator
---		EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for Equals Operator
---		EQUALS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for Equals Operator
---		EQUALS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for Equals Operator
---		EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for Equals Operator
---		EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for Equals Operator
---		EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for Equals Operator
---		EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for Equals Operator
---		EQUALS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for Equals Operator
---		EQUALS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for Equals Operator
---		EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for Equals Operator
---		EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for Equals Operator
---		EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for Equals Operator
---		EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for Equals Operator
---		EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for Equals Operator
---		EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for Equals Operator
---		EQUALS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for Equals Operator
---		EQUALS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for Equals Operator
---		EQUALS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for Equals Operator
---		EQUALS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for Equals Operator
---		EQUALS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for Equals Operator
---		EQUALS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for Equals Operator
---		EQUALS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for Equals Operator
---		EQUALS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for Equals Operator
---		EQUALS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for Equals Operator
---		EQUALS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for Equals Operator
---		EQUALS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for Equals Operator
---		EQUALS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for Equals Operator
---		EQUALS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for Equals Operator
---		EQUALS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for Equals Operator
---		EQUALS_STRING_BLENGTH_INDEX: String Descriptor Length USB Field Index for Equals Operator
---		EQUALS_STRING_BLENGTH_COUNT: String Descriptor Length USB Field Count for Equals Operator
---		EQUALS_STRING_IMANUFACTURER_INDEX: String Descriptor Manufacturer USB Field Index for Equals Operator
---		EQUALS_STRING_IMANUFACTURER_COUNT: String Descriptor Manufacturer USB Field Count for Equals Operator
---		EQUALS_STRING_IPRODUCT_INDEX: String Descriptor Product USB Field Index for Equals Operator
---		EQUALS_STRING_IPRODUCT_COUNT: String Descriptor Product USB Field Count for Equals Operator
---		EQUALS_STRING_ISERIALNUMBER_INDEX: String Descriptor Serial Number USB Field Index for Equals Operator
---		EQUALS_STRING_ISERIALNUMBER_COUNT: String Descriptor Serial Number USB Field Count for Equals Operator
---		EQUALS_STRING_ICONFIGURATION_INDEX: String Descriptor Configuration USB Field Index for Equals Operator
---		EQUALS_STRING_ICONFIGURATION_COUNT: String Descriptor Configuration USB Field Count for Equals Operator
---		EQUALS_STRING_IINTERFACE_INDEX: String Descriptor Interface USB Field Index for Equals Operator
---		EQUALS_STRING_IINTERFACE_COUNT: String Descriptor Interface USB Field Count for Equals Operator
 --
 --		NOT_EQUALS_MEMORY_ADDR_LENGTH: Define the Memory Address Bus Length for NotEquals Operator (in line with the maximum index value)
 --		NOT_EQUALS_MEMORY_ADDR_MAX_INDEX: Define the Memory Maximum Address for NotEquals Operator (in line with the maximum index value)
@@ -168,8 +180,76 @@
 --		NOT_EQUALS_DEVICE_IDPRODUCT_COUNT: Device Descriptor Product USB Field Count for NotEquals Operator
 --		NOT_EQUALS_DEVICE_BCDDEVICE_INDEX: Device Descriptor Device Release Number USB Field Index for NotEquals Operator
 --		NOT_EQUALS_DEVICE_BCDDEVICE_COUNT: Device Descriptor Device Release Number USB Field Count for NotEquals Operator
+--		NOT_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: Device Descriptor String Manufacturer Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: Device Descriptor String Manufacturer Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_DEVICE_IMANUFACTURER_INDEX: Device Descriptor String Manufacturer USB Field Index for NotEquals Operator
+--		NOT_EQUALS_DEVICE_IMANUFACTURER_COUNT: Device Descriptor String Manufacturer USB Field Count for NotEquals Operator
+--		NOT_EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX: Device Descriptor String Product Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT: Device Descriptor String Product Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_DEVICE_IPRODUCT_INDEX: Device Descriptor String Product USB Field Index for NotEquals Operator
+--		NOT_EQUALS_DEVICE_IPRODUCT_COUNT: Device Descriptor String Product USB Field Count for NotEquals Operator
+--		NOT_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: Device Descriptor String Serial Number Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: Device Descriptor String Serial Number Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_DEVICE_ISERIALNUMBER_INDEX: Device Descriptor String Serial Number USB Field Index for NotEquals Operator
+--		NOT_EQUALS_DEVICE_ISERIALNUMBER_COUNT: Device Descriptor String Serial Number USB Field Count for NotEquals Operator
 --		NOT_EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX: Device Descriptor Num Configuration USB Field Index for NotEquals Operator
 --		NOT_EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT: Device Descriptor Num Configuration USB Field Count for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: Configuration Descriptor String Configuration Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: Configuration Descriptor String Configuration Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_ICONFIGURATION_INDEX: Configuration Descriptor String Configuration USB Field Index for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_ICONFIGURATION_COUNT: Configuration Descriptor String Configuration USB Field Coubt for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for NotEquals Operator
+--		NOT_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX: Interface Descriptor String Interface Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT: Interface Descriptor String Interface Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_IINTERFACE_INDEX: Interface Descriptor String Interface USB Field Index for NotEquals Operator
+--		NOT_EQUALS_INTERFACE_IINTERFACE_COUNT: Interface Descriptor String Interface USB Field Count for NotEquals Operator
+--		NOT_EQUALS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for NotEquals Operator
+--		NOT_EQUALS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for NotEquals Operator
+--		NOT_EQUALS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for NotEquals Operator
+--		NOT_EQUALS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for NotEquals Operator
+--		NOT_EQUALS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for NotEquals Operator
+--		NOT_EQUALS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for NotEquals Operator
+--		NOT_EQUALS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for NotEquals Operator
+--		NOT_EQUALS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for NotEquals Operator
+--		NOT_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for NotEquals Operator
+--		NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for NotEquals Operator
+--		NOT_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for NotEquals Operator
+--		NOT_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for NotEquals Operator
+--		NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for NotEquals Operator
+--		NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for NotEquals Operator
+--		NOT_EQUALS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for NotEquals Operator
+--		NOT_EQUALS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for NotEquals Operator
 --		NOT_EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX: Device Qualifier Descriptor Length USB Field Index for NotEquals Operator
 --		NOT_EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT: Device Qualifier Descriptor Length USB Field Count for NotEquals Operator
 --		NOT_EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX: Device Qualifier Descriptor USB Release Number Field Index for NotEquals Operator
@@ -186,18 +266,6 @@
 --		NOT_EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: Device Qualifier Descriptor Num Configuration USB Field Count for NotEquals Operator
 --		NOT_EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX: Device Qualifier Descriptor Reserved USB Field Index for NotEquals Operator
 --		NOT_EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT: Device Qualifier Descriptor Reserved USB Field Count for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for NotEquals Operator
---		NOT_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for NotEquals Operator
 --		NOT_EQUALS_OTHER_SPEED_BLENGTH_INDEX: Other Speed Descriptor Length USB Field Index for NotEquals Operator
 --		NOT_EQUALS_OTHER_SPEED_BLENGTH_COUNT: Other Speed Descriptor Length USB Field Count for NotEquals Operator
 --		NOT_EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX: Other Speed Descriptor Total Length USB Field Index for NotEquals Operator
@@ -206,58 +274,14 @@
 --		NOT_EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT: Other Speed Descriptor Num Interfaces USB Field Count for NotEquals Operator
 --		NOT_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: Other Speed Descriptor Configuration Value USB Field Index for NotEquals Operator
 --		NOT_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: Other Speed Descriptor Configuration Value USB Field Count for NotEquals Operator
+--		NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: Other Speed Descriptor String Configuration Length USB Field Index for NotEquals Operator
+--		NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: Other Speed Descriptor String Configuration Length USB Field Count for NotEquals Operator
+--		NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX: Other Speed Descriptor String Configuration USB Field Index for NotEquals Operator
+--		NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT: Other Speed Descriptor String Configuration USB Field Count for NotEquals Operator
 --		NOT_EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX: Other Speed Descriptor Attributes USB Field Index for NotEquals Operator
 --		NOT_EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT: Other Speed Descriptor Attributes USB Field Count for NotEquals Operator
 --		NOT_EQUALS_OTHER_SPEED_BMAXPOWER_INDEX: Other Speed Descriptor Max Power USB Field Index for NotEquals Operator
 --		NOT_EQUALS_OTHER_SPEED_BMAXPOWER_COUNT: Other Speed Descriptor Max Power USB Field Count for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for NotEquals Operator
---		NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for NotEquals Operator
---		NOT_EQUALS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for NotEquals Operator
---		NOT_EQUALS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for NotEquals Operator
---		NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for NotEquals Operator
---		NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for NotEquals Operator
---		NOT_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for NotEquals Operator
---		NOT_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for NotEquals Operator
---		NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for NotEquals Operator
---		NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for NotEquals Operator
---		NOT_EQUALS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for NotEquals Operator
---		NOT_EQUALS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for NotEquals Operator
---		NOT_EQUALS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for NotEquals Operator
---		NOT_EQUALS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for NotEquals Operator
---		NOT_EQUALS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for NotEquals Operator
---		NOT_EQUALS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for NotEquals Operator
---		NOT_EQUALS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for NotEquals Operator
---		NOT_EQUALS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for NotEquals Operator
---		NOT_EQUALS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for NotEquals Operator
---		NOT_EQUALS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for NotEquals Operator
---		NOT_EQUALS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for NotEquals Operator
---		NOT_EQUALS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for NotEquals Operator
---		NOT_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for NotEquals Operator
---		NOT_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for NotEquals Operator
---		NOT_EQUALS_STRING_BLENGTH_INDEX: String Descriptor Length USB Field Index for NotEquals Operator
---		NOT_EQUALS_STRING_BLENGTH_COUNT: String Descriptor Length USB Field Count for NotEquals Operator
---		NOT_EQUALS_STRING_IMANUFACTURER_INDEX: String Descriptor Manufacturer USB Field Index for NotEquals Operator
---		NOT_EQUALS_STRING_IMANUFACTURER_COUNT: String Descriptor Manufacturer USB Field Count for NotEquals Operator
---		NOT_EQUALS_STRING_IPRODUCT_INDEX: String Descriptor Product USB Field Index for NotEquals Operator
---		NOT_EQUALS_STRING_IPRODUCT_COUNT: String Descriptor Product USB Field Count for NotEquals Operator
---		NOT_EQUALS_STRING_ISERIALNUMBER_INDEX: String Descriptor Serial Number USB Field Index for NotEquals Operator
---		NOT_EQUALS_STRING_ISERIALNUMBER_COUNT: String Descriptor Serial Number USB Field Count for NotEquals Operator
---		NOT_EQUALS_STRING_ICONFIGURATION_INDEX: String Descriptor Configuration USB Field Index for NotEquals Operator
---		NOT_EQUALS_STRING_ICONFIGURATION_COUNT: String Descriptor Configuration USB Field Count for NotEquals Operator
---		NOT_EQUALS_STRING_IINTERFACE_INDEX: String Descriptor Interface USB Field Index for NotEquals Operator
---		NOT_EQUALS_STRING_IINTERFACE_COUNT: String Descriptor Interface USB Field Count for NotEquals Operator
 --
 --		GREATER_MEMORY_ADDR_LENGTH: Define the Memory Address Bus Length for Greater Operator (in line with the maximum index value)
 --		GREATER_MEMORY_ADDR_MAX_INDEX: Define the Memory Maximum Address for Greater Operator (in line with the maximum index value)
@@ -280,8 +304,76 @@
 --		GREATER_DEVICE_IDPRODUCT_COUNT: Device Descriptor Product USB Field Count for Greater Operator
 --		GREATER_DEVICE_BCDDEVICE_INDEX: Device Descriptor Device Release Number USB Field Index for Greater Operator
 --		GREATER_DEVICE_BCDDEVICE_COUNT: Device Descriptor Device Release Number USB Field Count for Greater Operator
+--		GREATER_DEVICE_IMANUFACTURER_BLENGTH_INDEX: Device Descriptor String Manufacturer Length USB Field Index for Greater Operator
+--		GREATER_DEVICE_IMANUFACTURER_BLENGTH_COUNT: Device Descriptor String Manufacturer Length USB Field Count for Greater Operator
+--		GREATER_DEVICE_IMANUFACTURER_INDEX: Device Descriptor String Manufacturer USB Field Index for Greater Operator
+--		GREATER_DEVICE_IMANUFACTURER_COUNT: Device Descriptor String Manufacturer USB Field Count for Greater Operator
+--		GREATER_DEVICE_IPRODUCT_BLENGTH_INDEX: Device Descriptor String Product Length USB Field Index for Greater Operator
+--		GREATER_DEVICE_IPRODUCT_BLENGTH_COUNT: Device Descriptor String Product Length USB Field Count for Greater Operator
+--		GREATER_DEVICE_IPRODUCT_INDEX: Device Descriptor String Product USB Field Index for Greater Operator
+--		GREATER_DEVICE_IPRODUCT_COUNT: Device Descriptor String Product USB Field Count for Greater Operator
+--		GREATER_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: Device Descriptor String Serial Number Length USB Field Index for Greater Operator
+--		GREATER_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: Device Descriptor String Serial Number Length USB Field Count for Greater Operator
+--		GREATER_DEVICE_ISERIALNUMBER_INDEX: Device Descriptor String Serial Number USB Field Index for Greater Operator
+--		GREATER_DEVICE_ISERIALNUMBER_COUNT: Device Descriptor String Serial Number USB Field Count for Greater Operator
 --		GREATER_DEVICE_BNUMCONFIGURATIONS_INDEX: Device Descriptor Num Configuration USB Field Index for Greater Operator
 --		GREATER_DEVICE_BNUMCONFIGURATIONS_COUNT: Device Descriptor Num Configuration USB Field Count for Greater Operator
+--		GREATER_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for Greater Operator
+--		GREATER_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for Greater Operator
+--		GREATER_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for Greater Operator
+--		GREATER_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for Greater Operator
+--		GREATER_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for Greater Operator
+--		GREATER_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for Greater Operator
+--		GREATER_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for Greater Operator
+--		GREATER_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for Greater Operator
+--		GREATER_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: Configuration Descriptor String Configuration Length USB Field Index for Greater Operator
+--		GREATER_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: Configuration Descriptor String Configuration Length USB Field Count for Greater Operator
+--		GREATER_CONFIGURATION_ICONFIGURATION_INDEX: Configuration Descriptor String Configuration USB Field Index for Greater Operator
+--		GREATER_CONFIGURATION_ICONFIGURATION_COUNT: Configuration Descriptor String Configuration USB Field Coubt for Greater Operator
+--		GREATER_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for Greater Operator
+--		GREATER_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for Greater Operator
+--		GREATER_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for Greater Operator
+--		GREATER_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for Greater Operator
+--		GREATER_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for Greater Operator
+--		GREATER_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for Greater Operator
+--		GREATER_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for Greater Operator
+--		GREATER_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for Greater Operator
+--		GREATER_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for Greater Operator
+--		GREATER_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for Greater Operator
+--		GREATER_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for Greater Operator
+--		GREATER_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for Greater Operator
+--		GREATER_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for Greater Operator
+--		GREATER_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for Greater Operator
+--		GREATER_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for Greater Operator
+--		GREATER_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for Greater Operator
+--		GREATER_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for Greater Operator
+--		GREATER_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for Greater Operator
+--		GREATER_INTERFACE_IINTERFACE_BLENGTH_INDEX: Interface Descriptor String Interface Length USB Field Index for Greater Operator
+--		GREATER_INTERFACE_IINTERFACE_BLENGTH_COUNT: Interface Descriptor String Interface Length USB Field Count for Greater Operator
+--		GREATER_INTERFACE_IINTERFACE_INDEX: Interface Descriptor String Interface USB Field Index for Greater Operator
+--		GREATER_INTERFACE_IINTERFACE_COUNT: Interface Descriptor String Interface USB Field Count for Greater Operator
+--		GREATER_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for Greater Operator
+--		GREATER_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for Greater Operator
+--		GREATER_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for Greater Operator
+--		GREATER_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for Greater Operator
+--		GREATER_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for Greater Operator
+--		GREATER_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for Greater Operator
+--		GREATER_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for Greater Operator
+--		GREATER_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for Greater Operator
+--		GREATER_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for Greater Operator
+--		GREATER_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for Greater Operator
+--		GREATER_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for Greater Operator
+--		GREATER_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for Greater Operator
+--		GREATER_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for Greater Operator
+--		GREATER_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for Greater Operator
+--		GREATER_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for Greater Operator
+--		GREATER_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for Greater Operator
+--		GREATER_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for Greater Operator
+--		GREATER_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for Greater Operator
+--		GREATER_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for Greater Operator
+--		GREATER_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for Greater Operator
+--		GREATER_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for Greater Operator
+--		GREATER_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for Greater Operator
 --		GREATER_DEVICE_QUALIFIER_BLENGTH_INDEX: Device Qualifier Descriptor Length USB Field Index for Greater Operator
 --		GREATER_DEVICE_QUALIFIER_BLENGTH_COUNT: Device Qualifier Descriptor Length USB Field Count for Greater Operator
 --		GREATER_DEVICE_QUALIFIER_BCDUSB_INDEX: Device Qualifier Descriptor USB Release Number Field Index for Greater Operator
@@ -298,18 +390,6 @@
 --		GREATER_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: Device Qualifier Descriptor Num Configuration USB Field Count for Greater Operator
 --		GREATER_DEVICE_QUALIFIER_BRESERVED_INDEX: Device Qualifier Descriptor Reserved USB Field Index for Greater Operator
 --		GREATER_DEVICE_QUALIFIER_BRESERVED_COUNT: Device Qualifier Descriptor Reserved USB Field Count for Greater Operator
---		GREATER_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for Greater Operator
---		GREATER_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for Greater Operator
---		GREATER_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for Greater Operator
---		GREATER_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for Greater Operator
---		GREATER_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for Greater Operator
---		GREATER_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for Greater Operator
---		GREATER_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for Greater Operator
---		GREATER_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for Greater Operator
---		GREATER_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for Greater Operator
---		GREATER_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for Greater Operator
---		GREATER_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for Greater Operator
---		GREATER_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for Greater Operator
 --		GREATER_OTHER_SPEED_BLENGTH_INDEX: Other Speed Descriptor Length USB Field Index for Greater Operator
 --		GREATER_OTHER_SPEED_BLENGTH_COUNT: Other Speed Descriptor Length USB Field Count for Greater Operator
 --		GREATER_OTHER_SPEED_WTOTALLENGTH_INDEX: Other Speed Descriptor Total Length USB Field Index for Greater Operator
@@ -318,58 +398,14 @@
 --		GREATER_OTHER_SPEED_BNUMINTERFACES_COUNT: Other Speed Descriptor Num Interfaces USB Field Count for Greater Operator
 --		GREATER_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: Other Speed Descriptor Configuration Value USB Field Index for Greater Operator
 --		GREATER_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: Other Speed Descriptor Configuration Value USB Field Count for Greater Operator
+--		GREATER_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: Other Speed Descriptor String Configuration Length USB Field Index for Greater Operator
+--		GREATER_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: Other Speed Descriptor String Configuration Length USB Field Count for Greater Operator
+--		GREATER_OTHER_SPEED_ICONFIGURATION_INDEX: Other Speed Descriptor String Configuration USB Field Index for Greater Operator
+--		GREATER_OTHER_SPEED_ICONFIGURATION_COUNT: Other Speed Descriptor String Configuration USB Field Count for Greater Operator
 --		GREATER_OTHER_SPEED_BMATTRIBUTES_INDEX: Other Speed Descriptor Attributes USB Field Index for Greater Operator
 --		GREATER_OTHER_SPEED_BMATTRIBUTES_COUNT: Other Speed Descriptor Attributes USB Field Count for Greater Operator
 --		GREATER_OTHER_SPEED_BMAXPOWER_INDEX: Other Speed Descriptor Max Power USB Field Index for Greater Operator
 --		GREATER_OTHER_SPEED_BMAXPOWER_COUNT: Other Speed Descriptor Max Power USB Field Count for Greater Operator
---		GREATER_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for Greater Operator
---		GREATER_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for Greater Operator
---		GREATER_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for Greater Operator
---		GREATER_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for Greater Operator
---		GREATER_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for Greater Operator
---		GREATER_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for Greater Operator
---		GREATER_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for Greater Operator
---		GREATER_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for Greater Operator
---		GREATER_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for Greater Operator
---		GREATER_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for Greater Operator
---		GREATER_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for Greater Operator
---		GREATER_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for Greater Operator
---		GREATER_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for Greater Operator
---		GREATER_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for Greater Operator
---		GREATER_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for Greater Operator
---		GREATER_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for Greater Operator
---		GREATER_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for Greater Operator
---		GREATER_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for Greater Operator
---		GREATER_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for Greater Operator
---		GREATER_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for Greater Operator
---		GREATER_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for Greater Operator
---		GREATER_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for Greater Operator
---		GREATER_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for Greater Operator
---		GREATER_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for Greater Operator
---		GREATER_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for Greater Operator
---		GREATER_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for Greater Operator
---		GREATER_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for Greater Operator
---		GREATER_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for Greater Operator
---		GREATER_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for Greater Operator
---		GREATER_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for Greater Operator
---		GREATER_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for Greater Operator
---		GREATER_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for Greater Operator
---		GREATER_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for Greater Operator
---		GREATER_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for Greater Operator
---		GREATER_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for Greater Operator
---		GREATER_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for Greater Operator
---		GREATER_STRING_BLENGTH_INDEX: String Descriptor Length USB Field Index for Greater Operator
---		GREATER_STRING_BLENGTH_COUNT: String Descriptor Length USB Field Count for Greater Operator
---		GREATER_STRING_IMANUFACTURER_INDEX: String Descriptor Manufacturer USB Field Index for Greater Operator
---		GREATER_STRING_IMANUFACTURER_COUNT: String Descriptor Manufacturer USB Field Count for Greater Operator
---		GREATER_STRING_IPRODUCT_INDEX: String Descriptor Product USB Field Index for Greater Operator
---		GREATER_STRING_IPRODUCT_COUNT: String Descriptor Product USB Field Count for Greater Operator
---		GREATER_STRING_ISERIALNUMBER_INDEX: String Descriptor Serial Number USB Field Index for Greater Operator
---		GREATER_STRING_ISERIALNUMBER_COUNT: String Descriptor Serial Number USB Field Count for Greater Operator
---		GREATER_STRING_ICONFIGURATION_INDEX: String Descriptor Configuration USB Field Index for Greater Operator
---		GREATER_STRING_ICONFIGURATION_COUNT: String Descriptor Configuration USB Field Count for Greater Operator
---		GREATER_STRING_IINTERFACE_INDEX: String Descriptor Interface USB Field Index for Greater Operator
---		GREATER_STRING_IINTERFACE_COUNT: String Descriptor Interface USB Field Count for Greater Operator
 --
 --		GREATER_EQUALS_MEMORY_ADDR_LENGTH: Define the Memory Address Bus Length for GreaterEquals Operator (in line with the maximum index value)
 --		GREATER_EQUALS_MEMORY_ADDR_MAX_INDEX: Define the Memory Maximum Address for GreaterEquals Operator (in line with the maximum index value)
@@ -392,8 +428,76 @@
 --		GREATER_EQUALS_DEVICE_IDPRODUCT_COUNT: Device Descriptor Product USB Field Count for GreaterEquals Operator
 --		GREATER_EQUALS_DEVICE_BCDDEVICE_INDEX: Device Descriptor Device Release Number USB Field Index for GreaterEquals Operator
 --		GREATER_EQUALS_DEVICE_BCDDEVICE_COUNT: Device Descriptor Device Release Number USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: Device Descriptor String Manufacturer Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: Device Descriptor String Manufacturer Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_IMANUFACTURER_INDEX: Device Descriptor String Manufacturer USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_IMANUFACTURER_COUNT: Device Descriptor String Manufacturer USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX: Device Descriptor String Product Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT: Device Descriptor String Product Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_IPRODUCT_INDEX: Device Descriptor String Product USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_IPRODUCT_COUNT: Device Descriptor String Product USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: Device Descriptor String Serial Number Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: Device Descriptor String Serial Number Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_ISERIALNUMBER_INDEX: Device Descriptor String Serial Number USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_DEVICE_ISERIALNUMBER_COUNT: Device Descriptor String Serial Number USB Field Count for GreaterEquals Operator
 --		GREATER_EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX: Device Descriptor Num Configuration USB Field Index for GreaterEquals Operator
 --		GREATER_EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT: Device Descriptor Num Configuration USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: Configuration Descriptor String Configuration Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: Configuration Descriptor String Configuration Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_INDEX: Configuration Descriptor String Configuration USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_COUNT: Configuration Descriptor String Configuration USB Field Coubt for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX: Interface Descriptor String Interface Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT: Interface Descriptor String Interface Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_IINTERFACE_INDEX: Interface Descriptor String Interface USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_INTERFACE_IINTERFACE_COUNT: Interface Descriptor String Interface USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for GreaterEquals Operator
 --		GREATER_EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX: Device Qualifier Descriptor Length USB Field Index for GreaterEquals Operator
 --		GREATER_EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT: Device Qualifier Descriptor Length USB Field Count for GreaterEquals Operator
 --		GREATER_EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX: Device Qualifier Descriptor USB Release Number Field Index for GreaterEquals Operator
@@ -410,18 +514,6 @@
 --		GREATER_EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: Device Qualifier Descriptor Num Configuration USB Field Count for GreaterEquals Operator
 --		GREATER_EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX: Device Qualifier Descriptor Reserved USB Field Index for GreaterEquals Operator
 --		GREATER_EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT: Device Qualifier Descriptor Reserved USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for GreaterEquals Operator
 --		GREATER_EQUALS_OTHER_SPEED_BLENGTH_INDEX: Other Speed Descriptor Length USB Field Index for GreaterEquals Operator
 --		GREATER_EQUALS_OTHER_SPEED_BLENGTH_COUNT: Other Speed Descriptor Length USB Field Count for GreaterEquals Operator
 --		GREATER_EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX: Other Speed Descriptor Total Length USB Field Index for GreaterEquals Operator
@@ -430,58 +522,14 @@
 --		GREATER_EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT: Other Speed Descriptor Num Interfaces USB Field Count for GreaterEquals Operator
 --		GREATER_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: Other Speed Descriptor Configuration Value USB Field Index for GreaterEquals Operator
 --		GREATER_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: Other Speed Descriptor Configuration Value USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: Other Speed Descriptor String Configuration Length USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: Other Speed Descriptor String Configuration Length USB Field Count for GreaterEquals Operator
+--		GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX: Other Speed Descriptor String Configuration USB Field Index for GreaterEquals Operator
+--		GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT: Other Speed Descriptor String Configuration USB Field Count for GreaterEquals Operator
 --		GREATER_EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX: Other Speed Descriptor Attributes USB Field Index for GreaterEquals Operator
 --		GREATER_EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT: Other Speed Descriptor Attributes USB Field Count for GreaterEquals Operator
 --		GREATER_EQUALS_OTHER_SPEED_BMAXPOWER_INDEX: Other Speed Descriptor Max Power USB Field Index for GreaterEquals Operator
 --		GREATER_EQUALS_OTHER_SPEED_BMAXPOWER_COUNT: Other Speed Descriptor Max Power USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_STRING_BLENGTH_INDEX: String Descriptor Length USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_STRING_BLENGTH_COUNT: String Descriptor Length USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_STRING_IMANUFACTURER_INDEX: String Descriptor Manufacturer USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_STRING_IMANUFACTURER_COUNT: String Descriptor Manufacturer USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_STRING_IPRODUCT_INDEX: String Descriptor Product USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_STRING_IPRODUCT_COUNT: String Descriptor Product USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_STRING_ISERIALNUMBER_INDEX: String Descriptor Serial Number USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_STRING_ISERIALNUMBER_COUNT: String Descriptor Serial Number USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_STRING_ICONFIGURATION_INDEX: String Descriptor Configuration USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_STRING_ICONFIGURATION_COUNT: String Descriptor Configuration USB Field Count for GreaterEquals Operator
---		GREATER_EQUALS_STRING_IINTERFACE_INDEX: String Descriptor Interface USB Field Index for GreaterEquals Operator
---		GREATER_EQUALS_STRING_IINTERFACE_COUNT: String Descriptor Interface USB Field Count for GreaterEquals Operator
 --
 --		LESS_MEMORY_ADDR_LENGTH: Define the Memory Address Bus Length for Less Operator (in line with the maximum index value)
 --		LESS_MEMORY_ADDR_MAX_INDEX: Define the Memory Maximum Address for Less Operator (in line with the maximum index value)
@@ -504,8 +552,76 @@
 --		LESS_DEVICE_IDPRODUCT_COUNT: Device Descriptor Product USB Field Count for Less Operator
 --		LESS_DEVICE_BCDDEVICE_INDEX: Device Descriptor Device Release Number USB Field Index for Less Operator
 --		LESS_DEVICE_BCDDEVICE_COUNT: Device Descriptor Device Release Number USB Field Count for Less Operator
+--		LESS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: Device Descriptor String Manufacturer Length USB Field Index for Less Operator
+--		LESS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: Device Descriptor String Manufacturer Length USB Field Count for Less Operator
+--		LESS_DEVICE_IMANUFACTURER_INDEX: Device Descriptor String Manufacturer USB Field Index for Less Operator
+--		LESS_DEVICE_IMANUFACTURER_COUNT: Device Descriptor String Manufacturer USB Field Count for Less Operator
+--		LESS_DEVICE_IPRODUCT_BLENGTH_INDEX: Device Descriptor String Product Length USB Field Index for Less Operator
+--		LESS_DEVICE_IPRODUCT_BLENGTH_COUNT: Device Descriptor String Product Length USB Field Count for Less Operator
+--		LESS_DEVICE_IPRODUCT_INDEX: Device Descriptor String Product USB Field Index for Less Operator
+--		LESS_DEVICE_IPRODUCT_COUNT: Device Descriptor String Product USB Field Count for Less Operator
+--		LESS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: Device Descriptor String Serial Number Length USB Field Index for Less Operator
+--		LESS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: Device Descriptor String Serial Number Length USB Field Count for Less Operator
+--		LESS_DEVICE_ISERIALNUMBER_INDEX: Device Descriptor String Serial Number USB Field Index for Less Operator
+--		LESS_DEVICE_ISERIALNUMBER_COUNT: Device Descriptor String Serial Number USB Field Count for Less Operator
 --		LESS_DEVICE_BNUMCONFIGURATIONS_INDEX: Device Descriptor Num Configuration USB Field Index for Less Operator
 --		LESS_DEVICE_BNUMCONFIGURATIONS_COUNT: Device Descriptor Num Configuration USB Field Count for Less Operator
+--		LESS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for Less Operator
+--		LESS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for Less Operator
+--		LESS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for Less Operator
+--		LESS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for Less Operator
+--		LESS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for Less Operator
+--		LESS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for Less Operator
+--		LESS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for Less Operator
+--		LESS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for Less Operator
+--		LESS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: Configuration Descriptor String Configuration Length USB Field Index for Less Operator
+--		LESS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: Configuration Descriptor String Configuration Length USB Field Count for Less Operator
+--		LESS_CONFIGURATION_ICONFIGURATION_INDEX: Configuration Descriptor String Configuration USB Field Index for Less Operator
+--		LESS_CONFIGURATION_ICONFIGURATION_COUNT: Configuration Descriptor String Configuration USB Field Coubt for Less Operator
+--		LESS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for Less Operator
+--		LESS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for Less Operator
+--		LESS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for Less Operator
+--		LESS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for Less Operator
+--		LESS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for Less Operator
+--		LESS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for Less Operator
+--		LESS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for Less Operator
+--		LESS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for Less Operator
+--		LESS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for Less Operator
+--		LESS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for Less Operator
+--		LESS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for Less Operator
+--		LESS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for Less Operator
+--		LESS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for Less Operator
+--		LESS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for Less Operator
+--		LESS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for Less Operator
+--		LESS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for Less Operator
+--		LESS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for Less Operator
+--		LESS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for Less Operator
+--		LESS_INTERFACE_IINTERFACE_BLENGTH_INDEX: Interface Descriptor String Interface Length USB Field Index for Less Operator
+--		LESS_INTERFACE_IINTERFACE_BLENGTH_COUNT: Interface Descriptor String Interface Length USB Field Count for Less Operator
+--		LESS_INTERFACE_IINTERFACE_INDEX: Interface Descriptor String Interface USB Field Index for Less Operator
+--		LESS_INTERFACE_IINTERFACE_COUNT: Interface Descriptor String Interface USB Field Count for Less Operator
+--		LESS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for Less Operator
+--		LESS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for Less Operator
+--		LESS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for Less Operator
+--		LESS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for Less Operator
+--		LESS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for Less Operator
+--		LESS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for Less Operator
+--		LESS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for Less Operator
+--		LESS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for Less Operator
+--		LESS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for Less Operator
+--		LESS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for Less Operator
+--		LESS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for Less Operator
+--		LESS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for Less Operator
+--		LESS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for Less Operator
+--		LESS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for Less Operator
+--		LESS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for Less Operator
+--		LESS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for Less Operator
+--		LESS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for Less Operator
+--		LESS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for Less Operator
+--		LESS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for Less Operator
+--		LESS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for Less Operator
+--		LESS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for Less Operator
+--		LESS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for Less Operator
 --		LESS_DEVICE_QUALIFIER_BLENGTH_INDEX: Device Qualifier Descriptor Length USB Field Index for Less Operator
 --		LESS_DEVICE_QUALIFIER_BLENGTH_COUNT: Device Qualifier Descriptor Length USB Field Count for Less Operator
 --		LESS_DEVICE_QUALIFIER_BCDUSB_INDEX: Device Qualifier Descriptor USB Release Number Field Index for Less Operator
@@ -522,18 +638,6 @@
 --		LESS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: Device Qualifier Descriptor Num Configuration USB Field Count for Less Operator
 --		LESS_DEVICE_QUALIFIER_BRESERVED_INDEX: Device Qualifier Descriptor Reserved USB Field Index for Less Operator
 --		LESS_DEVICE_QUALIFIER_BRESERVED_COUNT: Device Qualifier Descriptor Reserved USB Field Count for Less Operator
---		LESS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for Less Operator
---		LESS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for Less Operator
---		LESS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for Less Operator
---		LESS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for Less Operator
---		LESS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for Less Operator
---		LESS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for Less Operator
---		LESS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for Less Operator
---		LESS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for Less Operator
---		LESS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for Less Operator
---		LESS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for Less Operator
---		LESS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for Less Operator
---		LESS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for Less Operator
 --		LESS_OTHER_SPEED_BLENGTH_INDEX: Other Speed Descriptor Length USB Field Index for Less Operator
 --		LESS_OTHER_SPEED_BLENGTH_COUNT: Other Speed Descriptor Length USB Field Count for Less Operator
 --		LESS_OTHER_SPEED_WTOTALLENGTH_INDEX: Other Speed Descriptor Total Length USB Field Index for Less Operator
@@ -542,58 +646,14 @@
 --		LESS_OTHER_SPEED_BNUMINTERFACES_COUNT: Other Speed Descriptor Num Interfaces USB Field Count for Less Operator
 --		LESS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: Other Speed Descriptor Configuration Value USB Field Index for Less Operator
 --		LESS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: Other Speed Descriptor Configuration Value USB Field Count for Less Operator
+--		LESS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: Other Speed Descriptor String Configuration Length USB Field Index for Less Operator
+--		LESS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: Other Speed Descriptor String Configuration Length USB Field Count for Less Operator
+--		LESS_OTHER_SPEED_ICONFIGURATION_INDEX: Other Speed Descriptor String Configuration USB Field Index for Less Operator
+--		LESS_OTHER_SPEED_ICONFIGURATION_COUNT: Other Speed Descriptor String Configuration USB Field Count for Less Operator
 --		LESS_OTHER_SPEED_BMATTRIBUTES_INDEX: Other Speed Descriptor Attributes USB Field Index for Less Operator
 --		LESS_OTHER_SPEED_BMATTRIBUTES_COUNT: Other Speed Descriptor Attributes USB Field Count for Less Operator
 --		LESS_OTHER_SPEED_BMAXPOWER_INDEX: Other Speed Descriptor Max Power USB Field Index for Less Operator
 --		LESS_OTHER_SPEED_BMAXPOWER_COUNT: Other Speed Descriptor Max Power USB Field Count for Less Operator
---		LESS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for Less Operator
---		LESS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for Less Operator
---		LESS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for Less Operator
---		LESS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for Less Operator
---		LESS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for Less Operator
---		LESS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for Less Operator
---		LESS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for Less Operator
---		LESS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for Less Operator
---		LESS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for Less Operator
---		LESS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for Less Operator
---		LESS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for Less Operator
---		LESS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for Less Operator
---		LESS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for Less Operator
---		LESS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for Less Operator
---		LESS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for Less Operator
---		LESS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for Less Operator
---		LESS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for Less Operator
---		LESS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for Less Operator
---		LESS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for Less Operator
---		LESS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for Less Operator
---		LESS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for Less Operator
---		LESS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for Less Operator
---		LESS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for Less Operator
---		LESS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for Less Operator
---		LESS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for Less Operator
---		LESS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for Less Operator
---		LESS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for Less Operator
---		LESS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for Less Operator
---		LESS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for Less Operator
---		LESS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for Less Operator
---		LESS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for Less Operator
---		LESS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for Less Operator
---		LESS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for Less Operator
---		LESS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for Less Operator
---		LESS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for Less Operator
---		LESS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for Less Operator
---		LESS_STRING_BLENGTH_INDEX: String Descriptor Length USB Field Index for Less Operator
---		LESS_STRING_BLENGTH_COUNT: String Descriptor Length USB Field Count for Less Operator
---		LESS_STRING_IMANUFACTURER_INDEX: String Descriptor Manufacturer USB Field Index for Less Operator
---		LESS_STRING_IMANUFACTURER_COUNT: String Descriptor Manufacturer USB Field Count for Less Operator
---		LESS_STRING_IPRODUCT_INDEX: String Descriptor Product USB Field Index for Less Operator
---		LESS_STRING_IPRODUCT_COUNT: String Descriptor Product USB Field Count for Less Operator
---		LESS_STRING_ISERIALNUMBER_INDEX: String Descriptor Serial Number USB Field Index for Less Operator
---		LESS_STRING_ISERIALNUMBER_COUNT: String Descriptor Serial Number USB Field Count for Less Operator
---		LESS_STRING_ICONFIGURATION_INDEX: String Descriptor Configuration USB Field Index for Less Operator
---		LESS_STRING_ICONFIGURATION_COUNT: String Descriptor Configuration USB Field Count for Less Operator
---		LESS_STRING_IINTERFACE_INDEX: String Descriptor Interface USB Field Index for Less Operator
---		LESS_STRING_IINTERFACE_COUNT: String Descriptor Interface USB Field Count for Less Operator
 --
 --		LESS_EQUALS_MEMORY_ADDR_LENGTH: Define the Memory Address Bus Length for LessEquals Operator (in line with the maximum index value)
 --		LESS_EQUALS_MEMORY_ADDR_MAX_INDEX: Define the Memory Maximum Address for LessEquals Operator (in line with the maximum index value)
@@ -616,8 +676,76 @@
 --		LESS_EQUALS_DEVICE_IDPRODUCT_COUNT: Device Descriptor Product USB Field Count for LessEquals Operator
 --		LESS_EQUALS_DEVICE_BCDDEVICE_INDEX: Device Descriptor Device Release Number USB Field Index for LessEquals Operator
 --		LESS_EQUALS_DEVICE_BCDDEVICE_COUNT: Device Descriptor Device Release Number USB Field Count for LessEquals Operator
+--		LESS_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: Device Descriptor String Manufacturer Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: Device Descriptor String Manufacturer Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_DEVICE_IMANUFACTURER_INDEX: Device Descriptor String Manufacturer USB Field Index for LessEquals Operator
+--		LESS_EQUALS_DEVICE_IMANUFACTURER_COUNT: Device Descriptor String Manufacturer USB Field Count for LessEquals Operator
+--		LESS_EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX: Device Descriptor String Product Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT: Device Descriptor String Product Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_DEVICE_IPRODUCT_INDEX: Device Descriptor String Product USB Field Index for LessEquals Operator
+--		LESS_EQUALS_DEVICE_IPRODUCT_COUNT: Device Descriptor String Product USB Field Count for LessEquals Operator
+--		LESS_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: Device Descriptor String Serial Number Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: Device Descriptor String Serial Number Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_DEVICE_ISERIALNUMBER_INDEX: Device Descriptor String Serial Number USB Field Index for LessEquals Operator
+--		LESS_EQUALS_DEVICE_ISERIALNUMBER_COUNT: Device Descriptor String Serial Number USB Field Count for LessEquals Operator
 --		LESS_EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX: Device Descriptor Num Configuration USB Field Index for LessEquals Operator
 --		LESS_EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT: Device Descriptor Num Configuration USB Field Count for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: Configuration Descriptor String Configuration Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: Configuration Descriptor String Configuration Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_ICONFIGURATION_INDEX: Configuration Descriptor String Configuration USB Field Index for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_ICONFIGURATION_COUNT: Configuration Descriptor String Configuration USB Field Coubt for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for LessEquals Operator
+--		LESS_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX: Interface Descriptor String Interface Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT: Interface Descriptor String Interface Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_IINTERFACE_INDEX: Interface Descriptor String Interface USB Field Index for LessEquals Operator
+--		LESS_EQUALS_INTERFACE_IINTERFACE_COUNT: Interface Descriptor String Interface USB Field Count for LessEquals Operator
+--		LESS_EQUALS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for LessEquals Operator
+--		LESS_EQUALS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for LessEquals Operator
+--		LESS_EQUALS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for LessEquals Operator
+--		LESS_EQUALS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for LessEquals Operator
+--		LESS_EQUALS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for LessEquals Operator
+--		LESS_EQUALS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for LessEquals Operator
+--		LESS_EQUALS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for LessEquals Operator
+--		LESS_EQUALS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for LessEquals Operator
+--		LESS_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for LessEquals Operator
+--		LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for LessEquals Operator
+--		LESS_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for LessEquals Operator
+--		LESS_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for LessEquals Operator
+--		LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for LessEquals Operator
+--		LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for LessEquals Operator
+--		LESS_EQUALS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for LessEquals Operator
+--		LESS_EQUALS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for LessEquals Operator
 --		LESS_EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX: Device Qualifier Descriptor Length USB Field Index for LessEquals Operator
 --		LESS_EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT: Device Qualifier Descriptor Length USB Field Count for LessEquals Operator
 --		LESS_EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX: Device Qualifier Descriptor USB Release Number Field Index for LessEquals Operator
@@ -634,18 +762,6 @@
 --		LESS_EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: Device Qualifier Descriptor Num Configuration USB Field Count for LessEquals Operator
 --		LESS_EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX: Device Qualifier Descriptor Reserved USB Field Index for LessEquals Operator
 --		LESS_EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT: Device Qualifier Descriptor Reserved USB Field Count for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for LessEquals Operator
---		LESS_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for LessEquals Operator
 --		LESS_EQUALS_OTHER_SPEED_BLENGTH_INDEX: Other Speed Descriptor Length USB Field Index for LessEquals Operator
 --		LESS_EQUALS_OTHER_SPEED_BLENGTH_COUNT: Other Speed Descriptor Length USB Field Count for LessEquals Operator
 --		LESS_EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX: Other Speed Descriptor Total Length USB Field Index for LessEquals Operator
@@ -654,58 +770,14 @@
 --		LESS_EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT: Other Speed Descriptor Num Interfaces USB Field Count for LessEquals Operator
 --		LESS_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: Other Speed Descriptor Configuration Value USB Field Index for LessEquals Operator
 --		LESS_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: Other Speed Descriptor Configuration Value USB Field Count for LessEquals Operator
+--		LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: Other Speed Descriptor String Configuration Length USB Field Index for LessEquals Operator
+--		LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: Other Speed Descriptor String Configuration Length USB Field Count for LessEquals Operator
+--		LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX: Other Speed Descriptor String Configuration USB Field Index for LessEquals Operator
+--		LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT: Other Speed Descriptor String Configuration USB Field Count for LessEquals Operator
 --		LESS_EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX: Other Speed Descriptor Attributes USB Field Index for LessEquals Operator
 --		LESS_EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT: Other Speed Descriptor Attributes USB Field Count for LessEquals Operator
 --		LESS_EQUALS_OTHER_SPEED_BMAXPOWER_INDEX: Other Speed Descriptor Max Power USB Field Index for LessEquals Operator
 --		LESS_EQUALS_OTHER_SPEED_BMAXPOWER_COUNT: Other Speed Descriptor Max Power USB Field Count for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for LessEquals Operator
---		LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for LessEquals Operator
---		LESS_EQUALS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for LessEquals Operator
---		LESS_EQUALS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for LessEquals Operator
---		LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for LessEquals Operator
---		LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for LessEquals Operator
---		LESS_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for LessEquals Operator
---		LESS_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for LessEquals Operator
---		LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for LessEquals Operator
---		LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for LessEquals Operator
---		LESS_EQUALS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for LessEquals Operator
---		LESS_EQUALS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for LessEquals Operator
---		LESS_EQUALS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for LessEquals Operator
---		LESS_EQUALS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for LessEquals Operator
---		LESS_EQUALS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for LessEquals Operator
---		LESS_EQUALS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for LessEquals Operator
---		LESS_EQUALS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for LessEquals Operator
---		LESS_EQUALS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for LessEquals Operator
---		LESS_EQUALS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for LessEquals Operator
---		LESS_EQUALS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for LessEquals Operator
---		LESS_EQUALS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for LessEquals Operator
---		LESS_EQUALS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for LessEquals Operator
---		LESS_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for LessEquals Operator
---		LESS_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for LessEquals Operator
---		LESS_EQUALS_STRING_BLENGTH_INDEX: String Descriptor Length USB Field Index for LessEquals Operator
---		LESS_EQUALS_STRING_BLENGTH_COUNT: String Descriptor Length USB Field Count for LessEquals Operator
---		LESS_EQUALS_STRING_IMANUFACTURER_INDEX: String Descriptor Manufacturer USB Field Index for LessEquals Operator
---		LESS_EQUALS_STRING_IMANUFACTURER_COUNT: String Descriptor Manufacturer USB Field Count for LessEquals Operator
---		LESS_EQUALS_STRING_IPRODUCT_INDEX: String Descriptor Product USB Field Index for LessEquals Operator
---		LESS_EQUALS_STRING_IPRODUCT_COUNT: String Descriptor Product USB Field Count for LessEquals Operator
---		LESS_EQUALS_STRING_ISERIALNUMBER_INDEX: String Descriptor Serial Number USB Field Index for LessEquals Operator
---		LESS_EQUALS_STRING_ISERIALNUMBER_COUNT: String Descriptor Serial Number USB Field Count for LessEquals Operator
---		LESS_EQUALS_STRING_ICONFIGURATION_INDEX: String Descriptor Configuration USB Field Index for LessEquals Operator
---		LESS_EQUALS_STRING_ICONFIGURATION_COUNT: String Descriptor Configuration USB Field Count for LessEquals Operator
---		LESS_EQUALS_STRING_IINTERFACE_INDEX: String Descriptor Interface USB Field Index for LessEquals Operator
---		LESS_EQUALS_STRING_IINTERFACE_COUNT: String Descriptor Interface USB Field Count for LessEquals Operator
 --
 --		STARTS_WITH_MEMORY_ADDR_LENGTH: Define the Memory Address Bus Length for StartsWith Operator (in line with the maximum index value)
 --		STARTS_WITH_MEMORY_ADDR_MAX_INDEX: Define the Memory Maximum Address for StartsWith Operator (in line with the maximum index value)
@@ -728,8 +800,76 @@
 --		STARTS_WITH_DEVICE_IDPRODUCT_COUNT: Device Descriptor Product USB Field Count for StartsWith Operator
 --		STARTS_WITH_DEVICE_BCDDEVICE_INDEX: Device Descriptor Device Release Number USB Field Index for StartsWith Operator
 --		STARTS_WITH_DEVICE_BCDDEVICE_COUNT: Device Descriptor Device Release Number USB Field Count for StartsWith Operator
+--		STARTS_WITH_DEVICE_IMANUFACTURER_BLENGTH_INDEX: Device Descriptor String Manufacturer Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_DEVICE_IMANUFACTURER_BLENGTH_COUNT: Device Descriptor String Manufacturer Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_DEVICE_IMANUFACTURER_INDEX: Device Descriptor String Manufacturer USB Field Index for StartsWith Operator
+--		STARTS_WITH_DEVICE_IMANUFACTURER_COUNT: Device Descriptor String Manufacturer USB Field Count for StartsWith Operator
+--		STARTS_WITH_DEVICE_IPRODUCT_BLENGTH_INDEX: Device Descriptor String Product Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_DEVICE_IPRODUCT_BLENGTH_COUNT: Device Descriptor String Product Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_DEVICE_IPRODUCT_INDEX: Device Descriptor String Product USB Field Index for StartsWith Operator
+--		STARTS_WITH_DEVICE_IPRODUCT_COUNT: Device Descriptor String Product USB Field Count for StartsWith Operator
+--		STARTS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: Device Descriptor String Serial Number Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: Device Descriptor String Serial Number Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_DEVICE_ISERIALNUMBER_INDEX: Device Descriptor String Serial Number USB Field Index for StartsWith Operator
+--		STARTS_WITH_DEVICE_ISERIALNUMBER_COUNT: Device Descriptor String Serial Number USB Field Count for StartsWith Operator
 --		STARTS_WITH_DEVICE_BNUMCONFIGURATIONS_INDEX: Device Descriptor Num Configuration USB Field Index for StartsWith Operator
 --		STARTS_WITH_DEVICE_BNUMCONFIGURATIONS_COUNT: Device Descriptor Num Configuration USB Field Count for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: Configuration Descriptor String Configuration Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: Configuration Descriptor String Configuration Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_ICONFIGURATION_INDEX: Configuration Descriptor String Configuration USB Field Index for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_ICONFIGURATION_COUNT: Configuration Descriptor String Configuration USB Field Coubt for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for StartsWith Operator
+--		STARTS_WITH_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for StartsWith Operator
+--		STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for StartsWith Operator
+--		STARTS_WITH_INTERFACE_IINTERFACE_BLENGTH_INDEX: Interface Descriptor String Interface Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_INTERFACE_IINTERFACE_BLENGTH_COUNT: Interface Descriptor String Interface Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_INTERFACE_IINTERFACE_INDEX: Interface Descriptor String Interface USB Field Index for StartsWith Operator
+--		STARTS_WITH_INTERFACE_IINTERFACE_COUNT: Interface Descriptor String Interface USB Field Count for StartsWith Operator
+--		STARTS_WITH_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for StartsWith Operator
+--		STARTS_WITH_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for StartsWith Operator
+--		STARTS_WITH_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for StartsWith Operator
+--		STARTS_WITH_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for StartsWith Operator
+--		STARTS_WITH_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for StartsWith Operator
+--		STARTS_WITH_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for StartsWith Operator
+--		STARTS_WITH_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for StartsWith Operator
+--		STARTS_WITH_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for StartsWith Operator
+--		STARTS_WITH_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for StartsWith Operator
+--		STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for StartsWith Operator
+--		STARTS_WITH_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for StartsWith Operator
+--		STARTS_WITH_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for StartsWith Operator
+--		STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for StartsWith Operator
+--		STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for StartsWith Operator
+--		STARTS_WITH_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for StartsWith Operator
+--		STARTS_WITH_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for StartsWith Operator
 --		STARTS_WITH_DEVICE_QUALIFIER_BLENGTH_INDEX: Device Qualifier Descriptor Length USB Field Index for StartsWith Operator
 --		STARTS_WITH_DEVICE_QUALIFIER_BLENGTH_COUNT: Device Qualifier Descriptor Length USB Field Count for StartsWith Operator
 --		STARTS_WITH_DEVICE_QUALIFIER_BCDUSB_INDEX: Device Qualifier Descriptor USB Release Number Field Index for StartsWith Operator
@@ -746,18 +886,6 @@
 --		STARTS_WITH_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: Device Qualifier Descriptor Num Configuration USB Field Count for StartsWith Operator
 --		STARTS_WITH_DEVICE_QUALIFIER_BRESERVED_INDEX: Device Qualifier Descriptor Reserved USB Field Index for StartsWith Operator
 --		STARTS_WITH_DEVICE_QUALIFIER_BRESERVED_COUNT: Device Qualifier Descriptor Reserved USB Field Count for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for StartsWith Operator
---		STARTS_WITH_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for StartsWith Operator
 --		STARTS_WITH_OTHER_SPEED_BLENGTH_INDEX: Other Speed Descriptor Length USB Field Index for StartsWith Operator
 --		STARTS_WITH_OTHER_SPEED_BLENGTH_COUNT: Other Speed Descriptor Length USB Field Count for StartsWith Operator
 --		STARTS_WITH_OTHER_SPEED_WTOTALLENGTH_INDEX: Other Speed Descriptor Total Length USB Field Index for StartsWith Operator
@@ -766,58 +894,14 @@
 --		STARTS_WITH_OTHER_SPEED_BNUMINTERFACES_COUNT: Other Speed Descriptor Num Interfaces USB Field Count for StartsWith Operator
 --		STARTS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: Other Speed Descriptor Configuration Value USB Field Index for StartsWith Operator
 --		STARTS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: Other Speed Descriptor Configuration Value USB Field Count for StartsWith Operator
+--		STARTS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: Other Speed Descriptor String Configuration Length USB Field Index for StartsWith Operator
+--		STARTS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: Other Speed Descriptor String Configuration Length USB Field Count for StartsWith Operator
+--		STARTS_WITH_OTHER_SPEED_ICONFIGURATION_INDEX: Other Speed Descriptor String Configuration USB Field Index for StartsWith Operator
+--		STARTS_WITH_OTHER_SPEED_ICONFIGURATION_COUNT: Other Speed Descriptor String Configuration USB Field Count for StartsWith Operator
 --		STARTS_WITH_OTHER_SPEED_BMATTRIBUTES_INDEX: Other Speed Descriptor Attributes USB Field Index for StartsWith Operator
 --		STARTS_WITH_OTHER_SPEED_BMATTRIBUTES_COUNT: Other Speed Descriptor Attributes USB Field Count for StartsWith Operator
 --		STARTS_WITH_OTHER_SPEED_BMAXPOWER_INDEX: Other Speed Descriptor Max Power USB Field Index for StartsWith Operator
 --		STARTS_WITH_OTHER_SPEED_BMAXPOWER_COUNT: Other Speed Descriptor Max Power USB Field Count for StartsWith Operator
---		STARTS_WITH_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for StartsWith Operator
---		STARTS_WITH_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for StartsWith Operator
---		STARTS_WITH_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for StartsWith Operator
---		STARTS_WITH_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for StartsWith Operator
---		STARTS_WITH_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for StartsWith Operator
---		STARTS_WITH_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for StartsWith Operator
---		STARTS_WITH_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for StartsWith Operator
---		STARTS_WITH_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for StartsWith Operator
---		STARTS_WITH_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for StartsWith Operator
---		STARTS_WITH_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for StartsWith Operator
---		STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for StartsWith Operator
---		STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for StartsWith Operator
---		STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for StartsWith Operator
---		STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for StartsWith Operator
---		STARTS_WITH_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for StartsWith Operator
---		STARTS_WITH_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for StartsWith Operator
---		STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for StartsWith Operator
---		STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for StartsWith Operator
---		STARTS_WITH_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for StartsWith Operator
---		STARTS_WITH_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for StartsWith Operator
---		STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for StartsWith Operator
---		STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for StartsWith Operator
---		STARTS_WITH_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for StartsWith Operator
---		STARTS_WITH_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for StartsWith Operator
---		STARTS_WITH_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for StartsWith Operator
---		STARTS_WITH_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for StartsWith Operator
---		STARTS_WITH_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for StartsWith Operator
---		STARTS_WITH_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for StartsWith Operator
---		STARTS_WITH_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for StartsWith Operator
---		STARTS_WITH_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for StartsWith Operator
---		STARTS_WITH_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for StartsWith Operator
---		STARTS_WITH_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for StartsWith Operator
---		STARTS_WITH_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for StartsWith Operator
---		STARTS_WITH_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for StartsWith Operator
---		STARTS_WITH_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for StartsWith Operator
---		STARTS_WITH_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for StartsWith Operator
---		STARTS_WITH_STRING_BLENGTH_INDEX: String Descriptor Length USB Field Index for StartsWith Operator
---		STARTS_WITH_STRING_BLENGTH_COUNT: String Descriptor Length USB Field Count for StartsWith Operator
---		STARTS_WITH_STRING_IMANUFACTURER_INDEX: String Descriptor Manufacturer USB Field Index for StartsWith Operator
---		STARTS_WITH_STRING_IMANUFACTURER_COUNT: String Descriptor Manufacturer USB Field Count for StartsWith Operator
---		STARTS_WITH_STRING_IPRODUCT_INDEX: String Descriptor Product USB Field Index for StartsWith Operator
---		STARTS_WITH_STRING_IPRODUCT_COUNT: String Descriptor Product USB Field Count for StartsWith Operator
---		STARTS_WITH_STRING_ISERIALNUMBER_INDEX: String Descriptor Serial Number USB Field Index for StartsWith Operator
---		STARTS_WITH_STRING_ISERIALNUMBER_COUNT: String Descriptor Serial Number USB Field Count for StartsWith Operator
---		STARTS_WITH_STRING_ICONFIGURATION_INDEX: String Descriptor Configuration USB Field Index for StartsWith Operator
---		STARTS_WITH_STRING_ICONFIGURATION_COUNT: String Descriptor Configuration USB Field Count for StartsWith Operator
---		STARTS_WITH_STRING_IINTERFACE_INDEX: String Descriptor Interface USB Field Index for StartsWith Operator
---		STARTS_WITH_STRING_IINTERFACE_COUNT: String Descriptor Interface USB Field Count for StartsWith Operator
 --
 --		ENDS_WITH_MEMORY_ADDR_LENGTH: Define the Memory Address Bus Length for EndsWith Operator (in line with the maximum index value)
 --		ENDS_WITH_MEMORY_ADDR_MAX_INDEX: Define the Memory Maximum Address for EndsWith Operator (in line with the maximum index value)
@@ -840,8 +924,76 @@
 --		ENDS_WITH_DEVICE_IDPRODUCT_COUNT: Device Descriptor Product USB Field Count for EndsWith Operator
 --		ENDS_WITH_DEVICE_BCDDEVICE_INDEX: Device Descriptor Device Release Number USB Field Index for EndsWith Operator
 --		ENDS_WITH_DEVICE_BCDDEVICE_COUNT: Device Descriptor Device Release Number USB Field Count for EndsWith Operator
+--		ENDS_WITH_DEVICE_IMANUFACTURER_BLENGTH_INDEX: Device Descriptor String Manufacturer Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_DEVICE_IMANUFACTURER_BLENGTH_COUNT: Device Descriptor String Manufacturer Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_DEVICE_IMANUFACTURER_INDEX: Device Descriptor String Manufacturer USB Field Index for EndsWith Operator
+--		ENDS_WITH_DEVICE_IMANUFACTURER_COUNT: Device Descriptor String Manufacturer USB Field Count for EndsWith Operator
+--		ENDS_WITH_DEVICE_IPRODUCT_BLENGTH_INDEX: Device Descriptor String Product Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_DEVICE_IPRODUCT_BLENGTH_COUNT: Device Descriptor String Product Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_DEVICE_IPRODUCT_INDEX: Device Descriptor String Product USB Field Index for EndsWith Operator
+--		ENDS_WITH_DEVICE_IPRODUCT_COUNT: Device Descriptor String Product USB Field Count for EndsWith Operator
+--		ENDS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: Device Descriptor String Serial Number Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: Device Descriptor String Serial Number Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_DEVICE_ISERIALNUMBER_INDEX: Device Descriptor String Serial Number USB Field Index for EndsWith Operator
+--		ENDS_WITH_DEVICE_ISERIALNUMBER_COUNT: Device Descriptor String Serial Number USB Field Count for EndsWith Operator
 --		ENDS_WITH_DEVICE_BNUMCONFIGURATIONS_INDEX: Device Descriptor Num Configuration USB Field Index for EndsWith Operator
 --		ENDS_WITH_DEVICE_BNUMCONFIGURATIONS_COUNT: Device Descriptor Num Configuration USB Field Count for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: Configuration Descriptor String Configuration Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: Configuration Descriptor String Configuration Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_ICONFIGURATION_INDEX: Configuration Descriptor String Configuration USB Field Index for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_ICONFIGURATION_COUNT: Configuration Descriptor String Configuration USB Field Coubt for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for EndsWith Operator
+--		ENDS_WITH_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for EndsWith Operator
+--		ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for EndsWith Operator
+--		ENDS_WITH_INTERFACE_IINTERFACE_BLENGTH_INDEX: Interface Descriptor String Interface Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_INTERFACE_IINTERFACE_BLENGTH_COUNT: Interface Descriptor String Interface Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_INTERFACE_IINTERFACE_INDEX: Interface Descriptor String Interface USB Field Index for EndsWith Operator
+--		ENDS_WITH_INTERFACE_IINTERFACE_COUNT: Interface Descriptor String Interface USB Field Count for EndsWith Operator
+--		ENDS_WITH_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for EndsWith Operator
+--		ENDS_WITH_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for EndsWith Operator
+--		ENDS_WITH_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for EndsWith Operator
+--		ENDS_WITH_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for EndsWith Operator
+--		ENDS_WITH_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for EndsWith Operator
+--		ENDS_WITH_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for EndsWith Operator
+--		ENDS_WITH_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for EndsWith Operator
+--		ENDS_WITH_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for EndsWith Operator
+--		ENDS_WITH_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for EndsWith Operator
+--		ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for EndsWith Operator
+--		ENDS_WITH_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for EndsWith Operator
+--		ENDS_WITH_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for EndsWith Operator
+--		ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for EndsWith Operator
+--		ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for EndsWith Operator
+--		ENDS_WITH_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for EndsWith Operator
+--		ENDS_WITH_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for EndsWith Operator
 --		ENDS_WITH_DEVICE_QUALIFIER_BLENGTH_INDEX: Device Qualifier Descriptor Length USB Field Index for EndsWith Operator
 --		ENDS_WITH_DEVICE_QUALIFIER_BLENGTH_COUNT: Device Qualifier Descriptor Length USB Field Count for EndsWith Operator
 --		ENDS_WITH_DEVICE_QUALIFIER_BCDUSB_INDEX: Device Qualifier Descriptor USB Release Number Field Index for EndsWith Operator
@@ -858,18 +1010,6 @@
 --		ENDS_WITH_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: Device Qualifier Descriptor Num Configuration USB Field Count for EndsWith Operator
 --		ENDS_WITH_DEVICE_QUALIFIER_BRESERVED_INDEX: Device Qualifier Descriptor Reserved USB Field Index for EndsWith Operator
 --		ENDS_WITH_DEVICE_QUALIFIER_BRESERVED_COUNT: Device Qualifier Descriptor Reserved USB Field Count for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for EndsWith Operator
---		ENDS_WITH_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for EndsWith Operator
 --		ENDS_WITH_OTHER_SPEED_BLENGTH_INDEX: Other Speed Descriptor Length USB Field Index for EndsWith Operator
 --		ENDS_WITH_OTHER_SPEED_BLENGTH_COUNT: Other Speed Descriptor Length USB Field Count for EndsWith Operator
 --		ENDS_WITH_OTHER_SPEED_WTOTALLENGTH_INDEX: Other Speed Descriptor Total Length USB Field Index for EndsWith Operator
@@ -878,58 +1018,14 @@
 --		ENDS_WITH_OTHER_SPEED_BNUMINTERFACES_COUNT: Other Speed Descriptor Num Interfaces USB Field Count for EndsWith Operator
 --		ENDS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: Other Speed Descriptor Configuration Value USB Field Index for EndsWith Operator
 --		ENDS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: Other Speed Descriptor Configuration Value USB Field Count for EndsWith Operator
+--		ENDS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: Other Speed Descriptor String Configuration Length USB Field Index for EndsWith Operator
+--		ENDS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: Other Speed Descriptor String Configuration Length USB Field Count for EndsWith Operator
+--		ENDS_WITH_OTHER_SPEED_ICONFIGURATION_INDEX: Other Speed Descriptor String Configuration USB Field Index for EndsWith Operator
+--		ENDS_WITH_OTHER_SPEED_ICONFIGURATION_COUNT: Other Speed Descriptor String Configuration USB Field Count for EndsWith Operator
 --		ENDS_WITH_OTHER_SPEED_BMATTRIBUTES_INDEX: Other Speed Descriptor Attributes USB Field Index for EndsWith Operator
 --		ENDS_WITH_OTHER_SPEED_BMATTRIBUTES_COUNT: Other Speed Descriptor Attributes USB Field Count for EndsWith Operator
 --		ENDS_WITH_OTHER_SPEED_BMAXPOWER_INDEX: Other Speed Descriptor Max Power USB Field Index for EndsWith Operator
 --		ENDS_WITH_OTHER_SPEED_BMAXPOWER_COUNT: Other Speed Descriptor Max Power USB Field Count for EndsWith Operator
---		ENDS_WITH_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for EndsWith Operator
---		ENDS_WITH_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for EndsWith Operator
---		ENDS_WITH_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for EndsWith Operator
---		ENDS_WITH_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for EndsWith Operator
---		ENDS_WITH_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for EndsWith Operator
---		ENDS_WITH_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for EndsWith Operator
---		ENDS_WITH_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for EndsWith Operator
---		ENDS_WITH_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for EndsWith Operator
---		ENDS_WITH_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for EndsWith Operator
---		ENDS_WITH_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for EndsWith Operator
---		ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for EndsWith Operator
---		ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for EndsWith Operator
---		ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for EndsWith Operator
---		ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for EndsWith Operator
---		ENDS_WITH_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for EndsWith Operator
---		ENDS_WITH_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for EndsWith Operator
---		ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for EndsWith Operator
---		ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for EndsWith Operator
---		ENDS_WITH_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for EndsWith Operator
---		ENDS_WITH_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for EndsWith Operator
---		ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for EndsWith Operator
---		ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for EndsWith Operator
---		ENDS_WITH_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for EndsWith Operator
---		ENDS_WITH_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for EndsWith Operator
---		ENDS_WITH_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for EndsWith Operator
---		ENDS_WITH_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for EndsWith Operator
---		ENDS_WITH_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for EndsWith Operator
---		ENDS_WITH_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for EndsWith Operator
---		ENDS_WITH_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for EndsWith Operator
---		ENDS_WITH_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for EndsWith Operator
---		ENDS_WITH_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for EndsWith Operator
---		ENDS_WITH_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for EndsWith Operator
---		ENDS_WITH_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for EndsWith Operator
---		ENDS_WITH_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for EndsWith Operator
---		ENDS_WITH_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for EndsWith Operator
---		ENDS_WITH_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for EndsWith Operator
---		ENDS_WITH_STRING_BLENGTH_INDEX: String Descriptor Length USB Field Index for EndsWith Operator
---		ENDS_WITH_STRING_BLENGTH_COUNT: String Descriptor Length USB Field Count for EndsWith Operator
---		ENDS_WITH_STRING_IMANUFACTURER_INDEX: String Descriptor Manufacturer USB Field Index for EndsWith Operator
---		ENDS_WITH_STRING_IMANUFACTURER_COUNT: String Descriptor Manufacturer USB Field Count for EndsWith Operator
---		ENDS_WITH_STRING_IPRODUCT_INDEX: String Descriptor Product USB Field Index for EndsWith Operator
---		ENDS_WITH_STRING_IPRODUCT_COUNT: String Descriptor Product USB Field Count for EndsWith Operator
---		ENDS_WITH_STRING_ISERIALNUMBER_INDEX: String Descriptor Serial Number USB Field Index for EndsWith Operator
---		ENDS_WITH_STRING_ISERIALNUMBER_COUNT: String Descriptor Serial Number USB Field Count for EndsWith Operator
---		ENDS_WITH_STRING_ICONFIGURATION_INDEX: String Descriptor Configuration USB Field Index for EndsWith Operator
---		ENDS_WITH_STRING_ICONFIGURATION_COUNT: String Descriptor Configuration USB Field Count for EndsWith Operator
---		ENDS_WITH_STRING_IINTERFACE_INDEX: String Descriptor Interface USB Field Index for EndsWith Operator
---		ENDS_WITH_STRING_IINTERFACE_COUNT: String Descriptor Interface USB Field Count for EndsWith Operator
 --
 --		CONTAINS_MEMORY_ADDR_LENGTH: Define the Memory Address Bus Length for Contains Operator (in line with the maximum index value)
 --		CONTAINS_MEMORY_ADDR_MAX_INDEX: Define the Memory Maximum Address for Contains Operator (in line with the maximum index value)
@@ -952,8 +1048,76 @@
 --		CONTAINS_DEVICE_IDPRODUCT_COUNT: Device Descriptor Product USB Field Count for Contains Operator
 --		CONTAINS_DEVICE_BCDDEVICE_INDEX: Device Descriptor Device Release Number USB Field Index for Contains Operator
 --		CONTAINS_DEVICE_BCDDEVICE_COUNT: Device Descriptor Device Release Number USB Field Count for Contains Operator
+--		CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: Device Descriptor String Manufacturer Length USB Field Index for Contains Operator
+--		CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: Device Descriptor String Manufacturer Length USB Field Count for Contains Operator
+--		CONTAINS_DEVICE_IMANUFACTURER_INDEX: Device Descriptor String Manufacturer USB Field Index for Contains Operator
+--		CONTAINS_DEVICE_IMANUFACTURER_COUNT: Device Descriptor String Manufacturer USB Field Count for Contains Operator
+--		CONTAINS_DEVICE_IPRODUCT_BLENGTH_INDEX: Device Descriptor String Product Length USB Field Index for Contains Operator
+--		CONTAINS_DEVICE_IPRODUCT_BLENGTH_COUNT: Device Descriptor String Product Length USB Field Count for Contains Operator
+--		CONTAINS_DEVICE_IPRODUCT_INDEX: Device Descriptor String Product USB Field Index for Contains Operator
+--		CONTAINS_DEVICE_IPRODUCT_COUNT: Device Descriptor String Product USB Field Count for Contains Operator
+--		CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: Device Descriptor String Serial Number Length USB Field Index for Contains Operator
+--		CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: Device Descriptor String Serial Number Length USB Field Count for Contains Operator
+--		CONTAINS_DEVICE_ISERIALNUMBER_INDEX: Device Descriptor String Serial Number USB Field Index for Contains Operator
+--		CONTAINS_DEVICE_ISERIALNUMBER_COUNT: Device Descriptor String Serial Number USB Field Count for Contains Operator
 --		CONTAINS_DEVICE_BNUMCONFIGURATIONS_INDEX: Device Descriptor Num Configuration USB Field Index for Contains Operator
 --		CONTAINS_DEVICE_BNUMCONFIGURATIONS_COUNT: Device Descriptor Num Configuration USB Field Count for Contains Operator
+--		CONTAINS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for Contains Operator
+--		CONTAINS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for Contains Operator
+--		CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for Contains Operator
+--		CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for Contains Operator
+--		CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for Contains Operator
+--		CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for Contains Operator
+--		CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for Contains Operator
+--		CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for Contains Operator
+--		CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: Configuration Descriptor String Configuration Length USB Field Index for Contains Operator
+--		CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: Configuration Descriptor String Configuration Length USB Field Count for Contains Operator
+--		CONTAINS_CONFIGURATION_ICONFIGURATION_INDEX: Configuration Descriptor String Configuration USB Field Index for Contains Operator
+--		CONTAINS_CONFIGURATION_ICONFIGURATION_COUNT: Configuration Descriptor String Configuration USB Field Coubt for Contains Operator
+--		CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for Contains Operator
+--		CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for Contains Operator
+--		CONTAINS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for Contains Operator
+--		CONTAINS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for Contains Operator
+--		CONTAINS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for Contains Operator
+--		CONTAINS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for Contains Operator
+--		CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for Contains Operator
+--		CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for Contains Operator
+--		CONTAINS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for Contains Operator
+--		CONTAINS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for Contains Operator
+--		CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for Contains Operator
+--		CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for Contains Operator
+--		CONTAINS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for Contains Operator
+--		CONTAINS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for Contains Operator
+--		CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for Contains Operator
+--		CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for Contains Operator
+--		CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for Contains Operator
+--		CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for Contains Operator
+--		CONTAINS_INTERFACE_IINTERFACE_BLENGTH_INDEX: Interface Descriptor String Interface Length USB Field Index for Contains Operator
+--		CONTAINS_INTERFACE_IINTERFACE_BLENGTH_COUNT: Interface Descriptor String Interface Length USB Field Count for Contains Operator
+--		CONTAINS_INTERFACE_IINTERFACE_INDEX: Interface Descriptor String Interface USB Field Index for Contains Operator
+--		CONTAINS_INTERFACE_IINTERFACE_COUNT: Interface Descriptor String Interface USB Field Count for Contains Operator
+--		CONTAINS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for Contains Operator
+--		CONTAINS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for Contains Operator
+--		CONTAINS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for Contains Operator
+--		CONTAINS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for Contains Operator
+--		CONTAINS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for Contains Operator
+--		CONTAINS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for Contains Operator
+--		CONTAINS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for Contains Operator
+--		CONTAINS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for Contains Operator
+--		CONTAINS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for Contains Operator
+--		CONTAINS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for Contains Operator
+--		CONTAINS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for Contains Operator
+--		CONTAINS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for Contains Operator
+--		CONTAINS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for Contains Operator
+--		CONTAINS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for Contains Operator
+--		CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for Contains Operator
+--		CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for Contains Operator
+--		CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for Contains Operator
+--		CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for Contains Operator
+--		CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for Contains Operator
+--		CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for Contains Operator
+--		CONTAINS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for Contains Operator
+--		CONTAINS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for Contains Operator
 --		CONTAINS_DEVICE_QUALIFIER_BLENGTH_INDEX: Device Qualifier Descriptor Length USB Field Index for Contains Operator
 --		CONTAINS_DEVICE_QUALIFIER_BLENGTH_COUNT: Device Qualifier Descriptor Length USB Field Count for Contains Operator
 --		CONTAINS_DEVICE_QUALIFIER_BCDUSB_INDEX: Device Qualifier Descriptor USB Release Number Field Index for Contains Operator
@@ -970,18 +1134,6 @@
 --		CONTAINS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: Device Qualifier Descriptor Num Configuration USB Field Count for Contains Operator
 --		CONTAINS_DEVICE_QUALIFIER_BRESERVED_INDEX: Device Qualifier Descriptor Reserved USB Field Index for Contains Operator
 --		CONTAINS_DEVICE_QUALIFIER_BRESERVED_COUNT: Device Qualifier Descriptor Reserved USB Field Count for Contains Operator
---		CONTAINS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for Contains Operator
---		CONTAINS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for Contains Operator
---		CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for Contains Operator
---		CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for Contains Operator
---		CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for Contains Operator
---		CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for Contains Operator
---		CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for Contains Operator
---		CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for Contains Operator
---		CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for Contains Operator
---		CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for Contains Operator
---		CONTAINS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for Contains Operator
---		CONTAINS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for Contains Operator
 --		CONTAINS_OTHER_SPEED_BLENGTH_INDEX: Other Speed Descriptor Length USB Field Index for Contains Operator
 --		CONTAINS_OTHER_SPEED_BLENGTH_COUNT: Other Speed Descriptor Length USB Field Count for Contains Operator
 --		CONTAINS_OTHER_SPEED_WTOTALLENGTH_INDEX: Other Speed Descriptor Total Length USB Field Index for Contains Operator
@@ -990,58 +1142,14 @@
 --		CONTAINS_OTHER_SPEED_BNUMINTERFACES_COUNT: Other Speed Descriptor Num Interfaces USB Field Count for Contains Operator
 --		CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: Other Speed Descriptor Configuration Value USB Field Index for Contains Operator
 --		CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: Other Speed Descriptor Configuration Value USB Field Count for Contains Operator
+--		CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: Other Speed Descriptor String Configuration Length USB Field Index for Contains Operator
+--		CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: Other Speed Descriptor String Configuration Length USB Field Count for Contains Operator
+--		CONTAINS_OTHER_SPEED_ICONFIGURATION_INDEX: Other Speed Descriptor String Configuration USB Field Index for Contains Operator
+--		CONTAINS_OTHER_SPEED_ICONFIGURATION_COUNT: Other Speed Descriptor String Configuration USB Field Count for Contains Operator
 --		CONTAINS_OTHER_SPEED_BMATTRIBUTES_INDEX: Other Speed Descriptor Attributes USB Field Index for Contains Operator
 --		CONTAINS_OTHER_SPEED_BMATTRIBUTES_COUNT: Other Speed Descriptor Attributes USB Field Count for Contains Operator
 --		CONTAINS_OTHER_SPEED_BMAXPOWER_INDEX: Other Speed Descriptor Max Power USB Field Index for Contains Operator
 --		CONTAINS_OTHER_SPEED_BMAXPOWER_COUNT: Other Speed Descriptor Max Power USB Field Count for Contains Operator
---		CONTAINS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for Contains Operator
---		CONTAINS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for Contains Operator
---		CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for Contains Operator
---		CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for Contains Operator
---		CONTAINS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for Contains Operator
---		CONTAINS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for Contains Operator
---		CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for Contains Operator
---		CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for Contains Operator
---		CONTAINS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for Contains Operator
---		CONTAINS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for Contains Operator
---		CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for Contains Operator
---		CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for Contains Operator
---		CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for Contains Operator
---		CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for Contains Operator
---		CONTAINS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for Contains Operator
---		CONTAINS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for Contains Operator
---		CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for Contains Operator
---		CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for Contains Operator
---		CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for Contains Operator
---		CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for Contains Operator
---		CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for Contains Operator
---		CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for Contains Operator
---		CONTAINS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for Contains Operator
---		CONTAINS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for Contains Operator
---		CONTAINS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for Contains Operator
---		CONTAINS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for Contains Operator
---		CONTAINS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for Contains Operator
---		CONTAINS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for Contains Operator
---		CONTAINS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for Contains Operator
---		CONTAINS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for Contains Operator
---		CONTAINS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for Contains Operator
---		CONTAINS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for Contains Operator
---		CONTAINS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for Contains Operator
---		CONTAINS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for Contains Operator
---		CONTAINS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for Contains Operator
---		CONTAINS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for Contains Operator
---		CONTAINS_STRING_BLENGTH_INDEX: String Descriptor Length USB Field Index for Contains Operator
---		CONTAINS_STRING_BLENGTH_COUNT: String Descriptor Length USB Field Count for Contains Operator
---		CONTAINS_STRING_IMANUFACTURER_INDEX: String Descriptor Manufacturer USB Field Index for Contains Operator
---		CONTAINS_STRING_IMANUFACTURER_COUNT: String Descriptor Manufacturer USB Field Count for Contains Operator
---		CONTAINS_STRING_IPRODUCT_INDEX: String Descriptor Product USB Field Index for Contains Operator
---		CONTAINS_STRING_IPRODUCT_COUNT: String Descriptor Product USB Field Count for Contains Operator
---		CONTAINS_STRING_ISERIALNUMBER_INDEX: String Descriptor Serial Number USB Field Index for Contains Operator
---		CONTAINS_STRING_ISERIALNUMBER_COUNT: String Descriptor Serial Number USB Field Count for Contains Operator
---		CONTAINS_STRING_ICONFIGURATION_INDEX: String Descriptor Configuration USB Field Index for Contains Operator
---		CONTAINS_STRING_ICONFIGURATION_COUNT: String Descriptor Configuration USB Field Count for Contains Operator
---		CONTAINS_STRING_IINTERFACE_INDEX: String Descriptor Interface USB Field Index for Contains Operator
---		CONTAINS_STRING_IINTERFACE_COUNT: String Descriptor Interface USB Field Count for Contains Operator
 --
 --		NOT_CONTAINS_MEMORY_ADDR_LENGTH: Define the Memory Address Bus Length for NotContains Operator (in line with the maximum index value)
 --		NOT_CONTAINS_MEMORY_ADDR_MAX_INDEX: Define the Memory Maximum Address for NotContains Operator (in line with the maximum index value)
@@ -1064,8 +1172,76 @@
 --		NOT_CONTAINS_DEVICE_IDPRODUCT_COUNT: Device Descriptor Product USB Field Count for NotContains Operator
 --		NOT_CONTAINS_DEVICE_BCDDEVICE_INDEX: Device Descriptor Device Release Number USB Field Index for NotContains Operator
 --		NOT_CONTAINS_DEVICE_BCDDEVICE_COUNT: Device Descriptor Device Release Number USB Field Count for NotContains Operator
+--		NOT_CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: Device Descriptor String Manufacturer Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: Device Descriptor String Manufacturer Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_DEVICE_IMANUFACTURER_INDEX: Device Descriptor String Manufacturer USB Field Index for NotContains Operator
+--		NOT_CONTAINS_DEVICE_IMANUFACTURER_COUNT: Device Descriptor String Manufacturer USB Field Count for NotContains Operator
+--		NOT_CONTAINS_DEVICE_IPRODUCT_BLENGTH_INDEX: Device Descriptor String Product Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_DEVICE_IPRODUCT_BLENGTH_COUNT: Device Descriptor String Product Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_DEVICE_IPRODUCT_INDEX: Device Descriptor String Product USB Field Index for NotContains Operator
+--		NOT_CONTAINS_DEVICE_IPRODUCT_COUNT: Device Descriptor String Product USB Field Count for NotContains Operator
+--		NOT_CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: Device Descriptor String Serial Number Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: Device Descriptor String Serial Number Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_DEVICE_ISERIALNUMBER_INDEX: Device Descriptor String Serial Number USB Field Index for NotContains Operator
+--		NOT_CONTAINS_DEVICE_ISERIALNUMBER_COUNT: Device Descriptor String Serial Number USB Field Count for NotContains Operator
 --		NOT_CONTAINS_DEVICE_BNUMCONFIGURATIONS_INDEX: Device Descriptor Num Configuration USB Field Index for NotContains Operator
 --		NOT_CONTAINS_DEVICE_BNUMCONFIGURATIONS_COUNT: Device Descriptor Num Configuration USB Field Count for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: Configuration Descriptor String Configuration Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: Configuration Descriptor String Configuration Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_INDEX: Configuration Descriptor String Configuration USB Field Index for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_COUNT: Configuration Descriptor String Configuration USB Field Coubt for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for NotContains Operator
+--		NOT_CONTAINS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_IINTERFACE_BLENGTH_INDEX: Interface Descriptor String Interface Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_IINTERFACE_BLENGTH_COUNT: Interface Descriptor String Interface Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_IINTERFACE_INDEX: Interface Descriptor String Interface USB Field Index for NotContains Operator
+--		NOT_CONTAINS_INTERFACE_IINTERFACE_COUNT: Interface Descriptor String Interface USB Field Count for NotContains Operator
+--		NOT_CONTAINS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for NotContains Operator
+--		NOT_CONTAINS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for NotContains Operator
+--		NOT_CONTAINS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for NotContains Operator
+--		NOT_CONTAINS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for NotContains Operator
+--		NOT_CONTAINS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for NotContains Operator
+--		NOT_CONTAINS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for NotContains Operator
+--		NOT_CONTAINS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for NotContains Operator
+--		NOT_CONTAINS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for NotContains Operator
+--		NOT_CONTAINS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for NotContains Operator
+--		NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for NotContains Operator
+--		NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for NotContains Operator
+--		NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for NotContains Operator
+--		NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for NotContains Operator
+--		NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for NotContains Operator
+--		NOT_CONTAINS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for NotContains Operator
+--		NOT_CONTAINS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for NotContains Operator
 --		NOT_CONTAINS_DEVICE_QUALIFIER_BLENGTH_INDEX: Device Qualifier Descriptor Length USB Field Index for NotContains Operator
 --		NOT_CONTAINS_DEVICE_QUALIFIER_BLENGTH_COUNT: Device Qualifier Descriptor Length USB Field Count for NotContains Operator
 --		NOT_CONTAINS_DEVICE_QUALIFIER_BCDUSB_INDEX: Device Qualifier Descriptor USB Release Number Field Index for NotContains Operator
@@ -1082,18 +1258,6 @@
 --		NOT_CONTAINS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: Device Qualifier Descriptor Num Configuration USB Field Count for NotContains Operator
 --		NOT_CONTAINS_DEVICE_QUALIFIER_BRESERVED_INDEX: Device Qualifier Descriptor Reserved USB Field Index for NotContains Operator
 --		NOT_CONTAINS_DEVICE_QUALIFIER_BRESERVED_COUNT: Device Qualifier Descriptor Reserved USB Field Count for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_BLENGTH_INDEX: Configuration Descriptor Length USB Field Index for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_BLENGTH_COUNT: Configuration Descriptor Length USB Field Count for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX: Configuration Descriptor Total Length USB Field Index for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT: Configuration Descriptor Total Length USB Field Count for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX: Configuration Descriptor Num Interfaces USB Field Index for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT: Configuration Descriptor Num Interfaces USB Field Count for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: Configuration Descriptor Configuration Value USB Field Index for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: Configuration Descriptor Configuration Value USB Field Count for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX: Configuration Descriptor Attributes USB Field Index for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT: Configuration Descriptor Attributes USB Field Count for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_BMAXPOWER_INDEX: Configuration Descriptor Max Power USB Field Index for NotContains Operator
---		NOT_CONTAINS_CONFIGURATION_BMAXPOWER_COUNT: Configuration Descriptor Max Power USB Field Count for NotContains Operator
 --		NOT_CONTAINS_OTHER_SPEED_BLENGTH_INDEX: Other Speed Descriptor Length USB Field Index for NotContains Operator
 --		NOT_CONTAINS_OTHER_SPEED_BLENGTH_COUNT: Other Speed Descriptor Length USB Field Count for NotContains Operator
 --		NOT_CONTAINS_OTHER_SPEED_WTOTALLENGTH_INDEX: Other Speed Descriptor Total Length USB Field Index for NotContains Operator
@@ -1102,58 +1266,14 @@
 --		NOT_CONTAINS_OTHER_SPEED_BNUMINTERFACES_COUNT: Other Speed Descriptor Num Interfaces USB Field Count for NotContains Operator
 --		NOT_CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: Other Speed Descriptor Configuration Value USB Field Index for NotContains Operator
 --		NOT_CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: Other Speed Descriptor Configuration Value USB Field Count for NotContains Operator
+--		NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: Other Speed Descriptor String Configuration Length USB Field Index for NotContains Operator
+--		NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: Other Speed Descriptor String Configuration Length USB Field Count for NotContains Operator
+--		NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_INDEX: Other Speed Descriptor String Configuration USB Field Index for NotContains Operator
+--		NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_COUNT: Other Speed Descriptor String Configuration USB Field Count for NotContains Operator
 --		NOT_CONTAINS_OTHER_SPEED_BMATTRIBUTES_INDEX: Other Speed Descriptor Attributes USB Field Index for NotContains Operator
 --		NOT_CONTAINS_OTHER_SPEED_BMATTRIBUTES_COUNT: Other Speed Descriptor Attributes USB Field Count for NotContains Operator
 --		NOT_CONTAINS_OTHER_SPEED_BMAXPOWER_INDEX: Other Speed Descriptor Max Power USB Field Index for NotContains Operator
 --		NOT_CONTAINS_OTHER_SPEED_BMAXPOWER_COUNT: Other Speed Descriptor Max Power USB Field Count for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BLENGTH_INDEX: Interface Descriptor Length USB Field Index for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BLENGTH_COUNT: Interface Descriptor Length USB Field Count for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX: Interface Descriptor Interface Number USB Field Index for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT: Interface Descriptor Interface Number USB Field Count for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BALTERNATESETTING_INDEX: Interface Descriptor Alternate Setting USB Field Index for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BALTERNATESETTING_COUNT: Interface Descriptor Alternate Setting USB Field Count for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX: Interface Descriptor Num Endpoints USB Field Index for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT: Interface Descriptor Num Endpoints USB Field Count for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BINTERFACECLASS_INDEX: Interface Descriptor Interface Class USB Field Index for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BINTERFACECLASS_COUNT: Interface Descriptor Interface Class USB Field Count for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX: Interface Descriptor Interface Sub Class USB Field Index for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT: Interface Descriptor Interface Sub Class USB Field Count for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX: Interface Descriptor Interface Protocol USB Field Index for NotContains Operator
---		NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT: Interface Descriptor Interface Protocol USB Field Count for NotContains Operator
---		NOT_CONTAINS_ENDPOINT_BLENGTH_INDEX: Endpoint Descriptor Length USB Field Index for NotContains Operator
---		NOT_CONTAINS_ENDPOINT_BLENGTH_COUNT: Endpoint Descriptor Length USB Field Count for NotContains Operator
---		NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX: Endpoint Descriptor Endpoint Address USB Field Index for NotContains Operator
---		NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT: Endpoint Descriptor Endpoint Address USB Field Count for NotContains Operator
---		NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX: Endpoint Descriptor Attributes USB Field Index for NotContains Operator
---		NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT: Endpoint Descriptor Attributes USB Field Count for NotContains Operator
---		NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX: Endpoint Descriptor Max Packet Size USB Field Index for NotContains Operator
---		NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT: Endpoint Descriptor Max Packet Size USB Field Count for NotContains Operator
---		NOT_CONTAINS_ENDPOINT_BINTERVAL_INDEX: Endpoint Descriptor Interval USB Field Index for NotContains Operator
---		NOT_CONTAINS_ENDPOINT_BINTERVAL_COUNT: Endpoint Descriptor Interval USB Field Count for NotContains Operator
---		NOT_CONTAINS_HID_BLENGTH_INDEX: HID Descriptor Length USB Field Index for NotContains Operator
---		NOT_CONTAINS_HID_BLENGTH_COUNT: HID Descriptor Length USB Field Count for NotContains Operator
---		NOT_CONTAINS_HID_BCDHID_INDEX: HID Descriptor HID USB Field Index for NotContains Operator
---		NOT_CONTAINS_HID_BCDHID_COUNT: HID Descriptor HID USB Field Count for NotContains Operator
---		NOT_CONTAINS_HID_BCOUNTRYCODE_INDEX: HID Descriptor Country Code USB Field Index for NotContains Operator
---		NOT_CONTAINS_HID_BCOUNTRYCODE_COUNT: HID Descriptor Country Code USB Field Count for NotContains Operator
---		NOT_CONTAINS_HID_BNUMDESCRIPTORS_INDEX: HID Descriptor Num Descriptors USB Field Index for NotContains Operator
---		NOT_CONTAINS_HID_BNUMDESCRIPTORS_COUNT: HID Descriptor Num Descriptors USB Field Count for NotContains Operator
---		NOT_CONTAINS_HID_BDESCRIPTORTYPE_INDEX: HID Descriptor Descriptor Type USB Field Index for NotContains Operator
---		NOT_CONTAINS_HID_BDESCRIPTORTYPE_COUNT: HID Descriptor Descriptor Type USB Field Count for NotContains Operator
---		NOT_CONTAINS_HID_WDESCRIPTORLENGTH_INDEX: HID Descriptor Descriptor Length USB Field Index for NotContains Operator
---		NOT_CONTAINS_HID_WDESCRIPTORLENGTH_COUNT: HID Descriptor Descriptor Length USB Field Count for NotContains Operator
---		NOT_CONTAINS_STRING_BLENGTH_INDEX: String Descriptor Length USB Field Index for NotContains Operator
---		NOT_CONTAINS_STRING_BLENGTH_COUNT: String Descriptor Length USB Field Count for NotContains Operator
---		NOT_CONTAINS_STRING_IMANUFACTURER_INDEX: String Descriptor Manufacturer USB Field Index for NotContains Operator
---		NOT_CONTAINS_STRING_IMANUFACTURER_COUNT: String Descriptor Manufacturer USB Field Count for NotContains Operator
---		NOT_CONTAINS_STRING_IPRODUCT_INDEX: String Descriptor Product USB Field Index for NotContains Operator
---		NOT_CONTAINS_STRING_IPRODUCT_COUNT: String Descriptor Product USB Field Count for NotContains Operator
---		NOT_CONTAINS_STRING_ISERIALNUMBER_INDEX: String Descriptor Serial Number USB Field Index for NotContains Operator
---		NOT_CONTAINS_STRING_ISERIALNUMBER_COUNT: String Descriptor Serial Number USB Field Count for NotContains Operator
---		NOT_CONTAINS_STRING_ICONFIGURATION_INDEX: String Descriptor Configuration USB Field Index for NotContains Operator
---		NOT_CONTAINS_STRING_ICONFIGURATION_COUNT: String Descriptor Configuration USB Field Count for NotContains Operator
---		NOT_CONTAINS_STRING_IINTERFACE_INDEX: String Descriptor Interface USB Field Index for NotContains Operator
---		NOT_CONTAINS_STRING_IINTERFACE_COUNT: String Descriptor Interface USB Field Count for NotContains Operator
 --
 -- Ports
 --		Input 	-	i_sys_clock: System Input Clock
@@ -1208,7 +1328,7 @@ GENERIC(
 
 	EQUALS_MEMORY_ADDR_LENGTH: INTEGER := 1;
 	EQUALS_MEMORY_ADDR_MAX_INDEX: INTEGER := 0;
-	EQUALS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0; 
+	EQUALS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0;
 	EQUALS_DEVICE_BLENGTH_INDEX: INTEGER := 0;
 	EQUALS_DEVICE_BLENGTH_COUNT: INTEGER := 0;
 	EQUALS_DEVICE_BCDUSB_INDEX: INTEGER := 0;
@@ -1227,8 +1347,76 @@ GENERIC(
 	EQUALS_DEVICE_IDPRODUCT_COUNT: INTEGER := 0;
 	EQUALS_DEVICE_BCDDEVICE_INDEX: INTEGER := 0;
 	EQUALS_DEVICE_BCDDEVICE_COUNT: INTEGER := 0;
+	EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: INTEGER := 0;
+	EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: INTEGER := 0;
+	EQUALS_DEVICE_IMANUFACTURER_INDEX: INTEGER := 0;
+	EQUALS_DEVICE_IMANUFACTURER_COUNT: INTEGER := 0;
+	EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX: INTEGER := 0;
+	EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT: INTEGER := 0;
+	EQUALS_DEVICE_IPRODUCT_INDEX: INTEGER := 0;
+	EQUALS_DEVICE_IPRODUCT_COUNT: INTEGER := 0;
+	EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: INTEGER := 0;
+	EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: INTEGER := 0;
+	EQUALS_DEVICE_ISERIALNUMBER_INDEX: INTEGER := 0;
+	EQUALS_DEVICE_ISERIALNUMBER_COUNT: INTEGER := 0;
 	EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX: INTEGER := 0;
 	EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
+	EQUALS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	EQUALS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
+	EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
+	EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
+	EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
+	EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
+	EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	EQUALS_CONFIGURATION_ICONFIGURATION_INDEX: INTEGER := 0;
+	EQUALS_CONFIGURATION_ICONFIGURATION_COUNT: INTEGER := 0;
+	EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
+	EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
+	EQUALS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
+	EQUALS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
+	EQUALS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	EQUALS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
+	EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
+	EQUALS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
+	EQUALS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
+	EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
+	EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
+	EQUALS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
+	EQUALS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
+	EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
+	EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
+	EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
+	EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
+	EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	EQUALS_INTERFACE_IINTERFACE_INDEX: INTEGER := 0;
+	EQUALS_INTERFACE_IINTERFACE_COUNT: INTEGER := 0;
+	EQUALS_HID_BLENGTH_INDEX: INTEGER := 0;
+	EQUALS_HID_BLENGTH_COUNT: INTEGER := 0;
+	EQUALS_HID_BCDHID_INDEX: INTEGER := 0;
+	EQUALS_HID_BCDHID_COUNT: INTEGER := 0;
+	EQUALS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
+	EQUALS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
+	EQUALS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
+	EQUALS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
+	EQUALS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
+	EQUALS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
+	EQUALS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
+	EQUALS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
+	EQUALS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
+	EQUALS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
+	EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
+	EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
+	EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
+	EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
+	EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
+	EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
+	EQUALS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
+	EQUALS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
 	EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX: INTEGER := 0;
 	EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT: INTEGER := 0;
 	EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX: INTEGER := 0;
@@ -1245,18 +1433,6 @@ GENERIC(
 	EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
 	EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX: INTEGER := 0;
 	EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT: INTEGER := 0;
-	EQUALS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
-	EQUALS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
-	EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
-	EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
-	EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
-	EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
-	EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
-	EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
-	EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
-	EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
-	EQUALS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
-	EQUALS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
 	EQUALS_OTHER_SPEED_BLENGTH_INDEX: INTEGER := 0;
 	EQUALS_OTHER_SPEED_BLENGTH_COUNT: INTEGER := 0;
 	EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX: INTEGER := 0;
@@ -1265,62 +1441,18 @@ GENERIC(
 	EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT: INTEGER := 0;
 	EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
 	EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX: INTEGER := 0;
+	EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT: INTEGER := 0;
 	EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX: INTEGER := 0;
 	EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT: INTEGER := 0;
 	EQUALS_OTHER_SPEED_BMAXPOWER_INDEX: INTEGER := 0;
 	EQUALS_OTHER_SPEED_BMAXPOWER_COUNT: INTEGER := 0;
-	EQUALS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
-	EQUALS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
-	EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
-	EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
-	EQUALS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
-	EQUALS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
-	EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
-	EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
-	EQUALS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
-	EQUALS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
-	EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
-	EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
-	EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
-	EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
-	EQUALS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
-	EQUALS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
-	EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
-	EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
-	EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
-	EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
-	EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
-	EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
-	EQUALS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
-	EQUALS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
-	EQUALS_HID_BLENGTH_INDEX: INTEGER := 0;
-	EQUALS_HID_BLENGTH_COUNT: INTEGER := 0;
-	EQUALS_HID_BCDHID_INDEX: INTEGER := 0;
-	EQUALS_HID_BCDHID_COUNT: INTEGER := 0;
-	EQUALS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
-	EQUALS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
-	EQUALS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
-	EQUALS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
-	EQUALS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
-	EQUALS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
-	EQUALS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
-	EQUALS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
-	EQUALS_STRING_BLENGTH_INDEX: INTEGER := 0;
-	EQUALS_STRING_BLENGTH_COUNT: INTEGER := 0;
-	EQUALS_STRING_IMANUFACTURER_INDEX: INTEGER := 0;
-	EQUALS_STRING_IMANUFACTURER_COUNT: INTEGER := 0;
-	EQUALS_STRING_IPRODUCT_INDEX: INTEGER := 0;
-	EQUALS_STRING_IPRODUCT_COUNT: INTEGER := 0;
-	EQUALS_STRING_ISERIALNUMBER_INDEX: INTEGER := 0;
-	EQUALS_STRING_ISERIALNUMBER_COUNT: INTEGER := 0;
-	EQUALS_STRING_ICONFIGURATION_INDEX: INTEGER := 0;
-	EQUALS_STRING_ICONFIGURATION_COUNT: INTEGER := 0;
-	EQUALS_STRING_IINTERFACE_INDEX: INTEGER := 0;
-	EQUALS_STRING_IINTERFACE_COUNT: INTEGER := 0;
 
 	NOT_EQUALS_MEMORY_ADDR_LENGTH: INTEGER := 1;
 	NOT_EQUALS_MEMORY_ADDR_MAX_INDEX: INTEGER := 0;
-	NOT_EQUALS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0; 
+	NOT_EQUALS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0;
 	NOT_EQUALS_DEVICE_BLENGTH_INDEX: INTEGER := 0;
 	NOT_EQUALS_DEVICE_BLENGTH_COUNT: INTEGER := 0;
 	NOT_EQUALS_DEVICE_BCDUSB_INDEX: INTEGER := 0;
@@ -1339,8 +1471,76 @@ GENERIC(
 	NOT_EQUALS_DEVICE_IDPRODUCT_COUNT: INTEGER := 0;
 	NOT_EQUALS_DEVICE_BCDDEVICE_INDEX: INTEGER := 0;
 	NOT_EQUALS_DEVICE_BCDDEVICE_COUNT: INTEGER := 0;
+	NOT_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_DEVICE_IMANUFACTURER_INDEX: INTEGER := 0;
+	NOT_EQUALS_DEVICE_IMANUFACTURER_COUNT: INTEGER := 0;
+	NOT_EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_DEVICE_IPRODUCT_INDEX: INTEGER := 0;
+	NOT_EQUALS_DEVICE_IPRODUCT_COUNT: INTEGER := 0;
+	NOT_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_DEVICE_ISERIALNUMBER_INDEX: INTEGER := 0;
+	NOT_EQUALS_DEVICE_ISERIALNUMBER_COUNT: INTEGER := 0;
 	NOT_EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX: INTEGER := 0;
 	NOT_EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_ICONFIGURATION_INDEX: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_ICONFIGURATION_COUNT: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
+	NOT_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_IINTERFACE_INDEX: INTEGER := 0;
+	NOT_EQUALS_INTERFACE_IINTERFACE_COUNT: INTEGER := 0;
+	NOT_EQUALS_HID_BLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_HID_BLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_HID_BCDHID_INDEX: INTEGER := 0;
+	NOT_EQUALS_HID_BCDHID_COUNT: INTEGER := 0;
+	NOT_EQUALS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
+	NOT_EQUALS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
+	NOT_EQUALS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
+	NOT_EQUALS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
+	NOT_EQUALS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
+	NOT_EQUALS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
+	NOT_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
+	NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
+	NOT_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
+	NOT_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
+	NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
+	NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
+	NOT_EQUALS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
+	NOT_EQUALS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
 	NOT_EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX: INTEGER := 0;
 	NOT_EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT: INTEGER := 0;
 	NOT_EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX: INTEGER := 0;
@@ -1357,18 +1557,6 @@ GENERIC(
 	NOT_EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
 	NOT_EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX: INTEGER := 0;
 	NOT_EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
-	NOT_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
 	NOT_EQUALS_OTHER_SPEED_BLENGTH_INDEX: INTEGER := 0;
 	NOT_EQUALS_OTHER_SPEED_BLENGTH_COUNT: INTEGER := 0;
 	NOT_EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX: INTEGER := 0;
@@ -1377,62 +1565,18 @@ GENERIC(
 	NOT_EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT: INTEGER := 0;
 	NOT_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
 	NOT_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX: INTEGER := 0;
+	NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT: INTEGER := 0;
 	NOT_EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX: INTEGER := 0;
 	NOT_EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT: INTEGER := 0;
 	NOT_EQUALS_OTHER_SPEED_BMAXPOWER_INDEX: INTEGER := 0;
 	NOT_EQUALS_OTHER_SPEED_BMAXPOWER_COUNT: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
-	NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
-	NOT_EQUALS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
-	NOT_EQUALS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
-	NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
-	NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
-	NOT_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
-	NOT_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
-	NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
-	NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
-	NOT_EQUALS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
-	NOT_EQUALS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
-	NOT_EQUALS_HID_BLENGTH_INDEX: INTEGER := 0;
-	NOT_EQUALS_HID_BLENGTH_COUNT: INTEGER := 0;
-	NOT_EQUALS_HID_BCDHID_INDEX: INTEGER := 0;
-	NOT_EQUALS_HID_BCDHID_COUNT: INTEGER := 0;
-	NOT_EQUALS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
-	NOT_EQUALS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
-	NOT_EQUALS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
-	NOT_EQUALS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
-	NOT_EQUALS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
-	NOT_EQUALS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
-	NOT_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
-	NOT_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
-	NOT_EQUALS_STRING_BLENGTH_INDEX: INTEGER := 0;
-	NOT_EQUALS_STRING_BLENGTH_COUNT: INTEGER := 0;
-	NOT_EQUALS_STRING_IMANUFACTURER_INDEX: INTEGER := 0;
-	NOT_EQUALS_STRING_IMANUFACTURER_COUNT: INTEGER := 0;
-	NOT_EQUALS_STRING_IPRODUCT_INDEX: INTEGER := 0;
-	NOT_EQUALS_STRING_IPRODUCT_COUNT: INTEGER := 0;
-	NOT_EQUALS_STRING_ISERIALNUMBER_INDEX: INTEGER := 0;
-	NOT_EQUALS_STRING_ISERIALNUMBER_COUNT: INTEGER := 0;
-	NOT_EQUALS_STRING_ICONFIGURATION_INDEX: INTEGER := 0;
-	NOT_EQUALS_STRING_ICONFIGURATION_COUNT: INTEGER := 0;
-	NOT_EQUALS_STRING_IINTERFACE_INDEX: INTEGER := 0;
-	NOT_EQUALS_STRING_IINTERFACE_COUNT: INTEGER := 0;
 
 	GREATER_MEMORY_ADDR_LENGTH: INTEGER := 1;
 	GREATER_MEMORY_ADDR_MAX_INDEX: INTEGER := 0;
-	GREATER_MEMORY_ADDR_MAX_COUNT: INTEGER := 0; 
+	GREATER_MEMORY_ADDR_MAX_COUNT: INTEGER := 0;
 	GREATER_DEVICE_BLENGTH_INDEX: INTEGER := 0;
 	GREATER_DEVICE_BLENGTH_COUNT: INTEGER := 0;
 	GREATER_DEVICE_BCDUSB_INDEX: INTEGER := 0;
@@ -1451,8 +1595,76 @@ GENERIC(
 	GREATER_DEVICE_IDPRODUCT_COUNT: INTEGER := 0;
 	GREATER_DEVICE_BCDDEVICE_INDEX: INTEGER := 0;
 	GREATER_DEVICE_BCDDEVICE_COUNT: INTEGER := 0;
+	GREATER_DEVICE_IMANUFACTURER_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_DEVICE_IMANUFACTURER_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_DEVICE_IMANUFACTURER_INDEX: INTEGER := 0;
+	GREATER_DEVICE_IMANUFACTURER_COUNT: INTEGER := 0;
+	GREATER_DEVICE_IPRODUCT_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_DEVICE_IPRODUCT_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_DEVICE_IPRODUCT_INDEX: INTEGER := 0;
+	GREATER_DEVICE_IPRODUCT_COUNT: INTEGER := 0;
+	GREATER_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_DEVICE_ISERIALNUMBER_INDEX: INTEGER := 0;
+	GREATER_DEVICE_ISERIALNUMBER_COUNT: INTEGER := 0;
 	GREATER_DEVICE_BNUMCONFIGURATIONS_INDEX: INTEGER := 0;
 	GREATER_DEVICE_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
+	GREATER_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
+	GREATER_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
+	GREATER_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
+	GREATER_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
+	GREATER_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
+	GREATER_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	GREATER_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_CONFIGURATION_ICONFIGURATION_INDEX: INTEGER := 0;
+	GREATER_CONFIGURATION_ICONFIGURATION_COUNT: INTEGER := 0;
+	GREATER_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
+	GREATER_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
+	GREATER_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
+	GREATER_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
+	GREATER_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
+	GREATER_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
+	GREATER_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
+	GREATER_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
+	GREATER_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
+	GREATER_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
+	GREATER_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
+	GREATER_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
+	GREATER_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
+	GREATER_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
+	GREATER_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
+	GREATER_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
+	GREATER_INTERFACE_IINTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_INTERFACE_IINTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_INTERFACE_IINTERFACE_INDEX: INTEGER := 0;
+	GREATER_INTERFACE_IINTERFACE_COUNT: INTEGER := 0;
+	GREATER_HID_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_HID_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_HID_BCDHID_INDEX: INTEGER := 0;
+	GREATER_HID_BCDHID_COUNT: INTEGER := 0;
+	GREATER_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
+	GREATER_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
+	GREATER_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
+	GREATER_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
+	GREATER_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
+	GREATER_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
+	GREATER_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
+	GREATER_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
+	GREATER_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
+	GREATER_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
+	GREATER_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
+	GREATER_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
+	GREATER_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
+	GREATER_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
+	GREATER_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
+	GREATER_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
 	GREATER_DEVICE_QUALIFIER_BLENGTH_INDEX: INTEGER := 0;
 	GREATER_DEVICE_QUALIFIER_BLENGTH_COUNT: INTEGER := 0;
 	GREATER_DEVICE_QUALIFIER_BCDUSB_INDEX: INTEGER := 0;
@@ -1469,18 +1681,6 @@ GENERIC(
 	GREATER_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
 	GREATER_DEVICE_QUALIFIER_BRESERVED_INDEX: INTEGER := 0;
 	GREATER_DEVICE_QUALIFIER_BRESERVED_COUNT: INTEGER := 0;
-	GREATER_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
-	GREATER_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
-	GREATER_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
-	GREATER_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
-	GREATER_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
-	GREATER_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
-	GREATER_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
-	GREATER_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
-	GREATER_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
-	GREATER_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
-	GREATER_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
-	GREATER_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
 	GREATER_OTHER_SPEED_BLENGTH_INDEX: INTEGER := 0;
 	GREATER_OTHER_SPEED_BLENGTH_COUNT: INTEGER := 0;
 	GREATER_OTHER_SPEED_WTOTALLENGTH_INDEX: INTEGER := 0;
@@ -1489,62 +1689,18 @@ GENERIC(
 	GREATER_OTHER_SPEED_BNUMINTERFACES_COUNT: INTEGER := 0;
 	GREATER_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
 	GREATER_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	GREATER_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_OTHER_SPEED_ICONFIGURATION_INDEX: INTEGER := 0;
+	GREATER_OTHER_SPEED_ICONFIGURATION_COUNT: INTEGER := 0;
 	GREATER_OTHER_SPEED_BMATTRIBUTES_INDEX: INTEGER := 0;
 	GREATER_OTHER_SPEED_BMATTRIBUTES_COUNT: INTEGER := 0;
 	GREATER_OTHER_SPEED_BMAXPOWER_INDEX: INTEGER := 0;
 	GREATER_OTHER_SPEED_BMAXPOWER_COUNT: INTEGER := 0;
-	GREATER_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
-	GREATER_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
-	GREATER_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
-	GREATER_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
-	GREATER_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
-	GREATER_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
-	GREATER_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
-	GREATER_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
-	GREATER_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
-	GREATER_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
-	GREATER_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
-	GREATER_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
-	GREATER_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
-	GREATER_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
-	GREATER_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
-	GREATER_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
-	GREATER_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
-	GREATER_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
-	GREATER_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
-	GREATER_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
-	GREATER_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
-	GREATER_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
-	GREATER_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
-	GREATER_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
-	GREATER_HID_BLENGTH_INDEX: INTEGER := 0;
-	GREATER_HID_BLENGTH_COUNT: INTEGER := 0;
-	GREATER_HID_BCDHID_INDEX: INTEGER := 0;
-	GREATER_HID_BCDHID_COUNT: INTEGER := 0;
-	GREATER_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
-	GREATER_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
-	GREATER_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
-	GREATER_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
-	GREATER_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
-	GREATER_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
-	GREATER_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
-	GREATER_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
-	GREATER_STRING_BLENGTH_INDEX: INTEGER := 0;
-	GREATER_STRING_BLENGTH_COUNT: INTEGER := 0;
-	GREATER_STRING_IMANUFACTURER_INDEX: INTEGER := 0;
-	GREATER_STRING_IMANUFACTURER_COUNT: INTEGER := 0;
-	GREATER_STRING_IPRODUCT_INDEX: INTEGER := 0;
-	GREATER_STRING_IPRODUCT_COUNT: INTEGER := 0;
-	GREATER_STRING_ISERIALNUMBER_INDEX: INTEGER := 0;
-	GREATER_STRING_ISERIALNUMBER_COUNT: INTEGER := 0;
-	GREATER_STRING_ICONFIGURATION_INDEX: INTEGER := 0;
-	GREATER_STRING_ICONFIGURATION_COUNT: INTEGER := 0;
-	GREATER_STRING_IINTERFACE_INDEX: INTEGER := 0;
-	GREATER_STRING_IINTERFACE_COUNT: INTEGER := 0;
 
 	GREATER_EQUALS_MEMORY_ADDR_LENGTH: INTEGER := 1;
 	GREATER_EQUALS_MEMORY_ADDR_MAX_INDEX: INTEGER := 0;
-	GREATER_EQUALS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0; 
+	GREATER_EQUALS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_BLENGTH_INDEX: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_BLENGTH_COUNT: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_BCDUSB_INDEX: INTEGER := 0;
@@ -1563,8 +1719,76 @@ GENERIC(
 	GREATER_EQUALS_DEVICE_IDPRODUCT_COUNT: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_BCDDEVICE_INDEX: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_BCDDEVICE_COUNT: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_IMANUFACTURER_INDEX: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_IMANUFACTURER_COUNT: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_IPRODUCT_INDEX: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_IPRODUCT_COUNT: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_ISERIALNUMBER_INDEX: INTEGER := 0;
+	GREATER_EQUALS_DEVICE_ISERIALNUMBER_COUNT: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_INDEX: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_COUNT: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
+	GREATER_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_IINTERFACE_INDEX: INTEGER := 0;
+	GREATER_EQUALS_INTERFACE_IINTERFACE_COUNT: INTEGER := 0;
+	GREATER_EQUALS_HID_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_HID_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_HID_BCDHID_INDEX: INTEGER := 0;
+	GREATER_EQUALS_HID_BCDHID_COUNT: INTEGER := 0;
+	GREATER_EQUALS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
+	GREATER_EQUALS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
+	GREATER_EQUALS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
+	GREATER_EQUALS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
+	GREATER_EQUALS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
+	GREATER_EQUALS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
+	GREATER_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
+	GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
+	GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
+	GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
+	GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
+	GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
+	GREATER_EQUALS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
+	GREATER_EQUALS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX: INTEGER := 0;
@@ -1581,18 +1805,6 @@ GENERIC(
 	GREATER_EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX: INTEGER := 0;
 	GREATER_EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
-	GREATER_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
 	GREATER_EQUALS_OTHER_SPEED_BLENGTH_INDEX: INTEGER := 0;
 	GREATER_EQUALS_OTHER_SPEED_BLENGTH_COUNT: INTEGER := 0;
 	GREATER_EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX: INTEGER := 0;
@@ -1601,62 +1813,18 @@ GENERIC(
 	GREATER_EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT: INTEGER := 0;
 	GREATER_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
 	GREATER_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX: INTEGER := 0;
+	GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT: INTEGER := 0;
 	GREATER_EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX: INTEGER := 0;
 	GREATER_EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT: INTEGER := 0;
 	GREATER_EQUALS_OTHER_SPEED_BMAXPOWER_INDEX: INTEGER := 0;
 	GREATER_EQUALS_OTHER_SPEED_BMAXPOWER_COUNT: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
-	GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
-	GREATER_EQUALS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
-	GREATER_EQUALS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
-	GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
-	GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
-	GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
-	GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
-	GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
-	GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
-	GREATER_EQUALS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
-	GREATER_EQUALS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
-	GREATER_EQUALS_HID_BLENGTH_INDEX: INTEGER := 0;
-	GREATER_EQUALS_HID_BLENGTH_COUNT: INTEGER := 0;
-	GREATER_EQUALS_HID_BCDHID_INDEX: INTEGER := 0;
-	GREATER_EQUALS_HID_BCDHID_COUNT: INTEGER := 0;
-	GREATER_EQUALS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
-	GREATER_EQUALS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
-	GREATER_EQUALS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
-	GREATER_EQUALS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
-	GREATER_EQUALS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
-	GREATER_EQUALS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
-	GREATER_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
-	GREATER_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
-	GREATER_EQUALS_STRING_BLENGTH_INDEX: INTEGER := 0;
-	GREATER_EQUALS_STRING_BLENGTH_COUNT: INTEGER := 0;
-	GREATER_EQUALS_STRING_IMANUFACTURER_INDEX: INTEGER := 0;
-	GREATER_EQUALS_STRING_IMANUFACTURER_COUNT: INTEGER := 0;
-	GREATER_EQUALS_STRING_IPRODUCT_INDEX: INTEGER := 0;
-	GREATER_EQUALS_STRING_IPRODUCT_COUNT: INTEGER := 0;
-	GREATER_EQUALS_STRING_ISERIALNUMBER_INDEX: INTEGER := 0;
-	GREATER_EQUALS_STRING_ISERIALNUMBER_COUNT: INTEGER := 0;
-	GREATER_EQUALS_STRING_ICONFIGURATION_INDEX: INTEGER := 0;
-	GREATER_EQUALS_STRING_ICONFIGURATION_COUNT: INTEGER := 0;
-	GREATER_EQUALS_STRING_IINTERFACE_INDEX: INTEGER := 0;
-	GREATER_EQUALS_STRING_IINTERFACE_COUNT: INTEGER := 0;
 
 	LESS_MEMORY_ADDR_LENGTH: INTEGER := 1;
 	LESS_MEMORY_ADDR_MAX_INDEX: INTEGER := 0;
-	LESS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0; 
+	LESS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0;
 	LESS_DEVICE_BLENGTH_INDEX: INTEGER := 0;
 	LESS_DEVICE_BLENGTH_COUNT: INTEGER := 0;
 	LESS_DEVICE_BCDUSB_INDEX: INTEGER := 0;
@@ -1675,8 +1843,76 @@ GENERIC(
 	LESS_DEVICE_IDPRODUCT_COUNT: INTEGER := 0;
 	LESS_DEVICE_BCDDEVICE_INDEX: INTEGER := 0;
 	LESS_DEVICE_BCDDEVICE_COUNT: INTEGER := 0;
+	LESS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: INTEGER := 0;
+	LESS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: INTEGER := 0;
+	LESS_DEVICE_IMANUFACTURER_INDEX: INTEGER := 0;
+	LESS_DEVICE_IMANUFACTURER_COUNT: INTEGER := 0;
+	LESS_DEVICE_IPRODUCT_BLENGTH_INDEX: INTEGER := 0;
+	LESS_DEVICE_IPRODUCT_BLENGTH_COUNT: INTEGER := 0;
+	LESS_DEVICE_IPRODUCT_INDEX: INTEGER := 0;
+	LESS_DEVICE_IPRODUCT_COUNT: INTEGER := 0;
+	LESS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: INTEGER := 0;
+	LESS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: INTEGER := 0;
+	LESS_DEVICE_ISERIALNUMBER_INDEX: INTEGER := 0;
+	LESS_DEVICE_ISERIALNUMBER_COUNT: INTEGER := 0;
 	LESS_DEVICE_BNUMCONFIGURATIONS_INDEX: INTEGER := 0;
 	LESS_DEVICE_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
+	LESS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	LESS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	LESS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
+	LESS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
+	LESS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
+	LESS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
+	LESS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
+	LESS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	LESS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	LESS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	LESS_CONFIGURATION_ICONFIGURATION_INDEX: INTEGER := 0;
+	LESS_CONFIGURATION_ICONFIGURATION_COUNT: INTEGER := 0;
+	LESS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
+	LESS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
+	LESS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
+	LESS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
+	LESS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	LESS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	LESS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
+	LESS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
+	LESS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
+	LESS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
+	LESS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
+	LESS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
+	LESS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
+	LESS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
+	LESS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
+	LESS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
+	LESS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
+	LESS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
+	LESS_INTERFACE_IINTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	LESS_INTERFACE_IINTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	LESS_INTERFACE_IINTERFACE_INDEX: INTEGER := 0;
+	LESS_INTERFACE_IINTERFACE_COUNT: INTEGER := 0;
+	LESS_HID_BLENGTH_INDEX: INTEGER := 0;
+	LESS_HID_BLENGTH_COUNT: INTEGER := 0;
+	LESS_HID_BCDHID_INDEX: INTEGER := 0;
+	LESS_HID_BCDHID_COUNT: INTEGER := 0;
+	LESS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
+	LESS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
+	LESS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
+	LESS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
+	LESS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
+	LESS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
+	LESS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
+	LESS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
+	LESS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
+	LESS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
+	LESS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
+	LESS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
+	LESS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
+	LESS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
+	LESS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
+	LESS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
+	LESS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
+	LESS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
 	LESS_DEVICE_QUALIFIER_BLENGTH_INDEX: INTEGER := 0;
 	LESS_DEVICE_QUALIFIER_BLENGTH_COUNT: INTEGER := 0;
 	LESS_DEVICE_QUALIFIER_BCDUSB_INDEX: INTEGER := 0;
@@ -1693,18 +1929,6 @@ GENERIC(
 	LESS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
 	LESS_DEVICE_QUALIFIER_BRESERVED_INDEX: INTEGER := 0;
 	LESS_DEVICE_QUALIFIER_BRESERVED_COUNT: INTEGER := 0;
-	LESS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
-	LESS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
-	LESS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
-	LESS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
-	LESS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
-	LESS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
-	LESS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
-	LESS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
-	LESS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
-	LESS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
-	LESS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
-	LESS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
 	LESS_OTHER_SPEED_BLENGTH_INDEX: INTEGER := 0;
 	LESS_OTHER_SPEED_BLENGTH_COUNT: INTEGER := 0;
 	LESS_OTHER_SPEED_WTOTALLENGTH_INDEX: INTEGER := 0;
@@ -1713,62 +1937,18 @@ GENERIC(
 	LESS_OTHER_SPEED_BNUMINTERFACES_COUNT: INTEGER := 0;
 	LESS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
 	LESS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	LESS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	LESS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	LESS_OTHER_SPEED_ICONFIGURATION_INDEX: INTEGER := 0;
+	LESS_OTHER_SPEED_ICONFIGURATION_COUNT: INTEGER := 0;
 	LESS_OTHER_SPEED_BMATTRIBUTES_INDEX: INTEGER := 0;
 	LESS_OTHER_SPEED_BMATTRIBUTES_COUNT: INTEGER := 0;
 	LESS_OTHER_SPEED_BMAXPOWER_INDEX: INTEGER := 0;
 	LESS_OTHER_SPEED_BMAXPOWER_COUNT: INTEGER := 0;
-	LESS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
-	LESS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
-	LESS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
-	LESS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
-	LESS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
-	LESS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
-	LESS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
-	LESS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
-	LESS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
-	LESS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
-	LESS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
-	LESS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
-	LESS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
-	LESS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
-	LESS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
-	LESS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
-	LESS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
-	LESS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
-	LESS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
-	LESS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
-	LESS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
-	LESS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
-	LESS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
-	LESS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
-	LESS_HID_BLENGTH_INDEX: INTEGER := 0;
-	LESS_HID_BLENGTH_COUNT: INTEGER := 0;
-	LESS_HID_BCDHID_INDEX: INTEGER := 0;
-	LESS_HID_BCDHID_COUNT: INTEGER := 0;
-	LESS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
-	LESS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
-	LESS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
-	LESS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
-	LESS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
-	LESS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
-	LESS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
-	LESS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
-	LESS_STRING_BLENGTH_INDEX: INTEGER := 0;
-	LESS_STRING_BLENGTH_COUNT: INTEGER := 0;
-	LESS_STRING_IMANUFACTURER_INDEX: INTEGER := 0;
-	LESS_STRING_IMANUFACTURER_COUNT: INTEGER := 0;
-	LESS_STRING_IPRODUCT_INDEX: INTEGER := 0;
-	LESS_STRING_IPRODUCT_COUNT: INTEGER := 0;
-	LESS_STRING_ISERIALNUMBER_INDEX: INTEGER := 0;
-	LESS_STRING_ISERIALNUMBER_COUNT: INTEGER := 0;
-	LESS_STRING_ICONFIGURATION_INDEX: INTEGER := 0;
-	LESS_STRING_ICONFIGURATION_COUNT: INTEGER := 0;
-	LESS_STRING_IINTERFACE_INDEX: INTEGER := 0;
-	LESS_STRING_IINTERFACE_COUNT: INTEGER := 0;
 
 	LESS_EQUALS_MEMORY_ADDR_LENGTH: INTEGER := 1;
 	LESS_EQUALS_MEMORY_ADDR_MAX_INDEX: INTEGER := 0;
-	LESS_EQUALS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0; 
+	LESS_EQUALS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0;
 	LESS_EQUALS_DEVICE_BLENGTH_INDEX: INTEGER := 0;
 	LESS_EQUALS_DEVICE_BLENGTH_COUNT: INTEGER := 0;
 	LESS_EQUALS_DEVICE_BCDUSB_INDEX: INTEGER := 0;
@@ -1787,8 +1967,76 @@ GENERIC(
 	LESS_EQUALS_DEVICE_IDPRODUCT_COUNT: INTEGER := 0;
 	LESS_EQUALS_DEVICE_BCDDEVICE_INDEX: INTEGER := 0;
 	LESS_EQUALS_DEVICE_BCDDEVICE_COUNT: INTEGER := 0;
+	LESS_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_DEVICE_IMANUFACTURER_INDEX: INTEGER := 0;
+	LESS_EQUALS_DEVICE_IMANUFACTURER_COUNT: INTEGER := 0;
+	LESS_EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_DEVICE_IPRODUCT_INDEX: INTEGER := 0;
+	LESS_EQUALS_DEVICE_IPRODUCT_COUNT: INTEGER := 0;
+	LESS_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_DEVICE_ISERIALNUMBER_INDEX: INTEGER := 0;
+	LESS_EQUALS_DEVICE_ISERIALNUMBER_COUNT: INTEGER := 0;
 	LESS_EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX: INTEGER := 0;
 	LESS_EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_ICONFIGURATION_INDEX: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_ICONFIGURATION_COUNT: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
+	LESS_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_IINTERFACE_INDEX: INTEGER := 0;
+	LESS_EQUALS_INTERFACE_IINTERFACE_COUNT: INTEGER := 0;
+	LESS_EQUALS_HID_BLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_HID_BLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_HID_BCDHID_INDEX: INTEGER := 0;
+	LESS_EQUALS_HID_BCDHID_COUNT: INTEGER := 0;
+	LESS_EQUALS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
+	LESS_EQUALS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
+	LESS_EQUALS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
+	LESS_EQUALS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
+	LESS_EQUALS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
+	LESS_EQUALS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
+	LESS_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
+	LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
+	LESS_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
+	LESS_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
+	LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
+	LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
+	LESS_EQUALS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
+	LESS_EQUALS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
 	LESS_EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX: INTEGER := 0;
 	LESS_EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT: INTEGER := 0;
 	LESS_EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX: INTEGER := 0;
@@ -1805,18 +2053,6 @@ GENERIC(
 	LESS_EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
 	LESS_EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX: INTEGER := 0;
 	LESS_EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
-	LESS_EQUALS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
 	LESS_EQUALS_OTHER_SPEED_BLENGTH_INDEX: INTEGER := 0;
 	LESS_EQUALS_OTHER_SPEED_BLENGTH_COUNT: INTEGER := 0;
 	LESS_EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX: INTEGER := 0;
@@ -1825,62 +2061,18 @@ GENERIC(
 	LESS_EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT: INTEGER := 0;
 	LESS_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
 	LESS_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX: INTEGER := 0;
+	LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT: INTEGER := 0;
 	LESS_EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX: INTEGER := 0;
 	LESS_EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT: INTEGER := 0;
 	LESS_EQUALS_OTHER_SPEED_BMAXPOWER_INDEX: INTEGER := 0;
 	LESS_EQUALS_OTHER_SPEED_BMAXPOWER_COUNT: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
-	LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
-	LESS_EQUALS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
-	LESS_EQUALS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
-	LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
-	LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
-	LESS_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
-	LESS_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
-	LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
-	LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
-	LESS_EQUALS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
-	LESS_EQUALS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
-	LESS_EQUALS_HID_BLENGTH_INDEX: INTEGER := 0;
-	LESS_EQUALS_HID_BLENGTH_COUNT: INTEGER := 0;
-	LESS_EQUALS_HID_BCDHID_INDEX: INTEGER := 0;
-	LESS_EQUALS_HID_BCDHID_COUNT: INTEGER := 0;
-	LESS_EQUALS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
-	LESS_EQUALS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
-	LESS_EQUALS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
-	LESS_EQUALS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
-	LESS_EQUALS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
-	LESS_EQUALS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
-	LESS_EQUALS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
-	LESS_EQUALS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
-	LESS_EQUALS_STRING_BLENGTH_INDEX: INTEGER := 0;
-	LESS_EQUALS_STRING_BLENGTH_COUNT: INTEGER := 0;
-	LESS_EQUALS_STRING_IMANUFACTURER_INDEX: INTEGER := 0;
-	LESS_EQUALS_STRING_IMANUFACTURER_COUNT: INTEGER := 0;
-	LESS_EQUALS_STRING_IPRODUCT_INDEX: INTEGER := 0;
-	LESS_EQUALS_STRING_IPRODUCT_COUNT: INTEGER := 0;
-	LESS_EQUALS_STRING_ISERIALNUMBER_INDEX: INTEGER := 0;
-	LESS_EQUALS_STRING_ISERIALNUMBER_COUNT: INTEGER := 0;
-	LESS_EQUALS_STRING_ICONFIGURATION_INDEX: INTEGER := 0;
-	LESS_EQUALS_STRING_ICONFIGURATION_COUNT: INTEGER := 0;
-	LESS_EQUALS_STRING_IINTERFACE_INDEX: INTEGER := 0;
-	LESS_EQUALS_STRING_IINTERFACE_COUNT: INTEGER := 0;
 
 	STARTS_WITH_MEMORY_ADDR_LENGTH: INTEGER := 1;
 	STARTS_WITH_MEMORY_ADDR_MAX_INDEX: INTEGER := 0;
-	STARTS_WITH_MEMORY_ADDR_MAX_COUNT: INTEGER := 0; 
+	STARTS_WITH_MEMORY_ADDR_MAX_COUNT: INTEGER := 0;
 	STARTS_WITH_DEVICE_BLENGTH_INDEX: INTEGER := 0;
 	STARTS_WITH_DEVICE_BLENGTH_COUNT: INTEGER := 0;
 	STARTS_WITH_DEVICE_BCDUSB_INDEX: INTEGER := 0;
@@ -1899,8 +2091,76 @@ GENERIC(
 	STARTS_WITH_DEVICE_IDPRODUCT_COUNT: INTEGER := 0;
 	STARTS_WITH_DEVICE_BCDDEVICE_INDEX: INTEGER := 0;
 	STARTS_WITH_DEVICE_BCDDEVICE_COUNT: INTEGER := 0;
+	STARTS_WITH_DEVICE_IMANUFACTURER_BLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_DEVICE_IMANUFACTURER_BLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_DEVICE_IMANUFACTURER_INDEX: INTEGER := 0;
+	STARTS_WITH_DEVICE_IMANUFACTURER_COUNT: INTEGER := 0;
+	STARTS_WITH_DEVICE_IPRODUCT_BLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_DEVICE_IPRODUCT_BLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_DEVICE_IPRODUCT_INDEX: INTEGER := 0;
+	STARTS_WITH_DEVICE_IPRODUCT_COUNT: INTEGER := 0;
+	STARTS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_DEVICE_ISERIALNUMBER_INDEX: INTEGER := 0;
+	STARTS_WITH_DEVICE_ISERIALNUMBER_COUNT: INTEGER := 0;
 	STARTS_WITH_DEVICE_BNUMCONFIGURATIONS_INDEX: INTEGER := 0;
 	STARTS_WITH_DEVICE_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_ICONFIGURATION_INDEX: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_ICONFIGURATION_COUNT: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
+	STARTS_WITH_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
+	STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
+	STARTS_WITH_INTERFACE_IINTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_INTERFACE_IINTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_INTERFACE_IINTERFACE_INDEX: INTEGER := 0;
+	STARTS_WITH_INTERFACE_IINTERFACE_COUNT: INTEGER := 0;
+	STARTS_WITH_HID_BLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_HID_BLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_HID_BCDHID_INDEX: INTEGER := 0;
+	STARTS_WITH_HID_BCDHID_COUNT: INTEGER := 0;
+	STARTS_WITH_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
+	STARTS_WITH_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
+	STARTS_WITH_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
+	STARTS_WITH_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
+	STARTS_WITH_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
+	STARTS_WITH_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
+	STARTS_WITH_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
+	STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
+	STARTS_WITH_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
+	STARTS_WITH_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
+	STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
+	STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
+	STARTS_WITH_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
+	STARTS_WITH_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
 	STARTS_WITH_DEVICE_QUALIFIER_BLENGTH_INDEX: INTEGER := 0;
 	STARTS_WITH_DEVICE_QUALIFIER_BLENGTH_COUNT: INTEGER := 0;
 	STARTS_WITH_DEVICE_QUALIFIER_BCDUSB_INDEX: INTEGER := 0;
@@ -1917,18 +2177,6 @@ GENERIC(
 	STARTS_WITH_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
 	STARTS_WITH_DEVICE_QUALIFIER_BRESERVED_INDEX: INTEGER := 0;
 	STARTS_WITH_DEVICE_QUALIFIER_BRESERVED_COUNT: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
-	STARTS_WITH_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
 	STARTS_WITH_OTHER_SPEED_BLENGTH_INDEX: INTEGER := 0;
 	STARTS_WITH_OTHER_SPEED_BLENGTH_COUNT: INTEGER := 0;
 	STARTS_WITH_OTHER_SPEED_WTOTALLENGTH_INDEX: INTEGER := 0;
@@ -1937,62 +2185,18 @@ GENERIC(
 	STARTS_WITH_OTHER_SPEED_BNUMINTERFACES_COUNT: INTEGER := 0;
 	STARTS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
 	STARTS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	STARTS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	STARTS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	STARTS_WITH_OTHER_SPEED_ICONFIGURATION_INDEX: INTEGER := 0;
+	STARTS_WITH_OTHER_SPEED_ICONFIGURATION_COUNT: INTEGER := 0;
 	STARTS_WITH_OTHER_SPEED_BMATTRIBUTES_INDEX: INTEGER := 0;
 	STARTS_WITH_OTHER_SPEED_BMATTRIBUTES_COUNT: INTEGER := 0;
 	STARTS_WITH_OTHER_SPEED_BMAXPOWER_INDEX: INTEGER := 0;
 	STARTS_WITH_OTHER_SPEED_BMAXPOWER_COUNT: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
-	STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
-	STARTS_WITH_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
-	STARTS_WITH_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
-	STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
-	STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
-	STARTS_WITH_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
-	STARTS_WITH_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
-	STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
-	STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
-	STARTS_WITH_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
-	STARTS_WITH_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
-	STARTS_WITH_HID_BLENGTH_INDEX: INTEGER := 0;
-	STARTS_WITH_HID_BLENGTH_COUNT: INTEGER := 0;
-	STARTS_WITH_HID_BCDHID_INDEX: INTEGER := 0;
-	STARTS_WITH_HID_BCDHID_COUNT: INTEGER := 0;
-	STARTS_WITH_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
-	STARTS_WITH_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
-	STARTS_WITH_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
-	STARTS_WITH_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
-	STARTS_WITH_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
-	STARTS_WITH_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
-	STARTS_WITH_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
-	STARTS_WITH_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
-	STARTS_WITH_STRING_BLENGTH_INDEX: INTEGER := 0;
-	STARTS_WITH_STRING_BLENGTH_COUNT: INTEGER := 0;
-	STARTS_WITH_STRING_IMANUFACTURER_INDEX: INTEGER := 0;
-	STARTS_WITH_STRING_IMANUFACTURER_COUNT: INTEGER := 0;
-	STARTS_WITH_STRING_IPRODUCT_INDEX: INTEGER := 0;
-	STARTS_WITH_STRING_IPRODUCT_COUNT: INTEGER := 0;
-	STARTS_WITH_STRING_ISERIALNUMBER_INDEX: INTEGER := 0;
-	STARTS_WITH_STRING_ISERIALNUMBER_COUNT: INTEGER := 0;
-	STARTS_WITH_STRING_ICONFIGURATION_INDEX: INTEGER := 0;
-	STARTS_WITH_STRING_ICONFIGURATION_COUNT: INTEGER := 0;
-	STARTS_WITH_STRING_IINTERFACE_INDEX: INTEGER := 0;
-	STARTS_WITH_STRING_IINTERFACE_COUNT: INTEGER := 0;
 
 	ENDS_WITH_MEMORY_ADDR_LENGTH: INTEGER := 1;
 	ENDS_WITH_MEMORY_ADDR_MAX_INDEX: INTEGER := 0;
-	ENDS_WITH_MEMORY_ADDR_MAX_COUNT: INTEGER := 0; 
+	ENDS_WITH_MEMORY_ADDR_MAX_COUNT: INTEGER := 0;
 	ENDS_WITH_DEVICE_BLENGTH_INDEX: INTEGER := 0;
 	ENDS_WITH_DEVICE_BLENGTH_COUNT: INTEGER := 0;
 	ENDS_WITH_DEVICE_BCDUSB_INDEX: INTEGER := 0;
@@ -2011,8 +2215,76 @@ GENERIC(
 	ENDS_WITH_DEVICE_IDPRODUCT_COUNT: INTEGER := 0;
 	ENDS_WITH_DEVICE_BCDDEVICE_INDEX: INTEGER := 0;
 	ENDS_WITH_DEVICE_BCDDEVICE_COUNT: INTEGER := 0;
+	ENDS_WITH_DEVICE_IMANUFACTURER_BLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_DEVICE_IMANUFACTURER_BLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_DEVICE_IMANUFACTURER_INDEX: INTEGER := 0;
+	ENDS_WITH_DEVICE_IMANUFACTURER_COUNT: INTEGER := 0;
+	ENDS_WITH_DEVICE_IPRODUCT_BLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_DEVICE_IPRODUCT_BLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_DEVICE_IPRODUCT_INDEX: INTEGER := 0;
+	ENDS_WITH_DEVICE_IPRODUCT_COUNT: INTEGER := 0;
+	ENDS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_DEVICE_ISERIALNUMBER_INDEX: INTEGER := 0;
+	ENDS_WITH_DEVICE_ISERIALNUMBER_COUNT: INTEGER := 0;
 	ENDS_WITH_DEVICE_BNUMCONFIGURATIONS_INDEX: INTEGER := 0;
 	ENDS_WITH_DEVICE_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_ICONFIGURATION_INDEX: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_ICONFIGURATION_COUNT: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
+	ENDS_WITH_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
+	ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
+	ENDS_WITH_INTERFACE_IINTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_INTERFACE_IINTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_INTERFACE_IINTERFACE_INDEX: INTEGER := 0;
+	ENDS_WITH_INTERFACE_IINTERFACE_COUNT: INTEGER := 0;
+	ENDS_WITH_HID_BLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_HID_BLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_HID_BCDHID_INDEX: INTEGER := 0;
+	ENDS_WITH_HID_BCDHID_COUNT: INTEGER := 0;
+	ENDS_WITH_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
+	ENDS_WITH_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
+	ENDS_WITH_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
+	ENDS_WITH_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
+	ENDS_WITH_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
+	ENDS_WITH_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
+	ENDS_WITH_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
+	ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
+	ENDS_WITH_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
+	ENDS_WITH_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
+	ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
+	ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
+	ENDS_WITH_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
+	ENDS_WITH_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
 	ENDS_WITH_DEVICE_QUALIFIER_BLENGTH_INDEX: INTEGER := 0;
 	ENDS_WITH_DEVICE_QUALIFIER_BLENGTH_COUNT: INTEGER := 0;
 	ENDS_WITH_DEVICE_QUALIFIER_BCDUSB_INDEX: INTEGER := 0;
@@ -2029,18 +2301,6 @@ GENERIC(
 	ENDS_WITH_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
 	ENDS_WITH_DEVICE_QUALIFIER_BRESERVED_INDEX: INTEGER := 0;
 	ENDS_WITH_DEVICE_QUALIFIER_BRESERVED_COUNT: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
-	ENDS_WITH_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
 	ENDS_WITH_OTHER_SPEED_BLENGTH_INDEX: INTEGER := 0;
 	ENDS_WITH_OTHER_SPEED_BLENGTH_COUNT: INTEGER := 0;
 	ENDS_WITH_OTHER_SPEED_WTOTALLENGTH_INDEX: INTEGER := 0;
@@ -2049,62 +2309,18 @@ GENERIC(
 	ENDS_WITH_OTHER_SPEED_BNUMINTERFACES_COUNT: INTEGER := 0;
 	ENDS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
 	ENDS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	ENDS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	ENDS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	ENDS_WITH_OTHER_SPEED_ICONFIGURATION_INDEX: INTEGER := 0;
+	ENDS_WITH_OTHER_SPEED_ICONFIGURATION_COUNT: INTEGER := 0;
 	ENDS_WITH_OTHER_SPEED_BMATTRIBUTES_INDEX: INTEGER := 0;
 	ENDS_WITH_OTHER_SPEED_BMATTRIBUTES_COUNT: INTEGER := 0;
 	ENDS_WITH_OTHER_SPEED_BMAXPOWER_INDEX: INTEGER := 0;
 	ENDS_WITH_OTHER_SPEED_BMAXPOWER_COUNT: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
-	ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
-	ENDS_WITH_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
-	ENDS_WITH_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
-	ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
-	ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
-	ENDS_WITH_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
-	ENDS_WITH_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
-	ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
-	ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
-	ENDS_WITH_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
-	ENDS_WITH_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
-	ENDS_WITH_HID_BLENGTH_INDEX: INTEGER := 0;
-	ENDS_WITH_HID_BLENGTH_COUNT: INTEGER := 0;
-	ENDS_WITH_HID_BCDHID_INDEX: INTEGER := 0;
-	ENDS_WITH_HID_BCDHID_COUNT: INTEGER := 0;
-	ENDS_WITH_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
-	ENDS_WITH_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
-	ENDS_WITH_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
-	ENDS_WITH_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
-	ENDS_WITH_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
-	ENDS_WITH_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
-	ENDS_WITH_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
-	ENDS_WITH_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
-	ENDS_WITH_STRING_BLENGTH_INDEX: INTEGER := 0;
-	ENDS_WITH_STRING_BLENGTH_COUNT: INTEGER := 0;
-	ENDS_WITH_STRING_IMANUFACTURER_INDEX: INTEGER := 0;
-	ENDS_WITH_STRING_IMANUFACTURER_COUNT: INTEGER := 0;
-	ENDS_WITH_STRING_IPRODUCT_INDEX: INTEGER := 0;
-	ENDS_WITH_STRING_IPRODUCT_COUNT: INTEGER := 0;
-	ENDS_WITH_STRING_ISERIALNUMBER_INDEX: INTEGER := 0;
-	ENDS_WITH_STRING_ISERIALNUMBER_COUNT: INTEGER := 0;
-	ENDS_WITH_STRING_ICONFIGURATION_INDEX: INTEGER := 0;
-	ENDS_WITH_STRING_ICONFIGURATION_COUNT: INTEGER := 0;
-	ENDS_WITH_STRING_IINTERFACE_INDEX: INTEGER := 0;
-	ENDS_WITH_STRING_IINTERFACE_COUNT: INTEGER := 0;
 
 	CONTAINS_MEMORY_ADDR_LENGTH: INTEGER := 1;
 	CONTAINS_MEMORY_ADDR_MAX_INDEX: INTEGER := 0;
-	CONTAINS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0; 
+	CONTAINS_MEMORY_ADDR_MAX_COUNT: INTEGER := 0;
 	CONTAINS_DEVICE_BLENGTH_INDEX: INTEGER := 0;
 	CONTAINS_DEVICE_BLENGTH_COUNT: INTEGER := 0;
 	CONTAINS_DEVICE_BCDUSB_INDEX: INTEGER := 0;
@@ -2123,8 +2339,76 @@ GENERIC(
 	CONTAINS_DEVICE_IDPRODUCT_COUNT: INTEGER := 0;
 	CONTAINS_DEVICE_BCDDEVICE_INDEX: INTEGER := 0;
 	CONTAINS_DEVICE_BCDDEVICE_COUNT: INTEGER := 0;
+	CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_DEVICE_IMANUFACTURER_INDEX: INTEGER := 0;
+	CONTAINS_DEVICE_IMANUFACTURER_COUNT: INTEGER := 0;
+	CONTAINS_DEVICE_IPRODUCT_BLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_DEVICE_IPRODUCT_BLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_DEVICE_IPRODUCT_INDEX: INTEGER := 0;
+	CONTAINS_DEVICE_IPRODUCT_COUNT: INTEGER := 0;
+	CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_DEVICE_ISERIALNUMBER_INDEX: INTEGER := 0;
+	CONTAINS_DEVICE_ISERIALNUMBER_COUNT: INTEGER := 0;
 	CONTAINS_DEVICE_BNUMCONFIGURATIONS_INDEX: INTEGER := 0;
 	CONTAINS_DEVICE_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
+	CONTAINS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
+	CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
+	CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
+	CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_CONFIGURATION_ICONFIGURATION_INDEX: INTEGER := 0;
+	CONTAINS_CONFIGURATION_ICONFIGURATION_COUNT: INTEGER := 0;
+	CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
+	CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
+	CONTAINS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
+	CONTAINS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
+	CONTAINS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
+	CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
+	CONTAINS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
+	CONTAINS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
+	CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
+	CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
+	CONTAINS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
+	CONTAINS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
+	CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
+	CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
+	CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
+	CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
+	CONTAINS_INTERFACE_IINTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_INTERFACE_IINTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_INTERFACE_IINTERFACE_INDEX: INTEGER := 0;
+	CONTAINS_INTERFACE_IINTERFACE_COUNT: INTEGER := 0;
+	CONTAINS_HID_BLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_HID_BLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_HID_BCDHID_INDEX: INTEGER := 0;
+	CONTAINS_HID_BCDHID_COUNT: INTEGER := 0;
+	CONTAINS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
+	CONTAINS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
+	CONTAINS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
+	CONTAINS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
+	CONTAINS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
+	CONTAINS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
+	CONTAINS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
+	CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
+	CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
+	CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
+	CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
+	CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
+	CONTAINS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
+	CONTAINS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
 	CONTAINS_DEVICE_QUALIFIER_BLENGTH_INDEX: INTEGER := 0;
 	CONTAINS_DEVICE_QUALIFIER_BLENGTH_COUNT: INTEGER := 0;
 	CONTAINS_DEVICE_QUALIFIER_BCDUSB_INDEX: INTEGER := 0;
@@ -2141,18 +2425,6 @@ GENERIC(
 	CONTAINS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
 	CONTAINS_DEVICE_QUALIFIER_BRESERVED_INDEX: INTEGER := 0;
 	CONTAINS_DEVICE_QUALIFIER_BRESERVED_COUNT: INTEGER := 0;
-	CONTAINS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
-	CONTAINS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
-	CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
-	CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
-	CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
-	CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
-	CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
-	CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
-	CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
-	CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
-	CONTAINS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
-	CONTAINS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
 	CONTAINS_OTHER_SPEED_BLENGTH_INDEX: INTEGER := 0;
 	CONTAINS_OTHER_SPEED_BLENGTH_COUNT: INTEGER := 0;
 	CONTAINS_OTHER_SPEED_WTOTALLENGTH_INDEX: INTEGER := 0;
@@ -2161,58 +2433,14 @@ GENERIC(
 	CONTAINS_OTHER_SPEED_BNUMINTERFACES_COUNT: INTEGER := 0;
 	CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
 	CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	CONTAINS_OTHER_SPEED_ICONFIGURATION_INDEX: INTEGER := 0;
+	CONTAINS_OTHER_SPEED_ICONFIGURATION_COUNT: INTEGER := 0;
 	CONTAINS_OTHER_SPEED_BMATTRIBUTES_INDEX: INTEGER := 0;
 	CONTAINS_OTHER_SPEED_BMATTRIBUTES_COUNT: INTEGER := 0;
 	CONTAINS_OTHER_SPEED_BMAXPOWER_INDEX: INTEGER := 0;
 	CONTAINS_OTHER_SPEED_BMAXPOWER_COUNT: INTEGER := 0;
-	CONTAINS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
-	CONTAINS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
-	CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
-	CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
-	CONTAINS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
-	CONTAINS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
-	CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
-	CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
-	CONTAINS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
-	CONTAINS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
-	CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
-	CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
-	CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
-	CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
-	CONTAINS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
-	CONTAINS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
-	CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
-	CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
-	CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
-	CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
-	CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
-	CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
-	CONTAINS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
-	CONTAINS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
-	CONTAINS_HID_BLENGTH_INDEX: INTEGER := 0;
-	CONTAINS_HID_BLENGTH_COUNT: INTEGER := 0;
-	CONTAINS_HID_BCDHID_INDEX: INTEGER := 0;
-	CONTAINS_HID_BCDHID_COUNT: INTEGER := 0;
-	CONTAINS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
-	CONTAINS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
-	CONTAINS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
-	CONTAINS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
-	CONTAINS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
-	CONTAINS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
-	CONTAINS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
-	CONTAINS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
-	CONTAINS_STRING_BLENGTH_INDEX: INTEGER := 0;
-	CONTAINS_STRING_BLENGTH_COUNT: INTEGER := 0;
-	CONTAINS_STRING_IMANUFACTURER_INDEX: INTEGER := 0;
-	CONTAINS_STRING_IMANUFACTURER_COUNT: INTEGER := 0;
-	CONTAINS_STRING_IPRODUCT_INDEX: INTEGER := 0;
-	CONTAINS_STRING_IPRODUCT_COUNT: INTEGER := 0;
-	CONTAINS_STRING_ISERIALNUMBER_INDEX: INTEGER := 0;
-	CONTAINS_STRING_ISERIALNUMBER_COUNT: INTEGER := 0;
-	CONTAINS_STRING_ICONFIGURATION_INDEX: INTEGER := 0;
-	CONTAINS_STRING_ICONFIGURATION_COUNT: INTEGER := 0;
-	CONTAINS_STRING_IINTERFACE_INDEX: INTEGER := 0;
-	CONTAINS_STRING_IINTERFACE_COUNT: INTEGER := 0;
 
 	NOT_CONTAINS_MEMORY_ADDR_LENGTH: INTEGER := 1;
 	NOT_CONTAINS_MEMORY_ADDR_MAX_INDEX: INTEGER := 0;
@@ -2235,8 +2463,76 @@ GENERIC(
 	NOT_CONTAINS_DEVICE_IDPRODUCT_COUNT: INTEGER := 0;
 	NOT_CONTAINS_DEVICE_BCDDEVICE_INDEX: INTEGER := 0;
 	NOT_CONTAINS_DEVICE_BCDDEVICE_COUNT: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_IMANUFACTURER_INDEX: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_IMANUFACTURER_COUNT: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_IPRODUCT_BLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_IPRODUCT_BLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_IPRODUCT_INDEX: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_IPRODUCT_COUNT: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_ISERIALNUMBER_INDEX: INTEGER := 0;
+	NOT_CONTAINS_DEVICE_ISERIALNUMBER_COUNT: INTEGER := 0;
 	NOT_CONTAINS_DEVICE_BNUMCONFIGURATIONS_INDEX: INTEGER := 0;
 	NOT_CONTAINS_DEVICE_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_INDEX: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_COUNT: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
+	NOT_CONTAINS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_IINTERFACE_BLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_IINTERFACE_BLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_IINTERFACE_INDEX: INTEGER := 0;
+	NOT_CONTAINS_INTERFACE_IINTERFACE_COUNT: INTEGER := 0;
+	NOT_CONTAINS_HID_BLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_HID_BLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_HID_BCDHID_INDEX: INTEGER := 0;
+	NOT_CONTAINS_HID_BCDHID_COUNT: INTEGER := 0;
+	NOT_CONTAINS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
+	NOT_CONTAINS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
+	NOT_CONTAINS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
+	NOT_CONTAINS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
+	NOT_CONTAINS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
+	NOT_CONTAINS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
+	NOT_CONTAINS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
+	NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
+	NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
+	NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
+	NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
+	NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
+	NOT_CONTAINS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
+	NOT_CONTAINS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
 	NOT_CONTAINS_DEVICE_QUALIFIER_BLENGTH_INDEX: INTEGER := 0;
 	NOT_CONTAINS_DEVICE_QUALIFIER_BLENGTH_COUNT: INTEGER := 0;
 	NOT_CONTAINS_DEVICE_QUALIFIER_BCDUSB_INDEX: INTEGER := 0;
@@ -2253,18 +2549,6 @@ GENERIC(
 	NOT_CONTAINS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT: INTEGER := 0;
 	NOT_CONTAINS_DEVICE_QUALIFIER_BRESERVED_INDEX: INTEGER := 0;
 	NOT_CONTAINS_DEVICE_QUALIFIER_BRESERVED_COUNT: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_BMAXPOWER_INDEX: INTEGER := 0;
-	NOT_CONTAINS_CONFIGURATION_BMAXPOWER_COUNT: INTEGER := 0;
 	NOT_CONTAINS_OTHER_SPEED_BLENGTH_INDEX: INTEGER := 0;
 	NOT_CONTAINS_OTHER_SPEED_BLENGTH_COUNT: INTEGER := 0;
 	NOT_CONTAINS_OTHER_SPEED_WTOTALLENGTH_INDEX: INTEGER := 0;
@@ -2273,58 +2557,14 @@ GENERIC(
 	NOT_CONTAINS_OTHER_SPEED_BNUMINTERFACES_COUNT: INTEGER := 0;
 	NOT_CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX: INTEGER := 0;
 	NOT_CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT: INTEGER := 0;
+	NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX: INTEGER := 0;
+	NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT: INTEGER := 0;
+	NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_INDEX: INTEGER := 0;
+	NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_COUNT: INTEGER := 0;
 	NOT_CONTAINS_OTHER_SPEED_BMATTRIBUTES_INDEX: INTEGER := 0;
 	NOT_CONTAINS_OTHER_SPEED_BMATTRIBUTES_COUNT: INTEGER := 0;
 	NOT_CONTAINS_OTHER_SPEED_BMAXPOWER_INDEX: INTEGER := 0;
-	NOT_CONTAINS_OTHER_SPEED_BMAXPOWER_COUNT: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BLENGTH_INDEX: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BLENGTH_COUNT: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BALTERNATESETTING_INDEX: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BALTERNATESETTING_COUNT: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BINTERFACECLASS_INDEX: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BINTERFACECLASS_COUNT: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX: INTEGER := 0;
-	NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT: INTEGER := 0;
-	NOT_CONTAINS_ENDPOINT_BLENGTH_INDEX: INTEGER := 0;
-	NOT_CONTAINS_ENDPOINT_BLENGTH_COUNT: INTEGER := 0;
-	NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX: INTEGER := 0;
-	NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT: INTEGER := 0;
-	NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX: INTEGER := 0;
-	NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT: INTEGER := 0;
-	NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX: INTEGER := 0;
-	NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT: INTEGER := 0;
-	NOT_CONTAINS_ENDPOINT_BINTERVAL_INDEX: INTEGER := 0;
-	NOT_CONTAINS_ENDPOINT_BINTERVAL_COUNT: INTEGER := 0;
-	NOT_CONTAINS_HID_BLENGTH_INDEX: INTEGER := 0;
-	NOT_CONTAINS_HID_BLENGTH_COUNT: INTEGER := 0;
-	NOT_CONTAINS_HID_BCDHID_INDEX: INTEGER := 0;
-	NOT_CONTAINS_HID_BCDHID_COUNT: INTEGER := 0;
-	NOT_CONTAINS_HID_BCOUNTRYCODE_INDEX: INTEGER := 0;
-	NOT_CONTAINS_HID_BCOUNTRYCODE_COUNT: INTEGER := 0;
-	NOT_CONTAINS_HID_BNUMDESCRIPTORS_INDEX: INTEGER := 0;
-	NOT_CONTAINS_HID_BNUMDESCRIPTORS_COUNT: INTEGER := 0;
-	NOT_CONTAINS_HID_BDESCRIPTORTYPE_INDEX: INTEGER := 0;
-	NOT_CONTAINS_HID_BDESCRIPTORTYPE_COUNT: INTEGER := 0;
-	NOT_CONTAINS_HID_WDESCRIPTORLENGTH_INDEX: INTEGER := 0;
-	NOT_CONTAINS_HID_WDESCRIPTORLENGTH_COUNT: INTEGER := 0;
-	NOT_CONTAINS_STRING_BLENGTH_INDEX: INTEGER := 0;
-	NOT_CONTAINS_STRING_BLENGTH_COUNT: INTEGER := 0;
-	NOT_CONTAINS_STRING_IMANUFACTURER_INDEX: INTEGER := 0;
-	NOT_CONTAINS_STRING_IMANUFACTURER_COUNT: INTEGER := 0;
-	NOT_CONTAINS_STRING_IPRODUCT_INDEX: INTEGER := 0;
-	NOT_CONTAINS_STRING_IPRODUCT_COUNT: INTEGER := 0;
-	NOT_CONTAINS_STRING_ISERIALNUMBER_INDEX: INTEGER := 0;
-	NOT_CONTAINS_STRING_ISERIALNUMBER_COUNT: INTEGER := 0;
-	NOT_CONTAINS_STRING_ICONFIGURATION_INDEX: INTEGER := 0;
-	NOT_CONTAINS_STRING_ICONFIGURATION_COUNT: INTEGER := 0;
-	NOT_CONTAINS_STRING_IINTERFACE_INDEX: INTEGER := 0;
-	NOT_CONTAINS_STRING_IINTERFACE_COUNT: INTEGER := 0
+	NOT_CONTAINS_OTHER_SPEED_BMAXPOWER_COUNT: INTEGER := 0
 );
 
 PORT(
@@ -2396,7 +2636,7 @@ uut: USBVerifier
 
 		EQUALS_MEMORY_ADDR_LENGTH => 1,
 		EQUALS_MEMORY_ADDR_MAX_INDEX => 0,
-		EQUALS_MEMORY_ADDR_MAX_COUNT => 0, 
+		EQUALS_MEMORY_ADDR_MAX_COUNT => 0,
 		EQUALS_DEVICE_BLENGTH_INDEX => 0,
 		EQUALS_DEVICE_BLENGTH_COUNT => 0,
 		EQUALS_DEVICE_BCDUSB_INDEX => 0,
@@ -2415,8 +2655,76 @@ uut: USBVerifier
 		EQUALS_DEVICE_IDPRODUCT_COUNT => 0,
 		EQUALS_DEVICE_BCDDEVICE_INDEX => 0,
 		EQUALS_DEVICE_BCDDEVICE_COUNT => 0,
+		EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX => 0,
+		EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT => 0,
+		EQUALS_DEVICE_IMANUFACTURER_INDEX => 0,
+		EQUALS_DEVICE_IMANUFACTURER_COUNT => 0,
+		EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX => 0,
+		EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT => 0,
+		EQUALS_DEVICE_IPRODUCT_INDEX => 0,
+		EQUALS_DEVICE_IPRODUCT_COUNT => 0,
+		EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX => 0,
+		EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT => 0,
+		EQUALS_DEVICE_ISERIALNUMBER_INDEX => 0,
+		EQUALS_DEVICE_ISERIALNUMBER_COUNT => 0,
 		EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX => 0,
 		EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT => 0,
+		EQUALS_CONFIGURATION_BLENGTH_INDEX => 0,
+		EQUALS_CONFIGURATION_BLENGTH_COUNT => 0,
+		EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
+		EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
+		EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
+		EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
+		EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
+		EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
+		EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX => 0,
+		EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT => 0,
+		EQUALS_CONFIGURATION_ICONFIGURATION_INDEX => 0,
+		EQUALS_CONFIGURATION_ICONFIGURATION_COUNT => 0,
+		EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
+		EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
+		EQUALS_CONFIGURATION_BMAXPOWER_INDEX => 0,
+		EQUALS_CONFIGURATION_BMAXPOWER_COUNT => 0,
+		EQUALS_INTERFACE_BLENGTH_INDEX => 0,
+		EQUALS_INTERFACE_BLENGTH_COUNT => 0,
+		EQUALS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
+		EQUALS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
+		EQUALS_INTERFACE_BALTERNATESETTING_INDEX => 0,
+		EQUALS_INTERFACE_BALTERNATESETTING_COUNT => 0,
+		EQUALS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
+		EQUALS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
+		EQUALS_INTERFACE_BINTERFACECLASS_INDEX => 0,
+		EQUALS_INTERFACE_BINTERFACECLASS_COUNT => 0,
+		EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
+		EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
+		EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
+		EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
+		EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX => 0,
+		EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT => 0,
+		EQUALS_INTERFACE_IINTERFACE_INDEX => 0,
+		EQUALS_INTERFACE_IINTERFACE_COUNT => 0,
+		EQUALS_HID_BLENGTH_INDEX => 0,
+		EQUALS_HID_BLENGTH_COUNT => 0,
+		EQUALS_HID_BCDHID_INDEX => 0,
+		EQUALS_HID_BCDHID_COUNT => 0,
+		EQUALS_HID_BCOUNTRYCODE_INDEX => 0,
+		EQUALS_HID_BCOUNTRYCODE_COUNT => 0,
+		EQUALS_HID_BNUMDESCRIPTORS_INDEX => 0,
+		EQUALS_HID_BNUMDESCRIPTORS_COUNT => 0,
+		EQUALS_HID_BDESCRIPTORTYPE_INDEX => 0,
+		EQUALS_HID_BDESCRIPTORTYPE_COUNT => 0,
+		EQUALS_HID_WDESCRIPTORLENGTH_INDEX => 0,
+		EQUALS_HID_WDESCRIPTORLENGTH_COUNT => 0,
+		EQUALS_ENDPOINT_BLENGTH_INDEX => 0,
+		EQUALS_ENDPOINT_BLENGTH_COUNT => 0,
+		EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
+		EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
+		EQUALS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
+		EQUALS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
+		EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
+		EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
+		EQUALS_ENDPOINT_BINTERVAL_INDEX => 0,
+		EQUALS_ENDPOINT_BINTERVAL_COUNT => 0,
 		EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX => 0,
 		EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT => 0,
 		EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX => 0,
@@ -2433,18 +2741,6 @@ uut: USBVerifier
 		EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT => 0,
 		EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX => 0,
 		EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT => 0,
-		EQUALS_CONFIGURATION_BLENGTH_INDEX => 0,
-		EQUALS_CONFIGURATION_BLENGTH_COUNT => 0,
-		EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
-		EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
-		EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
-		EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
-		EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
-		EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
-		EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
-		EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
-		EQUALS_CONFIGURATION_BMAXPOWER_INDEX => 0,
-		EQUALS_CONFIGURATION_BMAXPOWER_COUNT => 0,
 		EQUALS_OTHER_SPEED_BLENGTH_INDEX => 0,
 		EQUALS_OTHER_SPEED_BLENGTH_COUNT => 0,
 		EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX => 0,
@@ -2453,62 +2749,18 @@ uut: USBVerifier
 		EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT => 0,
 		EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX => 0,
 		EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT => 0,
+		EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX => 0,
+		EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT => 0,
+		EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX => 0,
+		EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT => 0,
 		EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX => 0,
 		EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT => 0,
 		EQUALS_OTHER_SPEED_BMAXPOWER_INDEX => 0,
 		EQUALS_OTHER_SPEED_BMAXPOWER_COUNT => 0,
-		EQUALS_INTERFACE_BLENGTH_INDEX => 0,
-		EQUALS_INTERFACE_BLENGTH_COUNT => 0,
-		EQUALS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
-		EQUALS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
-		EQUALS_INTERFACE_BALTERNATESETTING_INDEX => 0,
-		EQUALS_INTERFACE_BALTERNATESETTING_COUNT => 0,
-		EQUALS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
-		EQUALS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
-		EQUALS_INTERFACE_BINTERFACECLASS_INDEX => 0,
-		EQUALS_INTERFACE_BINTERFACECLASS_COUNT => 0,
-		EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
-		EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
-		EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
-		EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
-		EQUALS_ENDPOINT_BLENGTH_INDEX => 0,
-		EQUALS_ENDPOINT_BLENGTH_COUNT => 0,
-		EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
-		EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
-		EQUALS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
-		EQUALS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
-		EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
-		EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
-		EQUALS_ENDPOINT_BINTERVAL_INDEX => 0,
-		EQUALS_ENDPOINT_BINTERVAL_COUNT => 0,
-		EQUALS_HID_BLENGTH_INDEX => 0,
-		EQUALS_HID_BLENGTH_COUNT => 0,
-		EQUALS_HID_BCDHID_INDEX => 0,
-		EQUALS_HID_BCDHID_COUNT => 0,
-		EQUALS_HID_BCOUNTRYCODE_INDEX => 0,
-		EQUALS_HID_BCOUNTRYCODE_COUNT => 0,
-		EQUALS_HID_BNUMDESCRIPTORS_INDEX => 0,
-		EQUALS_HID_BNUMDESCRIPTORS_COUNT => 0,
-		EQUALS_HID_BDESCRIPTORTYPE_INDEX => 0,
-		EQUALS_HID_BDESCRIPTORTYPE_COUNT => 0,
-		EQUALS_HID_WDESCRIPTORLENGTH_INDEX => 0,
-		EQUALS_HID_WDESCRIPTORLENGTH_COUNT => 0,
-		EQUALS_STRING_BLENGTH_INDEX => 0,
-		EQUALS_STRING_BLENGTH_COUNT => 0,
-		EQUALS_STRING_IMANUFACTURER_INDEX => 0,
-		EQUALS_STRING_IMANUFACTURER_COUNT => 0,
-		EQUALS_STRING_IPRODUCT_INDEX => 0,
-		EQUALS_STRING_IPRODUCT_COUNT => 0,
-		EQUALS_STRING_ISERIALNUMBER_INDEX => 0,
-		EQUALS_STRING_ISERIALNUMBER_COUNT => 0,
-		EQUALS_STRING_ICONFIGURATION_INDEX => 0,
-		EQUALS_STRING_ICONFIGURATION_COUNT => 0,
-		EQUALS_STRING_IINTERFACE_INDEX => 0,
-		EQUALS_STRING_IINTERFACE_COUNT => 0,
 
 		NOT_EQUALS_MEMORY_ADDR_LENGTH => 1,
 		NOT_EQUALS_MEMORY_ADDR_MAX_INDEX => 0,
-		NOT_EQUALS_MEMORY_ADDR_MAX_COUNT => 0, 
+		NOT_EQUALS_MEMORY_ADDR_MAX_COUNT => 0,
 		NOT_EQUALS_DEVICE_BLENGTH_INDEX => 0,
 		NOT_EQUALS_DEVICE_BLENGTH_COUNT => 0,
 		NOT_EQUALS_DEVICE_BCDUSB_INDEX => 0,
@@ -2527,8 +2779,76 @@ uut: USBVerifier
 		NOT_EQUALS_DEVICE_IDPRODUCT_COUNT => 0,
 		NOT_EQUALS_DEVICE_BCDDEVICE_INDEX => 0,
 		NOT_EQUALS_DEVICE_BCDDEVICE_COUNT => 0,
+		NOT_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX => 0,
+		NOT_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT => 0,
+		NOT_EQUALS_DEVICE_IMANUFACTURER_INDEX => 0,
+		NOT_EQUALS_DEVICE_IMANUFACTURER_COUNT => 0,
+		NOT_EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX => 0,
+		NOT_EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT => 0,
+		NOT_EQUALS_DEVICE_IPRODUCT_INDEX => 0,
+		NOT_EQUALS_DEVICE_IPRODUCT_COUNT => 0,
+		NOT_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX => 0,
+		NOT_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT => 0,
+		NOT_EQUALS_DEVICE_ISERIALNUMBER_INDEX => 0,
+		NOT_EQUALS_DEVICE_ISERIALNUMBER_COUNT => 0,
 		NOT_EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX => 0,
 		NOT_EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT => 0,
+		NOT_EQUALS_CONFIGURATION_BLENGTH_INDEX => 0,
+		NOT_EQUALS_CONFIGURATION_BLENGTH_COUNT => 0,
+		NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
+		NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
+		NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
+		NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
+		NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
+		NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
+		NOT_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX => 0,
+		NOT_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT => 0,
+		NOT_EQUALS_CONFIGURATION_ICONFIGURATION_INDEX => 0,
+		NOT_EQUALS_CONFIGURATION_ICONFIGURATION_COUNT => 0,
+		NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
+		NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
+		NOT_EQUALS_CONFIGURATION_BMAXPOWER_INDEX => 0,
+		NOT_EQUALS_CONFIGURATION_BMAXPOWER_COUNT => 0,
+		NOT_EQUALS_INTERFACE_BLENGTH_INDEX => 0,
+		NOT_EQUALS_INTERFACE_BLENGTH_COUNT => 0,
+		NOT_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
+		NOT_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
+		NOT_EQUALS_INTERFACE_BALTERNATESETTING_INDEX => 0,
+		NOT_EQUALS_INTERFACE_BALTERNATESETTING_COUNT => 0,
+		NOT_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
+		NOT_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
+		NOT_EQUALS_INTERFACE_BINTERFACECLASS_INDEX => 0,
+		NOT_EQUALS_INTERFACE_BINTERFACECLASS_COUNT => 0,
+		NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
+		NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
+		NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
+		NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
+		NOT_EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX => 0,
+		NOT_EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT => 0,
+		NOT_EQUALS_INTERFACE_IINTERFACE_INDEX => 0,
+		NOT_EQUALS_INTERFACE_IINTERFACE_COUNT => 0,
+		NOT_EQUALS_HID_BLENGTH_INDEX => 0,
+		NOT_EQUALS_HID_BLENGTH_COUNT => 0,
+		NOT_EQUALS_HID_BCDHID_INDEX => 0,
+		NOT_EQUALS_HID_BCDHID_COUNT => 0,
+		NOT_EQUALS_HID_BCOUNTRYCODE_INDEX => 0,
+		NOT_EQUALS_HID_BCOUNTRYCODE_COUNT => 0,
+		NOT_EQUALS_HID_BNUMDESCRIPTORS_INDEX => 0,
+		NOT_EQUALS_HID_BNUMDESCRIPTORS_COUNT => 0,
+		NOT_EQUALS_HID_BDESCRIPTORTYPE_INDEX => 0,
+		NOT_EQUALS_HID_BDESCRIPTORTYPE_COUNT => 0,
+		NOT_EQUALS_HID_WDESCRIPTORLENGTH_INDEX => 0,
+		NOT_EQUALS_HID_WDESCRIPTORLENGTH_COUNT => 0,
+		NOT_EQUALS_ENDPOINT_BLENGTH_INDEX => 0,
+		NOT_EQUALS_ENDPOINT_BLENGTH_COUNT => 0,
+		NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
+		NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
+		NOT_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
+		NOT_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
+		NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
+		NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
+		NOT_EQUALS_ENDPOINT_BINTERVAL_INDEX => 0,
+		NOT_EQUALS_ENDPOINT_BINTERVAL_COUNT => 0,
 		NOT_EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX => 0,
 		NOT_EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT => 0,
 		NOT_EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX => 0,
@@ -2545,18 +2865,6 @@ uut: USBVerifier
 		NOT_EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT => 0,
 		NOT_EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX => 0,
 		NOT_EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT => 0,
-		NOT_EQUALS_CONFIGURATION_BLENGTH_INDEX => 0,
-		NOT_EQUALS_CONFIGURATION_BLENGTH_COUNT => 0,
-		NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
-		NOT_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
-		NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
-		NOT_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
-		NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
-		NOT_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
-		NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
-		NOT_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
-		NOT_EQUALS_CONFIGURATION_BMAXPOWER_INDEX => 0,
-		NOT_EQUALS_CONFIGURATION_BMAXPOWER_COUNT => 0,
 		NOT_EQUALS_OTHER_SPEED_BLENGTH_INDEX => 0,
 		NOT_EQUALS_OTHER_SPEED_BLENGTH_COUNT => 0,
 		NOT_EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX => 0,
@@ -2565,62 +2873,18 @@ uut: USBVerifier
 		NOT_EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT => 0,
 		NOT_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX => 0,
 		NOT_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT => 0,
+		NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX => 0,
+		NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT => 0,
+		NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX => 0,
+		NOT_EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT => 0,
 		NOT_EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX => 0,
 		NOT_EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT => 0,
 		NOT_EQUALS_OTHER_SPEED_BMAXPOWER_INDEX => 0,
 		NOT_EQUALS_OTHER_SPEED_BMAXPOWER_COUNT => 0,
-		NOT_EQUALS_INTERFACE_BLENGTH_INDEX => 0,
-		NOT_EQUALS_INTERFACE_BLENGTH_COUNT => 0,
-		NOT_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
-		NOT_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
-		NOT_EQUALS_INTERFACE_BALTERNATESETTING_INDEX => 0,
-		NOT_EQUALS_INTERFACE_BALTERNATESETTING_COUNT => 0,
-		NOT_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
-		NOT_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
-		NOT_EQUALS_INTERFACE_BINTERFACECLASS_INDEX => 0,
-		NOT_EQUALS_INTERFACE_BINTERFACECLASS_COUNT => 0,
-		NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
-		NOT_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
-		NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
-		NOT_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
-		NOT_EQUALS_ENDPOINT_BLENGTH_INDEX => 0,
-		NOT_EQUALS_ENDPOINT_BLENGTH_COUNT => 0,
-		NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
-		NOT_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
-		NOT_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
-		NOT_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
-		NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
-		NOT_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
-		NOT_EQUALS_ENDPOINT_BINTERVAL_INDEX => 0,
-		NOT_EQUALS_ENDPOINT_BINTERVAL_COUNT => 0,
-		NOT_EQUALS_HID_BLENGTH_INDEX => 0,
-		NOT_EQUALS_HID_BLENGTH_COUNT => 0,
-		NOT_EQUALS_HID_BCDHID_INDEX => 0,
-		NOT_EQUALS_HID_BCDHID_COUNT => 0,
-		NOT_EQUALS_HID_BCOUNTRYCODE_INDEX => 0,
-		NOT_EQUALS_HID_BCOUNTRYCODE_COUNT => 0,
-		NOT_EQUALS_HID_BNUMDESCRIPTORS_INDEX => 0,
-		NOT_EQUALS_HID_BNUMDESCRIPTORS_COUNT => 0,
-		NOT_EQUALS_HID_BDESCRIPTORTYPE_INDEX => 0,
-		NOT_EQUALS_HID_BDESCRIPTORTYPE_COUNT => 0,
-		NOT_EQUALS_HID_WDESCRIPTORLENGTH_INDEX => 0,
-		NOT_EQUALS_HID_WDESCRIPTORLENGTH_COUNT => 0,
-		NOT_EQUALS_STRING_BLENGTH_INDEX => 0,
-		NOT_EQUALS_STRING_BLENGTH_COUNT => 0,
-		NOT_EQUALS_STRING_IMANUFACTURER_INDEX => 0,
-		NOT_EQUALS_STRING_IMANUFACTURER_COUNT => 0,
-		NOT_EQUALS_STRING_IPRODUCT_INDEX => 0,
-		NOT_EQUALS_STRING_IPRODUCT_COUNT => 0,
-		NOT_EQUALS_STRING_ISERIALNUMBER_INDEX => 0,
-		NOT_EQUALS_STRING_ISERIALNUMBER_COUNT => 0,
-		NOT_EQUALS_STRING_ICONFIGURATION_INDEX => 0,
-		NOT_EQUALS_STRING_ICONFIGURATION_COUNT => 0,
-		NOT_EQUALS_STRING_IINTERFACE_INDEX => 0,
-		NOT_EQUALS_STRING_IINTERFACE_COUNT => 0,
 
 		GREATER_MEMORY_ADDR_LENGTH => 1,
 		GREATER_MEMORY_ADDR_MAX_INDEX => 0,
-		GREATER_MEMORY_ADDR_MAX_COUNT => 0, 
+		GREATER_MEMORY_ADDR_MAX_COUNT => 0,
 		GREATER_DEVICE_BLENGTH_INDEX => 0,
 		GREATER_DEVICE_BLENGTH_COUNT => 0,
 		GREATER_DEVICE_BCDUSB_INDEX => 0,
@@ -2639,8 +2903,76 @@ uut: USBVerifier
 		GREATER_DEVICE_IDPRODUCT_COUNT => 0,
 		GREATER_DEVICE_BCDDEVICE_INDEX => 0,
 		GREATER_DEVICE_BCDDEVICE_COUNT => 0,
+		GREATER_DEVICE_IMANUFACTURER_BLENGTH_INDEX => 0,
+		GREATER_DEVICE_IMANUFACTURER_BLENGTH_COUNT => 0,
+		GREATER_DEVICE_IMANUFACTURER_INDEX => 0,
+		GREATER_DEVICE_IMANUFACTURER_COUNT => 0,
+		GREATER_DEVICE_IPRODUCT_BLENGTH_INDEX => 0,
+		GREATER_DEVICE_IPRODUCT_BLENGTH_COUNT => 0,
+		GREATER_DEVICE_IPRODUCT_INDEX => 0,
+		GREATER_DEVICE_IPRODUCT_COUNT => 0,
+		GREATER_DEVICE_ISERIALNUMBER_BLENGTH_INDEX => 0,
+		GREATER_DEVICE_ISERIALNUMBER_BLENGTH_COUNT => 0,
+		GREATER_DEVICE_ISERIALNUMBER_INDEX => 0,
+		GREATER_DEVICE_ISERIALNUMBER_COUNT => 0,
 		GREATER_DEVICE_BNUMCONFIGURATIONS_INDEX => 0,
 		GREATER_DEVICE_BNUMCONFIGURATIONS_COUNT => 0,
+		GREATER_CONFIGURATION_BLENGTH_INDEX => 0,
+		GREATER_CONFIGURATION_BLENGTH_COUNT => 0,
+		GREATER_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
+		GREATER_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
+		GREATER_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
+		GREATER_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
+		GREATER_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
+		GREATER_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
+		GREATER_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX => 0,
+		GREATER_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT => 0,
+		GREATER_CONFIGURATION_ICONFIGURATION_INDEX => 0,
+		GREATER_CONFIGURATION_ICONFIGURATION_COUNT => 0,
+		GREATER_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
+		GREATER_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
+		GREATER_CONFIGURATION_BMAXPOWER_INDEX => 0,
+		GREATER_CONFIGURATION_BMAXPOWER_COUNT => 0,
+		GREATER_INTERFACE_BLENGTH_INDEX => 0,
+		GREATER_INTERFACE_BLENGTH_COUNT => 0,
+		GREATER_INTERFACE_BINTERFACENUMBER_INDEX => 0,
+		GREATER_INTERFACE_BINTERFACENUMBER_COUNT => 0,
+		GREATER_INTERFACE_BALTERNATESETTING_INDEX => 0,
+		GREATER_INTERFACE_BALTERNATESETTING_COUNT => 0,
+		GREATER_INTERFACE_BNUMENDPOINTS_INDEX => 0,
+		GREATER_INTERFACE_BNUMENDPOINTS_COUNT => 0,
+		GREATER_INTERFACE_BINTERFACECLASS_INDEX => 0,
+		GREATER_INTERFACE_BINTERFACECLASS_COUNT => 0,
+		GREATER_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
+		GREATER_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
+		GREATER_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
+		GREATER_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
+		GREATER_INTERFACE_IINTERFACE_BLENGTH_INDEX => 0,
+		GREATER_INTERFACE_IINTERFACE_BLENGTH_COUNT => 0,
+		GREATER_INTERFACE_IINTERFACE_INDEX => 0,
+		GREATER_INTERFACE_IINTERFACE_COUNT => 0,
+		GREATER_HID_BLENGTH_INDEX => 0,
+		GREATER_HID_BLENGTH_COUNT => 0,
+		GREATER_HID_BCDHID_INDEX => 0,
+		GREATER_HID_BCDHID_COUNT => 0,
+		GREATER_HID_BCOUNTRYCODE_INDEX => 0,
+		GREATER_HID_BCOUNTRYCODE_COUNT => 0,
+		GREATER_HID_BNUMDESCRIPTORS_INDEX => 0,
+		GREATER_HID_BNUMDESCRIPTORS_COUNT => 0,
+		GREATER_HID_BDESCRIPTORTYPE_INDEX => 0,
+		GREATER_HID_BDESCRIPTORTYPE_COUNT => 0,
+		GREATER_HID_WDESCRIPTORLENGTH_INDEX => 0,
+		GREATER_HID_WDESCRIPTORLENGTH_COUNT => 0,
+		GREATER_ENDPOINT_BLENGTH_INDEX => 0,
+		GREATER_ENDPOINT_BLENGTH_COUNT => 0,
+		GREATER_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
+		GREATER_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
+		GREATER_ENDPOINT_BMATTRIBUTES_INDEX => 0,
+		GREATER_ENDPOINT_BMATTRIBUTES_COUNT => 0,
+		GREATER_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
+		GREATER_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
+		GREATER_ENDPOINT_BINTERVAL_INDEX => 0,
+		GREATER_ENDPOINT_BINTERVAL_COUNT => 0,
 		GREATER_DEVICE_QUALIFIER_BLENGTH_INDEX => 0,
 		GREATER_DEVICE_QUALIFIER_BLENGTH_COUNT => 0,
 		GREATER_DEVICE_QUALIFIER_BCDUSB_INDEX => 0,
@@ -2657,18 +2989,6 @@ uut: USBVerifier
 		GREATER_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT => 0,
 		GREATER_DEVICE_QUALIFIER_BRESERVED_INDEX => 0,
 		GREATER_DEVICE_QUALIFIER_BRESERVED_COUNT => 0,
-		GREATER_CONFIGURATION_BLENGTH_INDEX => 0,
-		GREATER_CONFIGURATION_BLENGTH_COUNT => 0,
-		GREATER_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
-		GREATER_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
-		GREATER_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
-		GREATER_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
-		GREATER_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
-		GREATER_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
-		GREATER_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
-		GREATER_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
-		GREATER_CONFIGURATION_BMAXPOWER_INDEX => 0,
-		GREATER_CONFIGURATION_BMAXPOWER_COUNT => 0,
 		GREATER_OTHER_SPEED_BLENGTH_INDEX => 0,
 		GREATER_OTHER_SPEED_BLENGTH_COUNT => 0,
 		GREATER_OTHER_SPEED_WTOTALLENGTH_INDEX => 0,
@@ -2677,62 +2997,18 @@ uut: USBVerifier
 		GREATER_OTHER_SPEED_BNUMINTERFACES_COUNT => 0,
 		GREATER_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX => 0,
 		GREATER_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT => 0,
+		GREATER_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX => 0,
+		GREATER_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT => 0,
+		GREATER_OTHER_SPEED_ICONFIGURATION_INDEX => 0,
+		GREATER_OTHER_SPEED_ICONFIGURATION_COUNT => 0,
 		GREATER_OTHER_SPEED_BMATTRIBUTES_INDEX => 0,
 		GREATER_OTHER_SPEED_BMATTRIBUTES_COUNT => 0,
 		GREATER_OTHER_SPEED_BMAXPOWER_INDEX => 0,
 		GREATER_OTHER_SPEED_BMAXPOWER_COUNT => 0,
-		GREATER_INTERFACE_BLENGTH_INDEX => 0,
-		GREATER_INTERFACE_BLENGTH_COUNT => 0,
-		GREATER_INTERFACE_BINTERFACENUMBER_INDEX => 0,
-		GREATER_INTERFACE_BINTERFACENUMBER_COUNT => 0,
-		GREATER_INTERFACE_BALTERNATESETTING_INDEX => 0,
-		GREATER_INTERFACE_BALTERNATESETTING_COUNT => 0,
-		GREATER_INTERFACE_BNUMENDPOINTS_INDEX => 0,
-		GREATER_INTERFACE_BNUMENDPOINTS_COUNT => 0,
-		GREATER_INTERFACE_BINTERFACECLASS_INDEX => 0,
-		GREATER_INTERFACE_BINTERFACECLASS_COUNT => 0,
-		GREATER_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
-		GREATER_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
-		GREATER_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
-		GREATER_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
-		GREATER_ENDPOINT_BLENGTH_INDEX => 0,
-		GREATER_ENDPOINT_BLENGTH_COUNT => 0,
-		GREATER_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
-		GREATER_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
-		GREATER_ENDPOINT_BMATTRIBUTES_INDEX => 0,
-		GREATER_ENDPOINT_BMATTRIBUTES_COUNT => 0,
-		GREATER_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
-		GREATER_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
-		GREATER_ENDPOINT_BINTERVAL_INDEX => 0,
-		GREATER_ENDPOINT_BINTERVAL_COUNT => 0,
-		GREATER_HID_BLENGTH_INDEX => 0,
-		GREATER_HID_BLENGTH_COUNT => 0,
-		GREATER_HID_BCDHID_INDEX => 0,
-		GREATER_HID_BCDHID_COUNT => 0,
-		GREATER_HID_BCOUNTRYCODE_INDEX => 0,
-		GREATER_HID_BCOUNTRYCODE_COUNT => 0,
-		GREATER_HID_BNUMDESCRIPTORS_INDEX => 0,
-		GREATER_HID_BNUMDESCRIPTORS_COUNT => 0,
-		GREATER_HID_BDESCRIPTORTYPE_INDEX => 0,
-		GREATER_HID_BDESCRIPTORTYPE_COUNT => 0,
-		GREATER_HID_WDESCRIPTORLENGTH_INDEX => 0,
-		GREATER_HID_WDESCRIPTORLENGTH_COUNT => 0,
-		GREATER_STRING_BLENGTH_INDEX => 0,
-		GREATER_STRING_BLENGTH_COUNT => 0,
-		GREATER_STRING_IMANUFACTURER_INDEX => 0,
-		GREATER_STRING_IMANUFACTURER_COUNT => 0,
-		GREATER_STRING_IPRODUCT_INDEX => 0,
-		GREATER_STRING_IPRODUCT_COUNT => 0,
-		GREATER_STRING_ISERIALNUMBER_INDEX => 0,
-		GREATER_STRING_ISERIALNUMBER_COUNT => 0,
-		GREATER_STRING_ICONFIGURATION_INDEX => 0,
-		GREATER_STRING_ICONFIGURATION_COUNT => 0,
-		GREATER_STRING_IINTERFACE_INDEX => 0,
-		GREATER_STRING_IINTERFACE_COUNT => 0,
 
 		GREATER_EQUALS_MEMORY_ADDR_LENGTH => 1,
 		GREATER_EQUALS_MEMORY_ADDR_MAX_INDEX => 0,
-		GREATER_EQUALS_MEMORY_ADDR_MAX_COUNT => 0, 
+		GREATER_EQUALS_MEMORY_ADDR_MAX_COUNT => 0,
 		GREATER_EQUALS_DEVICE_BLENGTH_INDEX => 0,
 		GREATER_EQUALS_DEVICE_BLENGTH_COUNT => 0,
 		GREATER_EQUALS_DEVICE_BCDUSB_INDEX => 0,
@@ -2751,8 +3027,76 @@ uut: USBVerifier
 		GREATER_EQUALS_DEVICE_IDPRODUCT_COUNT => 0,
 		GREATER_EQUALS_DEVICE_BCDDEVICE_INDEX => 0,
 		GREATER_EQUALS_DEVICE_BCDDEVICE_COUNT => 0,
+		GREATER_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX => 0,
+		GREATER_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT => 0,
+		GREATER_EQUALS_DEVICE_IMANUFACTURER_INDEX => 0,
+		GREATER_EQUALS_DEVICE_IMANUFACTURER_COUNT => 0,
+		GREATER_EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX => 0,
+		GREATER_EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT => 0,
+		GREATER_EQUALS_DEVICE_IPRODUCT_INDEX => 0,
+		GREATER_EQUALS_DEVICE_IPRODUCT_COUNT => 0,
+		GREATER_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX => 0,
+		GREATER_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT => 0,
+		GREATER_EQUALS_DEVICE_ISERIALNUMBER_INDEX => 0,
+		GREATER_EQUALS_DEVICE_ISERIALNUMBER_COUNT => 0,
 		GREATER_EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX => 0,
 		GREATER_EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT => 0,
+		GREATER_EQUALS_CONFIGURATION_BLENGTH_INDEX => 0,
+		GREATER_EQUALS_CONFIGURATION_BLENGTH_COUNT => 0,
+		GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
+		GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
+		GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
+		GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
+		GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
+		GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
+		GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX => 0,
+		GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT => 0,
+		GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_INDEX => 0,
+		GREATER_EQUALS_CONFIGURATION_ICONFIGURATION_COUNT => 0,
+		GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
+		GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
+		GREATER_EQUALS_CONFIGURATION_BMAXPOWER_INDEX => 0,
+		GREATER_EQUALS_CONFIGURATION_BMAXPOWER_COUNT => 0,
+		GREATER_EQUALS_INTERFACE_BLENGTH_INDEX => 0,
+		GREATER_EQUALS_INTERFACE_BLENGTH_COUNT => 0,
+		GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
+		GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
+		GREATER_EQUALS_INTERFACE_BALTERNATESETTING_INDEX => 0,
+		GREATER_EQUALS_INTERFACE_BALTERNATESETTING_COUNT => 0,
+		GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
+		GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
+		GREATER_EQUALS_INTERFACE_BINTERFACECLASS_INDEX => 0,
+		GREATER_EQUALS_INTERFACE_BINTERFACECLASS_COUNT => 0,
+		GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
+		GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
+		GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
+		GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
+		GREATER_EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX => 0,
+		GREATER_EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT => 0,
+		GREATER_EQUALS_INTERFACE_IINTERFACE_INDEX => 0,
+		GREATER_EQUALS_INTERFACE_IINTERFACE_COUNT => 0,
+		GREATER_EQUALS_HID_BLENGTH_INDEX => 0,
+		GREATER_EQUALS_HID_BLENGTH_COUNT => 0,
+		GREATER_EQUALS_HID_BCDHID_INDEX => 0,
+		GREATER_EQUALS_HID_BCDHID_COUNT => 0,
+		GREATER_EQUALS_HID_BCOUNTRYCODE_INDEX => 0,
+		GREATER_EQUALS_HID_BCOUNTRYCODE_COUNT => 0,
+		GREATER_EQUALS_HID_BNUMDESCRIPTORS_INDEX => 0,
+		GREATER_EQUALS_HID_BNUMDESCRIPTORS_COUNT => 0,
+		GREATER_EQUALS_HID_BDESCRIPTORTYPE_INDEX => 0,
+		GREATER_EQUALS_HID_BDESCRIPTORTYPE_COUNT => 0,
+		GREATER_EQUALS_HID_WDESCRIPTORLENGTH_INDEX => 0,
+		GREATER_EQUALS_HID_WDESCRIPTORLENGTH_COUNT => 0,
+		GREATER_EQUALS_ENDPOINT_BLENGTH_INDEX => 0,
+		GREATER_EQUALS_ENDPOINT_BLENGTH_COUNT => 0,
+		GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
+		GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
+		GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
+		GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
+		GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
+		GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
+		GREATER_EQUALS_ENDPOINT_BINTERVAL_INDEX => 0,
+		GREATER_EQUALS_ENDPOINT_BINTERVAL_COUNT => 0,
 		GREATER_EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX => 0,
 		GREATER_EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT => 0,
 		GREATER_EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX => 0,
@@ -2769,18 +3113,6 @@ uut: USBVerifier
 		GREATER_EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT => 0,
 		GREATER_EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX => 0,
 		GREATER_EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT => 0,
-		GREATER_EQUALS_CONFIGURATION_BLENGTH_INDEX => 0,
-		GREATER_EQUALS_CONFIGURATION_BLENGTH_COUNT => 0,
-		GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
-		GREATER_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
-		GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
-		GREATER_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
-		GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
-		GREATER_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
-		GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
-		GREATER_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
-		GREATER_EQUALS_CONFIGURATION_BMAXPOWER_INDEX => 0,
-		GREATER_EQUALS_CONFIGURATION_BMAXPOWER_COUNT => 0,
 		GREATER_EQUALS_OTHER_SPEED_BLENGTH_INDEX => 0,
 		GREATER_EQUALS_OTHER_SPEED_BLENGTH_COUNT => 0,
 		GREATER_EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX => 0,
@@ -2789,62 +3121,18 @@ uut: USBVerifier
 		GREATER_EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT => 0,
 		GREATER_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX => 0,
 		GREATER_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT => 0,
+		GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX => 0,
+		GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT => 0,
+		GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX => 0,
+		GREATER_EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT => 0,
 		GREATER_EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX => 0,
 		GREATER_EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT => 0,
 		GREATER_EQUALS_OTHER_SPEED_BMAXPOWER_INDEX => 0,
 		GREATER_EQUALS_OTHER_SPEED_BMAXPOWER_COUNT => 0,
-		GREATER_EQUALS_INTERFACE_BLENGTH_INDEX => 0,
-		GREATER_EQUALS_INTERFACE_BLENGTH_COUNT => 0,
-		GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
-		GREATER_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
-		GREATER_EQUALS_INTERFACE_BALTERNATESETTING_INDEX => 0,
-		GREATER_EQUALS_INTERFACE_BALTERNATESETTING_COUNT => 0,
-		GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
-		GREATER_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
-		GREATER_EQUALS_INTERFACE_BINTERFACECLASS_INDEX => 0,
-		GREATER_EQUALS_INTERFACE_BINTERFACECLASS_COUNT => 0,
-		GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
-		GREATER_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
-		GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
-		GREATER_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
-		GREATER_EQUALS_ENDPOINT_BLENGTH_INDEX => 0,
-		GREATER_EQUALS_ENDPOINT_BLENGTH_COUNT => 0,
-		GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
-		GREATER_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
-		GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
-		GREATER_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
-		GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
-		GREATER_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
-		GREATER_EQUALS_ENDPOINT_BINTERVAL_INDEX => 0,
-		GREATER_EQUALS_ENDPOINT_BINTERVAL_COUNT => 0,
-		GREATER_EQUALS_HID_BLENGTH_INDEX => 0,
-		GREATER_EQUALS_HID_BLENGTH_COUNT => 0,
-		GREATER_EQUALS_HID_BCDHID_INDEX => 0,
-		GREATER_EQUALS_HID_BCDHID_COUNT => 0,
-		GREATER_EQUALS_HID_BCOUNTRYCODE_INDEX => 0,
-		GREATER_EQUALS_HID_BCOUNTRYCODE_COUNT => 0,
-		GREATER_EQUALS_HID_BNUMDESCRIPTORS_INDEX => 0,
-		GREATER_EQUALS_HID_BNUMDESCRIPTORS_COUNT => 0,
-		GREATER_EQUALS_HID_BDESCRIPTORTYPE_INDEX => 0,
-		GREATER_EQUALS_HID_BDESCRIPTORTYPE_COUNT => 0,
-		GREATER_EQUALS_HID_WDESCRIPTORLENGTH_INDEX => 0,
-		GREATER_EQUALS_HID_WDESCRIPTORLENGTH_COUNT => 0,
-		GREATER_EQUALS_STRING_BLENGTH_INDEX => 0,
-		GREATER_EQUALS_STRING_BLENGTH_COUNT => 0,
-		GREATER_EQUALS_STRING_IMANUFACTURER_INDEX => 0,
-		GREATER_EQUALS_STRING_IMANUFACTURER_COUNT => 0,
-		GREATER_EQUALS_STRING_IPRODUCT_INDEX => 0,
-		GREATER_EQUALS_STRING_IPRODUCT_COUNT => 0,
-		GREATER_EQUALS_STRING_ISERIALNUMBER_INDEX => 0,
-		GREATER_EQUALS_STRING_ISERIALNUMBER_COUNT => 0,
-		GREATER_EQUALS_STRING_ICONFIGURATION_INDEX => 0,
-		GREATER_EQUALS_STRING_ICONFIGURATION_COUNT => 0,
-		GREATER_EQUALS_STRING_IINTERFACE_INDEX => 0,
-		GREATER_EQUALS_STRING_IINTERFACE_COUNT => 0,
 
 		LESS_MEMORY_ADDR_LENGTH => 1,
 		LESS_MEMORY_ADDR_MAX_INDEX => 0,
-		LESS_MEMORY_ADDR_MAX_COUNT => 0, 
+		LESS_MEMORY_ADDR_MAX_COUNT => 0,
 		LESS_DEVICE_BLENGTH_INDEX => 0,
 		LESS_DEVICE_BLENGTH_COUNT => 0,
 		LESS_DEVICE_BCDUSB_INDEX => 0,
@@ -2863,8 +3151,76 @@ uut: USBVerifier
 		LESS_DEVICE_IDPRODUCT_COUNT => 0,
 		LESS_DEVICE_BCDDEVICE_INDEX => 0,
 		LESS_DEVICE_BCDDEVICE_COUNT => 0,
+		LESS_DEVICE_IMANUFACTURER_BLENGTH_INDEX => 0,
+		LESS_DEVICE_IMANUFACTURER_BLENGTH_COUNT => 0,
+		LESS_DEVICE_IMANUFACTURER_INDEX => 0,
+		LESS_DEVICE_IMANUFACTURER_COUNT => 0,
+		LESS_DEVICE_IPRODUCT_BLENGTH_INDEX => 0,
+		LESS_DEVICE_IPRODUCT_BLENGTH_COUNT => 0,
+		LESS_DEVICE_IPRODUCT_INDEX => 0,
+		LESS_DEVICE_IPRODUCT_COUNT => 0,
+		LESS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX => 0,
+		LESS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT => 0,
+		LESS_DEVICE_ISERIALNUMBER_INDEX => 0,
+		LESS_DEVICE_ISERIALNUMBER_COUNT => 0,
 		LESS_DEVICE_BNUMCONFIGURATIONS_INDEX => 0,
 		LESS_DEVICE_BNUMCONFIGURATIONS_COUNT => 0,
+		LESS_CONFIGURATION_BLENGTH_INDEX => 0,
+		LESS_CONFIGURATION_BLENGTH_COUNT => 0,
+		LESS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
+		LESS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
+		LESS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
+		LESS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
+		LESS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
+		LESS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
+		LESS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX => 0,
+		LESS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT => 0,
+		LESS_CONFIGURATION_ICONFIGURATION_INDEX => 0,
+		LESS_CONFIGURATION_ICONFIGURATION_COUNT => 0,
+		LESS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
+		LESS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
+		LESS_CONFIGURATION_BMAXPOWER_INDEX => 0,
+		LESS_CONFIGURATION_BMAXPOWER_COUNT => 0,
+		LESS_INTERFACE_BLENGTH_INDEX => 0,
+		LESS_INTERFACE_BLENGTH_COUNT => 0,
+		LESS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
+		LESS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
+		LESS_INTERFACE_BALTERNATESETTING_INDEX => 0,
+		LESS_INTERFACE_BALTERNATESETTING_COUNT => 0,
+		LESS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
+		LESS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
+		LESS_INTERFACE_BINTERFACECLASS_INDEX => 0,
+		LESS_INTERFACE_BINTERFACECLASS_COUNT => 0,
+		LESS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
+		LESS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
+		LESS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
+		LESS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
+		LESS_INTERFACE_IINTERFACE_BLENGTH_INDEX => 0,
+		LESS_INTERFACE_IINTERFACE_BLENGTH_COUNT => 0,
+		LESS_INTERFACE_IINTERFACE_INDEX => 0,
+		LESS_INTERFACE_IINTERFACE_COUNT => 0,
+		LESS_HID_BLENGTH_INDEX => 0,
+		LESS_HID_BLENGTH_COUNT => 0,
+		LESS_HID_BCDHID_INDEX => 0,
+		LESS_HID_BCDHID_COUNT => 0,
+		LESS_HID_BCOUNTRYCODE_INDEX => 0,
+		LESS_HID_BCOUNTRYCODE_COUNT => 0,
+		LESS_HID_BNUMDESCRIPTORS_INDEX => 0,
+		LESS_HID_BNUMDESCRIPTORS_COUNT => 0,
+		LESS_HID_BDESCRIPTORTYPE_INDEX => 0,
+		LESS_HID_BDESCRIPTORTYPE_COUNT => 0,
+		LESS_HID_WDESCRIPTORLENGTH_INDEX => 0,
+		LESS_HID_WDESCRIPTORLENGTH_COUNT => 0,
+		LESS_ENDPOINT_BLENGTH_INDEX => 0,
+		LESS_ENDPOINT_BLENGTH_COUNT => 0,
+		LESS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
+		LESS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
+		LESS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
+		LESS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
+		LESS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
+		LESS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
+		LESS_ENDPOINT_BINTERVAL_INDEX => 0,
+		LESS_ENDPOINT_BINTERVAL_COUNT => 0,
 		LESS_DEVICE_QUALIFIER_BLENGTH_INDEX => 0,
 		LESS_DEVICE_QUALIFIER_BLENGTH_COUNT => 0,
 		LESS_DEVICE_QUALIFIER_BCDUSB_INDEX => 0,
@@ -2881,18 +3237,6 @@ uut: USBVerifier
 		LESS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT => 0,
 		LESS_DEVICE_QUALIFIER_BRESERVED_INDEX => 0,
 		LESS_DEVICE_QUALIFIER_BRESERVED_COUNT => 0,
-		LESS_CONFIGURATION_BLENGTH_INDEX => 0,
-		LESS_CONFIGURATION_BLENGTH_COUNT => 0,
-		LESS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
-		LESS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
-		LESS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
-		LESS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
-		LESS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
-		LESS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
-		LESS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
-		LESS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
-		LESS_CONFIGURATION_BMAXPOWER_INDEX => 0,
-		LESS_CONFIGURATION_BMAXPOWER_COUNT => 0,
 		LESS_OTHER_SPEED_BLENGTH_INDEX => 0,
 		LESS_OTHER_SPEED_BLENGTH_COUNT => 0,
 		LESS_OTHER_SPEED_WTOTALLENGTH_INDEX => 0,
@@ -2901,62 +3245,18 @@ uut: USBVerifier
 		LESS_OTHER_SPEED_BNUMINTERFACES_COUNT => 0,
 		LESS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX => 0,
 		LESS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT => 0,
+		LESS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX => 0,
+		LESS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT => 0,
+		LESS_OTHER_SPEED_ICONFIGURATION_INDEX => 0,
+		LESS_OTHER_SPEED_ICONFIGURATION_COUNT => 0,
 		LESS_OTHER_SPEED_BMATTRIBUTES_INDEX => 0,
 		LESS_OTHER_SPEED_BMATTRIBUTES_COUNT => 0,
 		LESS_OTHER_SPEED_BMAXPOWER_INDEX => 0,
 		LESS_OTHER_SPEED_BMAXPOWER_COUNT => 0,
-		LESS_INTERFACE_BLENGTH_INDEX => 0,
-		LESS_INTERFACE_BLENGTH_COUNT => 0,
-		LESS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
-		LESS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
-		LESS_INTERFACE_BALTERNATESETTING_INDEX => 0,
-		LESS_INTERFACE_BALTERNATESETTING_COUNT => 0,
-		LESS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
-		LESS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
-		LESS_INTERFACE_BINTERFACECLASS_INDEX => 0,
-		LESS_INTERFACE_BINTERFACECLASS_COUNT => 0,
-		LESS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
-		LESS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
-		LESS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
-		LESS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
-		LESS_ENDPOINT_BLENGTH_INDEX => 0,
-		LESS_ENDPOINT_BLENGTH_COUNT => 0,
-		LESS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
-		LESS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
-		LESS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
-		LESS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
-		LESS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
-		LESS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
-		LESS_ENDPOINT_BINTERVAL_INDEX => 0,
-		LESS_ENDPOINT_BINTERVAL_COUNT => 0,
-		LESS_HID_BLENGTH_INDEX => 0,
-		LESS_HID_BLENGTH_COUNT => 0,
-		LESS_HID_BCDHID_INDEX => 0,
-		LESS_HID_BCDHID_COUNT => 0,
-		LESS_HID_BCOUNTRYCODE_INDEX => 0,
-		LESS_HID_BCOUNTRYCODE_COUNT => 0,
-		LESS_HID_BNUMDESCRIPTORS_INDEX => 0,
-		LESS_HID_BNUMDESCRIPTORS_COUNT => 0,
-		LESS_HID_BDESCRIPTORTYPE_INDEX => 0,
-		LESS_HID_BDESCRIPTORTYPE_COUNT => 0,
-		LESS_HID_WDESCRIPTORLENGTH_INDEX => 0,
-		LESS_HID_WDESCRIPTORLENGTH_COUNT => 0,
-		LESS_STRING_BLENGTH_INDEX => 0,
-		LESS_STRING_BLENGTH_COUNT => 0,
-		LESS_STRING_IMANUFACTURER_INDEX => 0,
-		LESS_STRING_IMANUFACTURER_COUNT => 0,
-		LESS_STRING_IPRODUCT_INDEX => 0,
-		LESS_STRING_IPRODUCT_COUNT => 0,
-		LESS_STRING_ISERIALNUMBER_INDEX => 0,
-		LESS_STRING_ISERIALNUMBER_COUNT => 0,
-		LESS_STRING_ICONFIGURATION_INDEX => 0,
-		LESS_STRING_ICONFIGURATION_COUNT => 0,
-		LESS_STRING_IINTERFACE_INDEX => 0,
-		LESS_STRING_IINTERFACE_COUNT => 0,
 
 		LESS_EQUALS_MEMORY_ADDR_LENGTH => 1,
 		LESS_EQUALS_MEMORY_ADDR_MAX_INDEX => 0,
-		LESS_EQUALS_MEMORY_ADDR_MAX_COUNT => 0, 
+		LESS_EQUALS_MEMORY_ADDR_MAX_COUNT => 0,
 		LESS_EQUALS_DEVICE_BLENGTH_INDEX => 0,
 		LESS_EQUALS_DEVICE_BLENGTH_COUNT => 0,
 		LESS_EQUALS_DEVICE_BCDUSB_INDEX => 0,
@@ -2975,8 +3275,76 @@ uut: USBVerifier
 		LESS_EQUALS_DEVICE_IDPRODUCT_COUNT => 0,
 		LESS_EQUALS_DEVICE_BCDDEVICE_INDEX => 0,
 		LESS_EQUALS_DEVICE_BCDDEVICE_COUNT => 0,
+		LESS_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_INDEX => 0,
+		LESS_EQUALS_DEVICE_IMANUFACTURER_BLENGTH_COUNT => 0,
+		LESS_EQUALS_DEVICE_IMANUFACTURER_INDEX => 0,
+		LESS_EQUALS_DEVICE_IMANUFACTURER_COUNT => 0,
+		LESS_EQUALS_DEVICE_IPRODUCT_BLENGTH_INDEX => 0,
+		LESS_EQUALS_DEVICE_IPRODUCT_BLENGTH_COUNT => 0,
+		LESS_EQUALS_DEVICE_IPRODUCT_INDEX => 0,
+		LESS_EQUALS_DEVICE_IPRODUCT_COUNT => 0,
+		LESS_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX => 0,
+		LESS_EQUALS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT => 0,
+		LESS_EQUALS_DEVICE_ISERIALNUMBER_INDEX => 0,
+		LESS_EQUALS_DEVICE_ISERIALNUMBER_COUNT => 0,
 		LESS_EQUALS_DEVICE_BNUMCONFIGURATIONS_INDEX => 0,
 		LESS_EQUALS_DEVICE_BNUMCONFIGURATIONS_COUNT => 0,
+		LESS_EQUALS_CONFIGURATION_BLENGTH_INDEX => 0,
+		LESS_EQUALS_CONFIGURATION_BLENGTH_COUNT => 0,
+		LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
+		LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
+		LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
+		LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
+		LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
+		LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
+		LESS_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX => 0,
+		LESS_EQUALS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT => 0,
+		LESS_EQUALS_CONFIGURATION_ICONFIGURATION_INDEX => 0,
+		LESS_EQUALS_CONFIGURATION_ICONFIGURATION_COUNT => 0,
+		LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
+		LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
+		LESS_EQUALS_CONFIGURATION_BMAXPOWER_INDEX => 0,
+		LESS_EQUALS_CONFIGURATION_BMAXPOWER_COUNT => 0,
+		LESS_EQUALS_INTERFACE_BLENGTH_INDEX => 0,
+		LESS_EQUALS_INTERFACE_BLENGTH_COUNT => 0,
+		LESS_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
+		LESS_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
+		LESS_EQUALS_INTERFACE_BALTERNATESETTING_INDEX => 0,
+		LESS_EQUALS_INTERFACE_BALTERNATESETTING_COUNT => 0,
+		LESS_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
+		LESS_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
+		LESS_EQUALS_INTERFACE_BINTERFACECLASS_INDEX => 0,
+		LESS_EQUALS_INTERFACE_BINTERFACECLASS_COUNT => 0,
+		LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
+		LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
+		LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
+		LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
+		LESS_EQUALS_INTERFACE_IINTERFACE_BLENGTH_INDEX => 0,
+		LESS_EQUALS_INTERFACE_IINTERFACE_BLENGTH_COUNT => 0,
+		LESS_EQUALS_INTERFACE_IINTERFACE_INDEX => 0,
+		LESS_EQUALS_INTERFACE_IINTERFACE_COUNT => 0,
+		LESS_EQUALS_HID_BLENGTH_INDEX => 0,
+		LESS_EQUALS_HID_BLENGTH_COUNT => 0,
+		LESS_EQUALS_HID_BCDHID_INDEX => 0,
+		LESS_EQUALS_HID_BCDHID_COUNT => 0,
+		LESS_EQUALS_HID_BCOUNTRYCODE_INDEX => 0,
+		LESS_EQUALS_HID_BCOUNTRYCODE_COUNT => 0,
+		LESS_EQUALS_HID_BNUMDESCRIPTORS_INDEX => 0,
+		LESS_EQUALS_HID_BNUMDESCRIPTORS_COUNT => 0,
+		LESS_EQUALS_HID_BDESCRIPTORTYPE_INDEX => 0,
+		LESS_EQUALS_HID_BDESCRIPTORTYPE_COUNT => 0,
+		LESS_EQUALS_HID_WDESCRIPTORLENGTH_INDEX => 0,
+		LESS_EQUALS_HID_WDESCRIPTORLENGTH_COUNT => 0,
+		LESS_EQUALS_ENDPOINT_BLENGTH_INDEX => 0,
+		LESS_EQUALS_ENDPOINT_BLENGTH_COUNT => 0,
+		LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
+		LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
+		LESS_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
+		LESS_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
+		LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
+		LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
+		LESS_EQUALS_ENDPOINT_BINTERVAL_INDEX => 0,
+		LESS_EQUALS_ENDPOINT_BINTERVAL_COUNT => 0,
 		LESS_EQUALS_DEVICE_QUALIFIER_BLENGTH_INDEX => 0,
 		LESS_EQUALS_DEVICE_QUALIFIER_BLENGTH_COUNT => 0,
 		LESS_EQUALS_DEVICE_QUALIFIER_BCDUSB_INDEX => 0,
@@ -2993,18 +3361,6 @@ uut: USBVerifier
 		LESS_EQUALS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT => 0,
 		LESS_EQUALS_DEVICE_QUALIFIER_BRESERVED_INDEX => 0,
 		LESS_EQUALS_DEVICE_QUALIFIER_BRESERVED_COUNT => 0,
-		LESS_EQUALS_CONFIGURATION_BLENGTH_INDEX => 0,
-		LESS_EQUALS_CONFIGURATION_BLENGTH_COUNT => 0,
-		LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
-		LESS_EQUALS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
-		LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
-		LESS_EQUALS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
-		LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
-		LESS_EQUALS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
-		LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
-		LESS_EQUALS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
-		LESS_EQUALS_CONFIGURATION_BMAXPOWER_INDEX => 0,
-		LESS_EQUALS_CONFIGURATION_BMAXPOWER_COUNT => 0,
 		LESS_EQUALS_OTHER_SPEED_BLENGTH_INDEX => 0,
 		LESS_EQUALS_OTHER_SPEED_BLENGTH_COUNT => 0,
 		LESS_EQUALS_OTHER_SPEED_WTOTALLENGTH_INDEX => 0,
@@ -3013,62 +3369,18 @@ uut: USBVerifier
 		LESS_EQUALS_OTHER_SPEED_BNUMINTERFACES_COUNT => 0,
 		LESS_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX => 0,
 		LESS_EQUALS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT => 0,
+		LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX => 0,
+		LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT => 0,
+		LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_INDEX => 0,
+		LESS_EQUALS_OTHER_SPEED_ICONFIGURATION_COUNT => 0,
 		LESS_EQUALS_OTHER_SPEED_BMATTRIBUTES_INDEX => 0,
 		LESS_EQUALS_OTHER_SPEED_BMATTRIBUTES_COUNT => 0,
 		LESS_EQUALS_OTHER_SPEED_BMAXPOWER_INDEX => 0,
 		LESS_EQUALS_OTHER_SPEED_BMAXPOWER_COUNT => 0,
-		LESS_EQUALS_INTERFACE_BLENGTH_INDEX => 0,
-		LESS_EQUALS_INTERFACE_BLENGTH_COUNT => 0,
-		LESS_EQUALS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
-		LESS_EQUALS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
-		LESS_EQUALS_INTERFACE_BALTERNATESETTING_INDEX => 0,
-		LESS_EQUALS_INTERFACE_BALTERNATESETTING_COUNT => 0,
-		LESS_EQUALS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
-		LESS_EQUALS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
-		LESS_EQUALS_INTERFACE_BINTERFACECLASS_INDEX => 0,
-		LESS_EQUALS_INTERFACE_BINTERFACECLASS_COUNT => 0,
-		LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
-		LESS_EQUALS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
-		LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
-		LESS_EQUALS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
-		LESS_EQUALS_ENDPOINT_BLENGTH_INDEX => 0,
-		LESS_EQUALS_ENDPOINT_BLENGTH_COUNT => 0,
-		LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
-		LESS_EQUALS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
-		LESS_EQUALS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
-		LESS_EQUALS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
-		LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
-		LESS_EQUALS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
-		LESS_EQUALS_ENDPOINT_BINTERVAL_INDEX => 0,
-		LESS_EQUALS_ENDPOINT_BINTERVAL_COUNT => 0,
-		LESS_EQUALS_HID_BLENGTH_INDEX => 0,
-		LESS_EQUALS_HID_BLENGTH_COUNT => 0,
-		LESS_EQUALS_HID_BCDHID_INDEX => 0,
-		LESS_EQUALS_HID_BCDHID_COUNT => 0,
-		LESS_EQUALS_HID_BCOUNTRYCODE_INDEX => 0,
-		LESS_EQUALS_HID_BCOUNTRYCODE_COUNT => 0,
-		LESS_EQUALS_HID_BNUMDESCRIPTORS_INDEX => 0,
-		LESS_EQUALS_HID_BNUMDESCRIPTORS_COUNT => 0,
-		LESS_EQUALS_HID_BDESCRIPTORTYPE_INDEX => 0,
-		LESS_EQUALS_HID_BDESCRIPTORTYPE_COUNT => 0,
-		LESS_EQUALS_HID_WDESCRIPTORLENGTH_INDEX => 0,
-		LESS_EQUALS_HID_WDESCRIPTORLENGTH_COUNT => 0,
-		LESS_EQUALS_STRING_BLENGTH_INDEX => 0,
-		LESS_EQUALS_STRING_BLENGTH_COUNT => 0,
-		LESS_EQUALS_STRING_IMANUFACTURER_INDEX => 0,
-		LESS_EQUALS_STRING_IMANUFACTURER_COUNT => 0,
-		LESS_EQUALS_STRING_IPRODUCT_INDEX => 0,
-		LESS_EQUALS_STRING_IPRODUCT_COUNT => 0,
-		LESS_EQUALS_STRING_ISERIALNUMBER_INDEX => 0,
-		LESS_EQUALS_STRING_ISERIALNUMBER_COUNT => 0,
-		LESS_EQUALS_STRING_ICONFIGURATION_INDEX => 0,
-		LESS_EQUALS_STRING_ICONFIGURATION_COUNT => 0,
-		LESS_EQUALS_STRING_IINTERFACE_INDEX => 0,
-		LESS_EQUALS_STRING_IINTERFACE_COUNT => 0,
 
 		STARTS_WITH_MEMORY_ADDR_LENGTH => 1,
 		STARTS_WITH_MEMORY_ADDR_MAX_INDEX => 0,
-		STARTS_WITH_MEMORY_ADDR_MAX_COUNT => 0, 
+		STARTS_WITH_MEMORY_ADDR_MAX_COUNT => 0,
 		STARTS_WITH_DEVICE_BLENGTH_INDEX => 0,
 		STARTS_WITH_DEVICE_BLENGTH_COUNT => 0,
 		STARTS_WITH_DEVICE_BCDUSB_INDEX => 0,
@@ -3087,8 +3399,76 @@ uut: USBVerifier
 		STARTS_WITH_DEVICE_IDPRODUCT_COUNT => 0,
 		STARTS_WITH_DEVICE_BCDDEVICE_INDEX => 0,
 		STARTS_WITH_DEVICE_BCDDEVICE_COUNT => 0,
+		STARTS_WITH_DEVICE_IMANUFACTURER_BLENGTH_INDEX => 0,
+		STARTS_WITH_DEVICE_IMANUFACTURER_BLENGTH_COUNT => 0,
+		STARTS_WITH_DEVICE_IMANUFACTURER_INDEX => 0,
+		STARTS_WITH_DEVICE_IMANUFACTURER_COUNT => 0,
+		STARTS_WITH_DEVICE_IPRODUCT_BLENGTH_INDEX => 0,
+		STARTS_WITH_DEVICE_IPRODUCT_BLENGTH_COUNT => 0,
+		STARTS_WITH_DEVICE_IPRODUCT_INDEX => 0,
+		STARTS_WITH_DEVICE_IPRODUCT_COUNT => 0,
+		STARTS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_INDEX => 0,
+		STARTS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_COUNT => 0,
+		STARTS_WITH_DEVICE_ISERIALNUMBER_INDEX => 0,
+		STARTS_WITH_DEVICE_ISERIALNUMBER_COUNT => 0,
 		STARTS_WITH_DEVICE_BNUMCONFIGURATIONS_INDEX => 0,
 		STARTS_WITH_DEVICE_BNUMCONFIGURATIONS_COUNT => 0,
+		STARTS_WITH_CONFIGURATION_BLENGTH_INDEX => 0,
+		STARTS_WITH_CONFIGURATION_BLENGTH_COUNT => 0,
+		STARTS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
+		STARTS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
+		STARTS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
+		STARTS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
+		STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
+		STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
+		STARTS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX => 0,
+		STARTS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT => 0,
+		STARTS_WITH_CONFIGURATION_ICONFIGURATION_INDEX => 0,
+		STARTS_WITH_CONFIGURATION_ICONFIGURATION_COUNT => 0,
+		STARTS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
+		STARTS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
+		STARTS_WITH_CONFIGURATION_BMAXPOWER_INDEX => 0,
+		STARTS_WITH_CONFIGURATION_BMAXPOWER_COUNT => 0,
+		STARTS_WITH_INTERFACE_BLENGTH_INDEX => 0,
+		STARTS_WITH_INTERFACE_BLENGTH_COUNT => 0,
+		STARTS_WITH_INTERFACE_BINTERFACENUMBER_INDEX => 0,
+		STARTS_WITH_INTERFACE_BINTERFACENUMBER_COUNT => 0,
+		STARTS_WITH_INTERFACE_BALTERNATESETTING_INDEX => 0,
+		STARTS_WITH_INTERFACE_BALTERNATESETTING_COUNT => 0,
+		STARTS_WITH_INTERFACE_BNUMENDPOINTS_INDEX => 0,
+		STARTS_WITH_INTERFACE_BNUMENDPOINTS_COUNT => 0,
+		STARTS_WITH_INTERFACE_BINTERFACECLASS_INDEX => 0,
+		STARTS_WITH_INTERFACE_BINTERFACECLASS_COUNT => 0,
+		STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
+		STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
+		STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
+		STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
+		STARTS_WITH_INTERFACE_IINTERFACE_BLENGTH_INDEX => 0,
+		STARTS_WITH_INTERFACE_IINTERFACE_BLENGTH_COUNT => 0,
+		STARTS_WITH_INTERFACE_IINTERFACE_INDEX => 0,
+		STARTS_WITH_INTERFACE_IINTERFACE_COUNT => 0,
+		STARTS_WITH_HID_BLENGTH_INDEX => 0,
+		STARTS_WITH_HID_BLENGTH_COUNT => 0,
+		STARTS_WITH_HID_BCDHID_INDEX => 0,
+		STARTS_WITH_HID_BCDHID_COUNT => 0,
+		STARTS_WITH_HID_BCOUNTRYCODE_INDEX => 0,
+		STARTS_WITH_HID_BCOUNTRYCODE_COUNT => 0,
+		STARTS_WITH_HID_BNUMDESCRIPTORS_INDEX => 0,
+		STARTS_WITH_HID_BNUMDESCRIPTORS_COUNT => 0,
+		STARTS_WITH_HID_BDESCRIPTORTYPE_INDEX => 0,
+		STARTS_WITH_HID_BDESCRIPTORTYPE_COUNT => 0,
+		STARTS_WITH_HID_WDESCRIPTORLENGTH_INDEX => 0,
+		STARTS_WITH_HID_WDESCRIPTORLENGTH_COUNT => 0,
+		STARTS_WITH_ENDPOINT_BLENGTH_INDEX => 0,
+		STARTS_WITH_ENDPOINT_BLENGTH_COUNT => 0,
+		STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
+		STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
+		STARTS_WITH_ENDPOINT_BMATTRIBUTES_INDEX => 0,
+		STARTS_WITH_ENDPOINT_BMATTRIBUTES_COUNT => 0,
+		STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
+		STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
+		STARTS_WITH_ENDPOINT_BINTERVAL_INDEX => 0,
+		STARTS_WITH_ENDPOINT_BINTERVAL_COUNT => 0,
 		STARTS_WITH_DEVICE_QUALIFIER_BLENGTH_INDEX => 0,
 		STARTS_WITH_DEVICE_QUALIFIER_BLENGTH_COUNT => 0,
 		STARTS_WITH_DEVICE_QUALIFIER_BCDUSB_INDEX => 0,
@@ -3105,18 +3485,6 @@ uut: USBVerifier
 		STARTS_WITH_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT => 0,
 		STARTS_WITH_DEVICE_QUALIFIER_BRESERVED_INDEX => 0,
 		STARTS_WITH_DEVICE_QUALIFIER_BRESERVED_COUNT => 0,
-		STARTS_WITH_CONFIGURATION_BLENGTH_INDEX => 0,
-		STARTS_WITH_CONFIGURATION_BLENGTH_COUNT => 0,
-		STARTS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
-		STARTS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
-		STARTS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
-		STARTS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
-		STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
-		STARTS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
-		STARTS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
-		STARTS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
-		STARTS_WITH_CONFIGURATION_BMAXPOWER_INDEX => 0,
-		STARTS_WITH_CONFIGURATION_BMAXPOWER_COUNT => 0,
 		STARTS_WITH_OTHER_SPEED_BLENGTH_INDEX => 0,
 		STARTS_WITH_OTHER_SPEED_BLENGTH_COUNT => 0,
 		STARTS_WITH_OTHER_SPEED_WTOTALLENGTH_INDEX => 0,
@@ -3125,62 +3493,18 @@ uut: USBVerifier
 		STARTS_WITH_OTHER_SPEED_BNUMINTERFACES_COUNT => 0,
 		STARTS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX => 0,
 		STARTS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT => 0,
+		STARTS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX => 0,
+		STARTS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT => 0,
+		STARTS_WITH_OTHER_SPEED_ICONFIGURATION_INDEX => 0,
+		STARTS_WITH_OTHER_SPEED_ICONFIGURATION_COUNT => 0,
 		STARTS_WITH_OTHER_SPEED_BMATTRIBUTES_INDEX => 0,
 		STARTS_WITH_OTHER_SPEED_BMATTRIBUTES_COUNT => 0,
 		STARTS_WITH_OTHER_SPEED_BMAXPOWER_INDEX => 0,
 		STARTS_WITH_OTHER_SPEED_BMAXPOWER_COUNT => 0,
-		STARTS_WITH_INTERFACE_BLENGTH_INDEX => 0,
-		STARTS_WITH_INTERFACE_BLENGTH_COUNT => 0,
-		STARTS_WITH_INTERFACE_BINTERFACENUMBER_INDEX => 0,
-		STARTS_WITH_INTERFACE_BINTERFACENUMBER_COUNT => 0,
-		STARTS_WITH_INTERFACE_BALTERNATESETTING_INDEX => 0,
-		STARTS_WITH_INTERFACE_BALTERNATESETTING_COUNT => 0,
-		STARTS_WITH_INTERFACE_BNUMENDPOINTS_INDEX => 0,
-		STARTS_WITH_INTERFACE_BNUMENDPOINTS_COUNT => 0,
-		STARTS_WITH_INTERFACE_BINTERFACECLASS_INDEX => 0,
-		STARTS_WITH_INTERFACE_BINTERFACECLASS_COUNT => 0,
-		STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
-		STARTS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
-		STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
-		STARTS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
-		STARTS_WITH_ENDPOINT_BLENGTH_INDEX => 0,
-		STARTS_WITH_ENDPOINT_BLENGTH_COUNT => 0,
-		STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
-		STARTS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
-		STARTS_WITH_ENDPOINT_BMATTRIBUTES_INDEX => 0,
-		STARTS_WITH_ENDPOINT_BMATTRIBUTES_COUNT => 0,
-		STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
-		STARTS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
-		STARTS_WITH_ENDPOINT_BINTERVAL_INDEX => 0,
-		STARTS_WITH_ENDPOINT_BINTERVAL_COUNT => 0,
-		STARTS_WITH_HID_BLENGTH_INDEX => 0,
-		STARTS_WITH_HID_BLENGTH_COUNT => 0,
-		STARTS_WITH_HID_BCDHID_INDEX => 0,
-		STARTS_WITH_HID_BCDHID_COUNT => 0,
-		STARTS_WITH_HID_BCOUNTRYCODE_INDEX => 0,
-		STARTS_WITH_HID_BCOUNTRYCODE_COUNT => 0,
-		STARTS_WITH_HID_BNUMDESCRIPTORS_INDEX => 0,
-		STARTS_WITH_HID_BNUMDESCRIPTORS_COUNT => 0,
-		STARTS_WITH_HID_BDESCRIPTORTYPE_INDEX => 0,
-		STARTS_WITH_HID_BDESCRIPTORTYPE_COUNT => 0,
-		STARTS_WITH_HID_WDESCRIPTORLENGTH_INDEX => 0,
-		STARTS_WITH_HID_WDESCRIPTORLENGTH_COUNT => 0,
-		STARTS_WITH_STRING_BLENGTH_INDEX => 0,
-		STARTS_WITH_STRING_BLENGTH_COUNT => 0,
-		STARTS_WITH_STRING_IMANUFACTURER_INDEX => 0,
-		STARTS_WITH_STRING_IMANUFACTURER_COUNT => 0,
-		STARTS_WITH_STRING_IPRODUCT_INDEX => 0,
-		STARTS_WITH_STRING_IPRODUCT_COUNT => 0,
-		STARTS_WITH_STRING_ISERIALNUMBER_INDEX => 0,
-		STARTS_WITH_STRING_ISERIALNUMBER_COUNT => 0,
-		STARTS_WITH_STRING_ICONFIGURATION_INDEX => 0,
-		STARTS_WITH_STRING_ICONFIGURATION_COUNT => 0,
-		STARTS_WITH_STRING_IINTERFACE_INDEX => 0,
-		STARTS_WITH_STRING_IINTERFACE_COUNT => 0,
 
 		ENDS_WITH_MEMORY_ADDR_LENGTH => 1,
 		ENDS_WITH_MEMORY_ADDR_MAX_INDEX => 0,
-		ENDS_WITH_MEMORY_ADDR_MAX_COUNT => 0, 
+		ENDS_WITH_MEMORY_ADDR_MAX_COUNT => 0,
 		ENDS_WITH_DEVICE_BLENGTH_INDEX => 0,
 		ENDS_WITH_DEVICE_BLENGTH_COUNT => 0,
 		ENDS_WITH_DEVICE_BCDUSB_INDEX => 0,
@@ -3199,8 +3523,76 @@ uut: USBVerifier
 		ENDS_WITH_DEVICE_IDPRODUCT_COUNT => 0,
 		ENDS_WITH_DEVICE_BCDDEVICE_INDEX => 0,
 		ENDS_WITH_DEVICE_BCDDEVICE_COUNT => 0,
+		ENDS_WITH_DEVICE_IMANUFACTURER_BLENGTH_INDEX => 0,
+		ENDS_WITH_DEVICE_IMANUFACTURER_BLENGTH_COUNT => 0,
+		ENDS_WITH_DEVICE_IMANUFACTURER_INDEX => 0,
+		ENDS_WITH_DEVICE_IMANUFACTURER_COUNT => 0,
+		ENDS_WITH_DEVICE_IPRODUCT_BLENGTH_INDEX => 0,
+		ENDS_WITH_DEVICE_IPRODUCT_BLENGTH_COUNT => 0,
+		ENDS_WITH_DEVICE_IPRODUCT_INDEX => 0,
+		ENDS_WITH_DEVICE_IPRODUCT_COUNT => 0,
+		ENDS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_INDEX => 0,
+		ENDS_WITH_DEVICE_ISERIALNUMBER_BLENGTH_COUNT => 0,
+		ENDS_WITH_DEVICE_ISERIALNUMBER_INDEX => 0,
+		ENDS_WITH_DEVICE_ISERIALNUMBER_COUNT => 0,
 		ENDS_WITH_DEVICE_BNUMCONFIGURATIONS_INDEX => 0,
 		ENDS_WITH_DEVICE_BNUMCONFIGURATIONS_COUNT => 0,
+		ENDS_WITH_CONFIGURATION_BLENGTH_INDEX => 0,
+		ENDS_WITH_CONFIGURATION_BLENGTH_COUNT => 0,
+		ENDS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
+		ENDS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
+		ENDS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
+		ENDS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
+		ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
+		ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
+		ENDS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX => 0,
+		ENDS_WITH_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT => 0,
+		ENDS_WITH_CONFIGURATION_ICONFIGURATION_INDEX => 0,
+		ENDS_WITH_CONFIGURATION_ICONFIGURATION_COUNT => 0,
+		ENDS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
+		ENDS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
+		ENDS_WITH_CONFIGURATION_BMAXPOWER_INDEX => 0,
+		ENDS_WITH_CONFIGURATION_BMAXPOWER_COUNT => 0,
+		ENDS_WITH_INTERFACE_BLENGTH_INDEX => 0,
+		ENDS_WITH_INTERFACE_BLENGTH_COUNT => 0,
+		ENDS_WITH_INTERFACE_BINTERFACENUMBER_INDEX => 0,
+		ENDS_WITH_INTERFACE_BINTERFACENUMBER_COUNT => 0,
+		ENDS_WITH_INTERFACE_BALTERNATESETTING_INDEX => 0,
+		ENDS_WITH_INTERFACE_BALTERNATESETTING_COUNT => 0,
+		ENDS_WITH_INTERFACE_BNUMENDPOINTS_INDEX => 0,
+		ENDS_WITH_INTERFACE_BNUMENDPOINTS_COUNT => 0,
+		ENDS_WITH_INTERFACE_BINTERFACECLASS_INDEX => 0,
+		ENDS_WITH_INTERFACE_BINTERFACECLASS_COUNT => 0,
+		ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
+		ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
+		ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
+		ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
+		ENDS_WITH_INTERFACE_IINTERFACE_BLENGTH_INDEX => 0,
+		ENDS_WITH_INTERFACE_IINTERFACE_BLENGTH_COUNT => 0,
+		ENDS_WITH_INTERFACE_IINTERFACE_INDEX => 0,
+		ENDS_WITH_INTERFACE_IINTERFACE_COUNT => 0,
+		ENDS_WITH_HID_BLENGTH_INDEX => 0,
+		ENDS_WITH_HID_BLENGTH_COUNT => 0,
+		ENDS_WITH_HID_BCDHID_INDEX => 0,
+		ENDS_WITH_HID_BCDHID_COUNT => 0,
+		ENDS_WITH_HID_BCOUNTRYCODE_INDEX => 0,
+		ENDS_WITH_HID_BCOUNTRYCODE_COUNT => 0,
+		ENDS_WITH_HID_BNUMDESCRIPTORS_INDEX => 0,
+		ENDS_WITH_HID_BNUMDESCRIPTORS_COUNT => 0,
+		ENDS_WITH_HID_BDESCRIPTORTYPE_INDEX => 0,
+		ENDS_WITH_HID_BDESCRIPTORTYPE_COUNT => 0,
+		ENDS_WITH_HID_WDESCRIPTORLENGTH_INDEX => 0,
+		ENDS_WITH_HID_WDESCRIPTORLENGTH_COUNT => 0,
+		ENDS_WITH_ENDPOINT_BLENGTH_INDEX => 0,
+		ENDS_WITH_ENDPOINT_BLENGTH_COUNT => 0,
+		ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
+		ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
+		ENDS_WITH_ENDPOINT_BMATTRIBUTES_INDEX => 0,
+		ENDS_WITH_ENDPOINT_BMATTRIBUTES_COUNT => 0,
+		ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
+		ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
+		ENDS_WITH_ENDPOINT_BINTERVAL_INDEX => 0,
+		ENDS_WITH_ENDPOINT_BINTERVAL_COUNT => 0,
 		ENDS_WITH_DEVICE_QUALIFIER_BLENGTH_INDEX => 0,
 		ENDS_WITH_DEVICE_QUALIFIER_BLENGTH_COUNT => 0,
 		ENDS_WITH_DEVICE_QUALIFIER_BCDUSB_INDEX => 0,
@@ -3217,18 +3609,6 @@ uut: USBVerifier
 		ENDS_WITH_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT => 0,
 		ENDS_WITH_DEVICE_QUALIFIER_BRESERVED_INDEX => 0,
 		ENDS_WITH_DEVICE_QUALIFIER_BRESERVED_COUNT => 0,
-		ENDS_WITH_CONFIGURATION_BLENGTH_INDEX => 0,
-		ENDS_WITH_CONFIGURATION_BLENGTH_COUNT => 0,
-		ENDS_WITH_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
-		ENDS_WITH_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
-		ENDS_WITH_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
-		ENDS_WITH_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
-		ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
-		ENDS_WITH_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
-		ENDS_WITH_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
-		ENDS_WITH_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
-		ENDS_WITH_CONFIGURATION_BMAXPOWER_INDEX => 0,
-		ENDS_WITH_CONFIGURATION_BMAXPOWER_COUNT => 0,
 		ENDS_WITH_OTHER_SPEED_BLENGTH_INDEX => 0,
 		ENDS_WITH_OTHER_SPEED_BLENGTH_COUNT => 0,
 		ENDS_WITH_OTHER_SPEED_WTOTALLENGTH_INDEX => 0,
@@ -3237,62 +3617,18 @@ uut: USBVerifier
 		ENDS_WITH_OTHER_SPEED_BNUMINTERFACES_COUNT => 0,
 		ENDS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX => 0,
 		ENDS_WITH_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT => 0,
+		ENDS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX => 0,
+		ENDS_WITH_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT => 0,
+		ENDS_WITH_OTHER_SPEED_ICONFIGURATION_INDEX => 0,
+		ENDS_WITH_OTHER_SPEED_ICONFIGURATION_COUNT => 0,
 		ENDS_WITH_OTHER_SPEED_BMATTRIBUTES_INDEX => 0,
 		ENDS_WITH_OTHER_SPEED_BMATTRIBUTES_COUNT => 0,
 		ENDS_WITH_OTHER_SPEED_BMAXPOWER_INDEX => 0,
 		ENDS_WITH_OTHER_SPEED_BMAXPOWER_COUNT => 0,
-		ENDS_WITH_INTERFACE_BLENGTH_INDEX => 0,
-		ENDS_WITH_INTERFACE_BLENGTH_COUNT => 0,
-		ENDS_WITH_INTERFACE_BINTERFACENUMBER_INDEX => 0,
-		ENDS_WITH_INTERFACE_BINTERFACENUMBER_COUNT => 0,
-		ENDS_WITH_INTERFACE_BALTERNATESETTING_INDEX => 0,
-		ENDS_WITH_INTERFACE_BALTERNATESETTING_COUNT => 0,
-		ENDS_WITH_INTERFACE_BNUMENDPOINTS_INDEX => 0,
-		ENDS_WITH_INTERFACE_BNUMENDPOINTS_COUNT => 0,
-		ENDS_WITH_INTERFACE_BINTERFACECLASS_INDEX => 0,
-		ENDS_WITH_INTERFACE_BINTERFACECLASS_COUNT => 0,
-		ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
-		ENDS_WITH_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
-		ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
-		ENDS_WITH_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
-		ENDS_WITH_ENDPOINT_BLENGTH_INDEX => 0,
-		ENDS_WITH_ENDPOINT_BLENGTH_COUNT => 0,
-		ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
-		ENDS_WITH_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
-		ENDS_WITH_ENDPOINT_BMATTRIBUTES_INDEX => 0,
-		ENDS_WITH_ENDPOINT_BMATTRIBUTES_COUNT => 0,
-		ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
-		ENDS_WITH_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
-		ENDS_WITH_ENDPOINT_BINTERVAL_INDEX => 0,
-		ENDS_WITH_ENDPOINT_BINTERVAL_COUNT => 0,
-		ENDS_WITH_HID_BLENGTH_INDEX => 0,
-		ENDS_WITH_HID_BLENGTH_COUNT => 0,
-		ENDS_WITH_HID_BCDHID_INDEX => 0,
-		ENDS_WITH_HID_BCDHID_COUNT => 0,
-		ENDS_WITH_HID_BCOUNTRYCODE_INDEX => 0,
-		ENDS_WITH_HID_BCOUNTRYCODE_COUNT => 0,
-		ENDS_WITH_HID_BNUMDESCRIPTORS_INDEX => 0,
-		ENDS_WITH_HID_BNUMDESCRIPTORS_COUNT => 0,
-		ENDS_WITH_HID_BDESCRIPTORTYPE_INDEX => 0,
-		ENDS_WITH_HID_BDESCRIPTORTYPE_COUNT => 0,
-		ENDS_WITH_HID_WDESCRIPTORLENGTH_INDEX => 0,
-		ENDS_WITH_HID_WDESCRIPTORLENGTH_COUNT => 0,
-		ENDS_WITH_STRING_BLENGTH_INDEX => 0,
-		ENDS_WITH_STRING_BLENGTH_COUNT => 0,
-		ENDS_WITH_STRING_IMANUFACTURER_INDEX => 0,
-		ENDS_WITH_STRING_IMANUFACTURER_COUNT => 0,
-		ENDS_WITH_STRING_IPRODUCT_INDEX => 0,
-		ENDS_WITH_STRING_IPRODUCT_COUNT => 0,
-		ENDS_WITH_STRING_ISERIALNUMBER_INDEX => 0,
-		ENDS_WITH_STRING_ISERIALNUMBER_COUNT => 0,
-		ENDS_WITH_STRING_ICONFIGURATION_INDEX => 0,
-		ENDS_WITH_STRING_ICONFIGURATION_COUNT => 0,
-		ENDS_WITH_STRING_IINTERFACE_INDEX => 0,
-		ENDS_WITH_STRING_IINTERFACE_COUNT => 0,
 
 		CONTAINS_MEMORY_ADDR_LENGTH => 1,
 		CONTAINS_MEMORY_ADDR_MAX_INDEX => 0,
-		CONTAINS_MEMORY_ADDR_MAX_COUNT => 0, 
+		CONTAINS_MEMORY_ADDR_MAX_COUNT => 0,
 		CONTAINS_DEVICE_BLENGTH_INDEX => 0,
 		CONTAINS_DEVICE_BLENGTH_COUNT => 0,
 		CONTAINS_DEVICE_BCDUSB_INDEX => 0,
@@ -3311,8 +3647,76 @@ uut: USBVerifier
 		CONTAINS_DEVICE_IDPRODUCT_COUNT => 0,
 		CONTAINS_DEVICE_BCDDEVICE_INDEX => 0,
 		CONTAINS_DEVICE_BCDDEVICE_COUNT => 0,
+		CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_INDEX => 0,
+		CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_COUNT => 0,
+		CONTAINS_DEVICE_IMANUFACTURER_INDEX => 0,
+		CONTAINS_DEVICE_IMANUFACTURER_COUNT => 0,
+		CONTAINS_DEVICE_IPRODUCT_BLENGTH_INDEX => 0,
+		CONTAINS_DEVICE_IPRODUCT_BLENGTH_COUNT => 0,
+		CONTAINS_DEVICE_IPRODUCT_INDEX => 0,
+		CONTAINS_DEVICE_IPRODUCT_COUNT => 0,
+		CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX => 0,
+		CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT => 0,
+		CONTAINS_DEVICE_ISERIALNUMBER_INDEX => 0,
+		CONTAINS_DEVICE_ISERIALNUMBER_COUNT => 0,
 		CONTAINS_DEVICE_BNUMCONFIGURATIONS_INDEX => 0,
 		CONTAINS_DEVICE_BNUMCONFIGURATIONS_COUNT => 0,
+		CONTAINS_CONFIGURATION_BLENGTH_INDEX => 0,
+		CONTAINS_CONFIGURATION_BLENGTH_COUNT => 0,
+		CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
+		CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
+		CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
+		CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
+		CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
+		CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
+		CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX => 0,
+		CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT => 0,
+		CONTAINS_CONFIGURATION_ICONFIGURATION_INDEX => 0,
+		CONTAINS_CONFIGURATION_ICONFIGURATION_COUNT => 0,
+		CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
+		CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
+		CONTAINS_CONFIGURATION_BMAXPOWER_INDEX => 0,
+		CONTAINS_CONFIGURATION_BMAXPOWER_COUNT => 0,
+		CONTAINS_INTERFACE_BLENGTH_INDEX => 0,
+		CONTAINS_INTERFACE_BLENGTH_COUNT => 0,
+		CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
+		CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
+		CONTAINS_INTERFACE_BALTERNATESETTING_INDEX => 0,
+		CONTAINS_INTERFACE_BALTERNATESETTING_COUNT => 0,
+		CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
+		CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
+		CONTAINS_INTERFACE_BINTERFACECLASS_INDEX => 0,
+		CONTAINS_INTERFACE_BINTERFACECLASS_COUNT => 0,
+		CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
+		CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
+		CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
+		CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
+		CONTAINS_INTERFACE_IINTERFACE_BLENGTH_INDEX => 0,
+		CONTAINS_INTERFACE_IINTERFACE_BLENGTH_COUNT => 0,
+		CONTAINS_INTERFACE_IINTERFACE_INDEX => 0,
+		CONTAINS_INTERFACE_IINTERFACE_COUNT => 0,
+		CONTAINS_HID_BLENGTH_INDEX => 0,
+		CONTAINS_HID_BLENGTH_COUNT => 0,
+		CONTAINS_HID_BCDHID_INDEX => 0,
+		CONTAINS_HID_BCDHID_COUNT => 0,
+		CONTAINS_HID_BCOUNTRYCODE_INDEX => 0,
+		CONTAINS_HID_BCOUNTRYCODE_COUNT => 0,
+		CONTAINS_HID_BNUMDESCRIPTORS_INDEX => 0,
+		CONTAINS_HID_BNUMDESCRIPTORS_COUNT => 0,
+		CONTAINS_HID_BDESCRIPTORTYPE_INDEX => 0,
+		CONTAINS_HID_BDESCRIPTORTYPE_COUNT => 0,
+		CONTAINS_HID_WDESCRIPTORLENGTH_INDEX => 0,
+		CONTAINS_HID_WDESCRIPTORLENGTH_COUNT => 0,
+		CONTAINS_ENDPOINT_BLENGTH_INDEX => 0,
+		CONTAINS_ENDPOINT_BLENGTH_COUNT => 0,
+		CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
+		CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
+		CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
+		CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
+		CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
+		CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
+		CONTAINS_ENDPOINT_BINTERVAL_INDEX => 0,
+		CONTAINS_ENDPOINT_BINTERVAL_COUNT => 0,
 		CONTAINS_DEVICE_QUALIFIER_BLENGTH_INDEX => 0,
 		CONTAINS_DEVICE_QUALIFIER_BLENGTH_COUNT => 0,
 		CONTAINS_DEVICE_QUALIFIER_BCDUSB_INDEX => 0,
@@ -3329,18 +3733,6 @@ uut: USBVerifier
 		CONTAINS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT => 0,
 		CONTAINS_DEVICE_QUALIFIER_BRESERVED_INDEX => 0,
 		CONTAINS_DEVICE_QUALIFIER_BRESERVED_COUNT => 0,
-		CONTAINS_CONFIGURATION_BLENGTH_INDEX => 0,
-		CONTAINS_CONFIGURATION_BLENGTH_COUNT => 0,
-		CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
-		CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
-		CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
-		CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
-		CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
-		CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
-		CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
-		CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
-		CONTAINS_CONFIGURATION_BMAXPOWER_INDEX => 0,
-		CONTAINS_CONFIGURATION_BMAXPOWER_COUNT => 0,
 		CONTAINS_OTHER_SPEED_BLENGTH_INDEX => 0,
 		CONTAINS_OTHER_SPEED_BLENGTH_COUNT => 0,
 		CONTAINS_OTHER_SPEED_WTOTALLENGTH_INDEX => 0,
@@ -3349,58 +3741,14 @@ uut: USBVerifier
 		CONTAINS_OTHER_SPEED_BNUMINTERFACES_COUNT => 0,
 		CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX => 0,
 		CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT => 0,
+		CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX => 0,
+		CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT => 0,
+		CONTAINS_OTHER_SPEED_ICONFIGURATION_INDEX => 0,
+		CONTAINS_OTHER_SPEED_ICONFIGURATION_COUNT => 0,
 		CONTAINS_OTHER_SPEED_BMATTRIBUTES_INDEX => 0,
 		CONTAINS_OTHER_SPEED_BMATTRIBUTES_COUNT => 0,
 		CONTAINS_OTHER_SPEED_BMAXPOWER_INDEX => 0,
 		CONTAINS_OTHER_SPEED_BMAXPOWER_COUNT => 0,
-		CONTAINS_INTERFACE_BLENGTH_INDEX => 0,
-		CONTAINS_INTERFACE_BLENGTH_COUNT => 0,
-		CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
-		CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
-		CONTAINS_INTERFACE_BALTERNATESETTING_INDEX => 0,
-		CONTAINS_INTERFACE_BALTERNATESETTING_COUNT => 0,
-		CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
-		CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
-		CONTAINS_INTERFACE_BINTERFACECLASS_INDEX => 0,
-		CONTAINS_INTERFACE_BINTERFACECLASS_COUNT => 0,
-		CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
-		CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
-		CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
-		CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
-		CONTAINS_ENDPOINT_BLENGTH_INDEX => 0,
-		CONTAINS_ENDPOINT_BLENGTH_COUNT => 0,
-		CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
-		CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
-		CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
-		CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
-		CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
-		CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
-		CONTAINS_ENDPOINT_BINTERVAL_INDEX => 0,
-		CONTAINS_ENDPOINT_BINTERVAL_COUNT => 0,
-		CONTAINS_HID_BLENGTH_INDEX => 0,
-		CONTAINS_HID_BLENGTH_COUNT => 0,
-		CONTAINS_HID_BCDHID_INDEX => 0,
-		CONTAINS_HID_BCDHID_COUNT => 0,
-		CONTAINS_HID_BCOUNTRYCODE_INDEX => 0,
-		CONTAINS_HID_BCOUNTRYCODE_COUNT => 0,
-		CONTAINS_HID_BNUMDESCRIPTORS_INDEX => 0,
-		CONTAINS_HID_BNUMDESCRIPTORS_COUNT => 0,
-		CONTAINS_HID_BDESCRIPTORTYPE_INDEX => 0,
-		CONTAINS_HID_BDESCRIPTORTYPE_COUNT => 0,
-		CONTAINS_HID_WDESCRIPTORLENGTH_INDEX => 0,
-		CONTAINS_HID_WDESCRIPTORLENGTH_COUNT => 0,
-		CONTAINS_STRING_BLENGTH_INDEX => 0,
-		CONTAINS_STRING_BLENGTH_COUNT => 0,
-		CONTAINS_STRING_IMANUFACTURER_INDEX => 0,
-		CONTAINS_STRING_IMANUFACTURER_COUNT => 0,
-		CONTAINS_STRING_IPRODUCT_INDEX => 0,
-		CONTAINS_STRING_IPRODUCT_COUNT => 0,
-		CONTAINS_STRING_ISERIALNUMBER_INDEX => 0,
-		CONTAINS_STRING_ISERIALNUMBER_COUNT => 0,
-		CONTAINS_STRING_ICONFIGURATION_INDEX => 0,
-		CONTAINS_STRING_ICONFIGURATION_COUNT => 0,
-		CONTAINS_STRING_IINTERFACE_INDEX => 0,
-		CONTAINS_STRING_IINTERFACE_COUNT => 0,
 
 		NOT_CONTAINS_MEMORY_ADDR_LENGTH => 1,
 		NOT_CONTAINS_MEMORY_ADDR_MAX_INDEX => 0,
@@ -3423,8 +3771,76 @@ uut: USBVerifier
 		NOT_CONTAINS_DEVICE_IDPRODUCT_COUNT => 0,
 		NOT_CONTAINS_DEVICE_BCDDEVICE_INDEX => 0,
 		NOT_CONTAINS_DEVICE_BCDDEVICE_COUNT => 0,
+		NOT_CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_INDEX => 0,
+		NOT_CONTAINS_DEVICE_IMANUFACTURER_BLENGTH_COUNT => 0,
+		NOT_CONTAINS_DEVICE_IMANUFACTURER_INDEX => 0,
+		NOT_CONTAINS_DEVICE_IMANUFACTURER_COUNT => 0,
+		NOT_CONTAINS_DEVICE_IPRODUCT_BLENGTH_INDEX => 0,
+		NOT_CONTAINS_DEVICE_IPRODUCT_BLENGTH_COUNT => 0,
+		NOT_CONTAINS_DEVICE_IPRODUCT_INDEX => 0,
+		NOT_CONTAINS_DEVICE_IPRODUCT_COUNT => 0,
+		NOT_CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_INDEX => 0,
+		NOT_CONTAINS_DEVICE_ISERIALNUMBER_BLENGTH_COUNT => 0,
+		NOT_CONTAINS_DEVICE_ISERIALNUMBER_INDEX => 0,
+		NOT_CONTAINS_DEVICE_ISERIALNUMBER_COUNT => 0,
 		NOT_CONTAINS_DEVICE_BNUMCONFIGURATIONS_INDEX => 0,
 		NOT_CONTAINS_DEVICE_BNUMCONFIGURATIONS_COUNT => 0,
+		NOT_CONTAINS_CONFIGURATION_BLENGTH_INDEX => 0,
+		NOT_CONTAINS_CONFIGURATION_BLENGTH_COUNT => 0,
+		NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
+		NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
+		NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
+		NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
+		NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
+		NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
+		NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_INDEX => 0,
+		NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_BLENGTH_COUNT => 0,
+		NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_INDEX => 0,
+		NOT_CONTAINS_CONFIGURATION_ICONFIGURATION_COUNT => 0,
+		NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
+		NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
+		NOT_CONTAINS_CONFIGURATION_BMAXPOWER_INDEX => 0,
+		NOT_CONTAINS_CONFIGURATION_BMAXPOWER_COUNT => 0,
+		NOT_CONTAINS_INTERFACE_BLENGTH_INDEX => 0,
+		NOT_CONTAINS_INTERFACE_BLENGTH_COUNT => 0,
+		NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
+		NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
+		NOT_CONTAINS_INTERFACE_BALTERNATESETTING_INDEX => 0,
+		NOT_CONTAINS_INTERFACE_BALTERNATESETTING_COUNT => 0,
+		NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
+		NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
+		NOT_CONTAINS_INTERFACE_BINTERFACECLASS_INDEX => 0,
+		NOT_CONTAINS_INTERFACE_BINTERFACECLASS_COUNT => 0,
+		NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
+		NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
+		NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
+		NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
+		NOT_CONTAINS_INTERFACE_IINTERFACE_BLENGTH_INDEX => 0,
+		NOT_CONTAINS_INTERFACE_IINTERFACE_BLENGTH_COUNT => 0,
+		NOT_CONTAINS_INTERFACE_IINTERFACE_INDEX => 0,
+		NOT_CONTAINS_INTERFACE_IINTERFACE_COUNT => 0,
+		NOT_CONTAINS_HID_BLENGTH_INDEX => 0,
+		NOT_CONTAINS_HID_BLENGTH_COUNT => 0,
+		NOT_CONTAINS_HID_BCDHID_INDEX => 0,
+		NOT_CONTAINS_HID_BCDHID_COUNT => 0,
+		NOT_CONTAINS_HID_BCOUNTRYCODE_INDEX => 0,
+		NOT_CONTAINS_HID_BCOUNTRYCODE_COUNT => 0,
+		NOT_CONTAINS_HID_BNUMDESCRIPTORS_INDEX => 0,
+		NOT_CONTAINS_HID_BNUMDESCRIPTORS_COUNT => 0,
+		NOT_CONTAINS_HID_BDESCRIPTORTYPE_INDEX => 0,
+		NOT_CONTAINS_HID_BDESCRIPTORTYPE_COUNT => 0,
+		NOT_CONTAINS_HID_WDESCRIPTORLENGTH_INDEX => 0,
+		NOT_CONTAINS_HID_WDESCRIPTORLENGTH_COUNT => 0,
+		NOT_CONTAINS_ENDPOINT_BLENGTH_INDEX => 0,
+		NOT_CONTAINS_ENDPOINT_BLENGTH_COUNT => 0,
+		NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
+		NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
+		NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
+		NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
+		NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
+		NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
+		NOT_CONTAINS_ENDPOINT_BINTERVAL_INDEX => 0,
+		NOT_CONTAINS_ENDPOINT_BINTERVAL_COUNT => 0,
 		NOT_CONTAINS_DEVICE_QUALIFIER_BLENGTH_INDEX => 0,
 		NOT_CONTAINS_DEVICE_QUALIFIER_BLENGTH_COUNT => 0,
 		NOT_CONTAINS_DEVICE_QUALIFIER_BCDUSB_INDEX => 0,
@@ -3441,18 +3857,6 @@ uut: USBVerifier
 		NOT_CONTAINS_DEVICE_QUALIFIER_BNUMCONFIGURATIONS_COUNT => 0,
 		NOT_CONTAINS_DEVICE_QUALIFIER_BRESERVED_INDEX => 0,
 		NOT_CONTAINS_DEVICE_QUALIFIER_BRESERVED_COUNT => 0,
-		NOT_CONTAINS_CONFIGURATION_BLENGTH_INDEX => 0,
-		NOT_CONTAINS_CONFIGURATION_BLENGTH_COUNT => 0,
-		NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_INDEX => 0,
-		NOT_CONTAINS_CONFIGURATION_WTOTALLENGTH_COUNT => 0,
-		NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_INDEX => 0,
-		NOT_CONTAINS_CONFIGURATION_BNUMINTERFACES_COUNT => 0,
-		NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_INDEX => 0,
-		NOT_CONTAINS_CONFIGURATION_BCONFIGURATIONVALUE_COUNT => 0,
-		NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_INDEX => 0,
-		NOT_CONTAINS_CONFIGURATION_BMATTRIBUTES_COUNT => 0,
-		NOT_CONTAINS_CONFIGURATION_BMAXPOWER_INDEX => 0,
-		NOT_CONTAINS_CONFIGURATION_BMAXPOWER_COUNT => 0,
 		NOT_CONTAINS_OTHER_SPEED_BLENGTH_INDEX => 0,
 		NOT_CONTAINS_OTHER_SPEED_BLENGTH_COUNT => 0,
 		NOT_CONTAINS_OTHER_SPEED_WTOTALLENGTH_INDEX => 0,
@@ -3461,58 +3865,14 @@ uut: USBVerifier
 		NOT_CONTAINS_OTHER_SPEED_BNUMINTERFACES_COUNT => 0,
 		NOT_CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_INDEX => 0,
 		NOT_CONTAINS_OTHER_SPEED_BCONFIGURATIONVALUE_COUNT => 0,
+		NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_INDEX => 0,
+		NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_BLENGTH_COUNT => 0,
+		NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_INDEX => 0,
+		NOT_CONTAINS_OTHER_SPEED_ICONFIGURATION_COUNT => 0,
 		NOT_CONTAINS_OTHER_SPEED_BMATTRIBUTES_INDEX => 0,
 		NOT_CONTAINS_OTHER_SPEED_BMATTRIBUTES_COUNT => 0,
 		NOT_CONTAINS_OTHER_SPEED_BMAXPOWER_INDEX => 0,
-		NOT_CONTAINS_OTHER_SPEED_BMAXPOWER_COUNT => 0,
-		NOT_CONTAINS_INTERFACE_BLENGTH_INDEX => 0,
-		NOT_CONTAINS_INTERFACE_BLENGTH_COUNT => 0,
-		NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_INDEX => 0,
-		NOT_CONTAINS_INTERFACE_BINTERFACENUMBER_COUNT => 0,
-		NOT_CONTAINS_INTERFACE_BALTERNATESETTING_INDEX => 0,
-		NOT_CONTAINS_INTERFACE_BALTERNATESETTING_COUNT => 0,
-		NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_INDEX => 0,
-		NOT_CONTAINS_INTERFACE_BNUMENDPOINTS_COUNT => 0,
-		NOT_CONTAINS_INTERFACE_BINTERFACECLASS_INDEX => 0,
-		NOT_CONTAINS_INTERFACE_BINTERFACECLASS_COUNT => 0,
-		NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_INDEX => 0,
-		NOT_CONTAINS_INTERFACE_BINTERFACESUBCLASS_COUNT => 0,
-		NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_INDEX => 0,
-		NOT_CONTAINS_INTERFACE_BINTERFACEPROTOCOL_COUNT => 0,
-		NOT_CONTAINS_ENDPOINT_BLENGTH_INDEX => 0,
-		NOT_CONTAINS_ENDPOINT_BLENGTH_COUNT => 0,
-		NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_INDEX => 0,
-		NOT_CONTAINS_ENDPOINT_BENDPOINTADDRESS_COUNT => 0,
-		NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_INDEX => 0,
-		NOT_CONTAINS_ENDPOINT_BMATTRIBUTES_COUNT => 0,
-		NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_INDEX => 0,
-		NOT_CONTAINS_ENDPOINT_WMAXPACKETSIZE_COUNT => 0,
-		NOT_CONTAINS_ENDPOINT_BINTERVAL_INDEX => 0,
-		NOT_CONTAINS_ENDPOINT_BINTERVAL_COUNT => 0,
-		NOT_CONTAINS_HID_BLENGTH_INDEX => 0,
-		NOT_CONTAINS_HID_BLENGTH_COUNT => 0,
-		NOT_CONTAINS_HID_BCDHID_INDEX => 0,
-		NOT_CONTAINS_HID_BCDHID_COUNT => 0,
-		NOT_CONTAINS_HID_BCOUNTRYCODE_INDEX => 0,
-		NOT_CONTAINS_HID_BCOUNTRYCODE_COUNT => 0,
-		NOT_CONTAINS_HID_BNUMDESCRIPTORS_INDEX => 0,
-		NOT_CONTAINS_HID_BNUMDESCRIPTORS_COUNT => 0,
-		NOT_CONTAINS_HID_BDESCRIPTORTYPE_INDEX => 0,
-		NOT_CONTAINS_HID_BDESCRIPTORTYPE_COUNT => 0,
-		NOT_CONTAINS_HID_WDESCRIPTORLENGTH_INDEX => 0,
-		NOT_CONTAINS_HID_WDESCRIPTORLENGTH_COUNT => 0,
-		NOT_CONTAINS_STRING_BLENGTH_INDEX => 0,
-		NOT_CONTAINS_STRING_BLENGTH_COUNT => 0,
-		NOT_CONTAINS_STRING_IMANUFACTURER_INDEX => 0,
-		NOT_CONTAINS_STRING_IMANUFACTURER_COUNT => 0,
-		NOT_CONTAINS_STRING_IPRODUCT_INDEX => 0,
-		NOT_CONTAINS_STRING_IPRODUCT_COUNT => 0,
-		NOT_CONTAINS_STRING_ISERIALNUMBER_INDEX => 0,
-		NOT_CONTAINS_STRING_ISERIALNUMBER_COUNT => 0,
-		NOT_CONTAINS_STRING_ICONFIGURATION_INDEX => 0,
-		NOT_CONTAINS_STRING_ICONFIGURATION_COUNT => 0,
-		NOT_CONTAINS_STRING_IINTERFACE_INDEX => 0,
-		NOT_CONTAINS_STRING_IINTERFACE_COUNT => 0
+		NOT_CONTAINS_OTHER_SPEED_BMAXPOWER_COUNT => 0
 	)
 
 	PORT MAP (

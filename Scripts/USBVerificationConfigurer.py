@@ -37,7 +37,7 @@ hints = "Hints:\n"\
         "import verification values from file\t\t\t\"import path_to_file\"\n"\
         "export verification values\t\t\t\t\"export [directory_path]\"\n"\
         "show all verification values\t\t\t\t\"summary\"\n"\
-        "show Descriptor verification values\t\t\t\"summary [device/configuration/interface/hid/endpoint/string/deviceQualifier/otherSpeed]\"\n"\
+        "show Descriptor verification values\t\t\t\"summary [device/configuration/interface/hid/endpoint/deviceQualifier/otherSpeed]\"\n"\
         "show specific Descriptor field verification values\t\"summary usb_descriptor usb_field\"\t\t\n"\
         "quit programm\t\t\t\t\t\t\"quit\"\n\n"
 
