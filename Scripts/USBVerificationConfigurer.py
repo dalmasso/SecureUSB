@@ -19,6 +19,9 @@ from EndpointDescriptor import EndpointDescriptor
 from DeviceQualifierDescriptor import DeviceQualifierDescriptor
 from OtherSpeedDescriptor import OtherSpeedDescriptor
 
+# USB Descriptor Enable Status
+from DescriptorEnableStatusEnum import DescriptorEnableStatusEnum
+
 # Verification Order, Operator & Value
 from VerificationOrderEnum import VerificationOrderEnum
 from VerificationOperatorEnum import VerificationOperatorEnum
@@ -50,7 +53,7 @@ VHDL_SOURCE_DIR = os.path.abspath(os.path.join(os.getcwd(), os.pardir)) + "/USB-
 # Default Export Directory
 DEFAULT_EXPORT_DIR = os.getcwd() + '/Export/'
 
-# Exported Descriptor File
+# Exported USB Descriptor Verifications File
 DESCRIPTOR_VALUES_FILENAME = "USBVerificationValues"
 DESCRIPTOR_VALUES_FILE_EXTENSION = ".csv"
 DESCRIPTOR_VALUES_HEADER_OPERATOR = "Operator"
@@ -71,14 +74,16 @@ OPERATOR_MEM_VALUES_CONF_DIR = "MemoryExport/"
 OPERATOR_MEM_VALUES_CONF_FILE_SUFFIX_NAME = "MemoryFile"
 OPERATOR_MEM_VALUES_CONF_FILE_EXTENSION = ".coe"
 
-# Exported Operator Summary File
-OPERATOR_SUMMARY_FILENAME = "OperatorsSummary"
-OPERATOR_SUMMARY_FILE_EXTENSION = ".csv"
-OPERATOR_SUMMARY_HEADER_OPERATOR = "Operators"
-OPERATOR_SUMMARY_HEADER_STATUS = "Status"
-OPERATOR_SUMMARY_OPERATOR_INUSE_TITLE = "Operators in Use"
-OPERATOR_SUMMARY_OPERATOR_AVAILABLE_TITLE = "Operators Available"
-OPERATOR_SUMMARY_WATCHDOG_LIMIT_TITLE = "Watchdog Limit (in clock cycles)"
+# Exported USB Verification Summary File
+USB_SUMMARY_FILENAME = "USBVerificationSummary"
+USB_SUMMARY_FILE_EXTENSION = ".csv"
+USB_SUMMARY_HEADER_DESCRIPTOR = "Descriptors"
+USB_SUMMARY_HEADER_DESCRIPTOR_STATUS = "Status"
+USB_SUMMARY_HEADER_OPERATOR = "Operators"
+USB_SUMMARY_HEADER_OPERATOR_STATUS = "Status"
+USB_SUMMARY_OPERATOR_INUSE_TITLE = "Operators in Use"
+USB_SUMMARY_OPERATOR_AVAILABLE_TITLE = "Operators Available"
+USB_SUMMARY_WATCHDOG_LIMIT_TITLE = "Watchdog Limit (in clock cycles)"
 
 # Exported VHDL Sources
 VHDL_EXPORT_DIR = "HDL_Sources/"
@@ -273,7 +278,7 @@ def exportVerificationValues(userInputValues):
     os.makedirs(exportDir)
 
     # Export New Descriptor Verification Values
-    # Return: Dict {Descriptor Name: Enable/Disable}
+    # Return: Dict {Descriptor Name: Descriptor Enable Status}
     descriptorEnables = exportDescriptorVerificationValues(exportDir)
 
     # Export New Operator Memory Configurations (Indexes & Values)
@@ -286,8 +291,9 @@ def exportVerificationValues(userInputValues):
     memoryValues = exportOperatorMemoryValuesConfigurations(exportDir, [(el, operatorConfig[el][4]) for el in operatorConfig])
 
     # Export New Operator Summary
+    # Input: Dict {Descriptor Name: Descriptor Enable Status}
     # Return: (Dict {OperatorName, Enable/Disable}, Watchdog Limit)
-    operatorSummary = exportOperatorSummary(exportDir)
+    operatorSummary = exportOperatorSummary(exportDir, descriptorEnables)
 
     # Export New Operator VHDL Sources
     # Operator Config Input: Dict { OperatorName: (List[(Descriptor, USB Field, Index, Counter)], Required Memory Address Bit Length, Max Index, Max Counter, Total Index)}
@@ -296,7 +302,7 @@ def exportVerificationValues(userInputValues):
     exportVHDLSources(exportDir, operatorConfig, memoryValues, operatorSummary)
 
 ### Export Descriptor Verification Values ###
-### Return: Dict {Descriptor Name: Enable/Disable}
+### Return: Dict {Descriptor Name: Descriptor Enable Status}
 def exportDescriptorVerificationValues(exportDir):
 
     # Export Descriptor Values File
@@ -363,43 +369,56 @@ def exportDescriptorVerificationValues(exportDir):
         return extractDescriptorEnable()
 
 ### Extract Descriptor Enable ###
-# Return: Dict {Descriptor Name: Enable/Disable}
+# Return: Dict {Descriptor Name: Descriptor Enable Status}
 def extractDescriptorEnable():
     descriptorEnables = {}
 
     # Disable all Descriptors
-    descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: False})
-    descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: False})
-    descriptorEnables.update({interfaceDescriptor.DESCRIPTOR_NAME: False})
-    descriptorEnables.update({hidDescriptor.DESCRIPTOR_NAME: False})
-    descriptorEnables.update({endpointDescriptor.DESCRIPTOR_NAME: False})
-    descriptorEnables.update({deviceQualifierDescriptor.DESCRIPTOR_NAME: False})
-    descriptorEnables.update({otherSpeedDescriptor.DESCRIPTOR_NAME: False})
+    descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DISABLE})
+    descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DISABLE})
+    descriptorEnables.update({interfaceDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DISABLE})
+    descriptorEnables.update({hidDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DISABLE})
+    descriptorEnables.update({endpointDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DISABLE})
+    descriptorEnables.update({deviceQualifierDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DISABLE})
+    descriptorEnables.update({otherSpeedDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DISABLE})
 
     # Endpoint Descriptor require Interface/Configuration/Device Descriptors
     if (endpointDescriptor.isDescriptorInUse()):
-        descriptorEnables.update({endpointDescriptor.DESCRIPTOR_NAME: True})
-        descriptorEnables.update({interfaceDescriptor.DESCRIPTOR_NAME: True})
-        descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: True})
-        descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: True})
+        descriptorEnables.update({endpointDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.ENABLE})
+        descriptorEnables.update({interfaceDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DEPENDENCY})
+        descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DEPENDENCY})
+        descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DEPENDENCY})
 
     # HID Descriptor require Interface/Configuration/Device Descriptors
     if (hidDescriptor.isDescriptorInUse()):
-        descriptorEnables.update({hidDescriptor.DESCRIPTOR_NAME: True})
-        descriptorEnables.update({interfaceDescriptor.DESCRIPTOR_NAME: True})
-        descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: True})
-        descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: True})
+        descriptorEnables.update({hidDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.ENABLE})
+        descriptorEnables.update({interfaceDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DEPENDENCY})
+        descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DEPENDENCY})
+        descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DEPENDENCY})
 
     # Interface Descriptor requires Configuration Descriptor
     if (interfaceDescriptor.isDescriptorInUse()):
-        descriptorEnables.update({interfaceDescriptor.DESCRIPTOR_NAME: True})
-        descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: True})
-        descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: True})
+        descriptorEnables.update({interfaceDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.ENABLE})
+        descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DEPENDENCY})
+        descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DEPENDENCY})
 
     # Configuration Descriptor requires Device Descriptor
     if (configurationDescriptor.isDescriptorInUse()):
-        descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: True})
-        descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: True})
+        descriptorEnables.update({configurationDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.ENABLE})
+        descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DEPENDENCY})
+
+    # Device Descriptor
+    if (deviceDescriptor.isDescriptorInUse()):
+        descriptorEnables.update({deviceDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.ENABLE})
+
+    # Other Speed Descriptor requires Device Qualifier Descriptor
+    if (otherSpeedDescriptor.isDescriptorInUse()):
+        descriptorEnables.update({otherSpeedDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.ENABLE})
+        descriptorEnables.update({deviceQualifierDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.DEPENDENCY})
+
+    # Device Qualifier Descriptor
+    if (deviceQualifierDescriptor.isDescriptorInUse()):
+        descriptorEnables.update({deviceQualifierDescriptor.DESCRIPTOR_NAME: DescriptorEnableStatusEnum.ENABLE})
 
     return descriptorEnables
 
@@ -733,18 +752,31 @@ def exportOperatorMemoryValuesConfigurations(exportDir, operatorConfigList):
     return operatorMemValues
 
 ### Export Operator Summary ###
+### Input: Dict {Descriptor Name: Descriptor Enable Status}
 ### Return: (Dict {OperatorName, Enable/Disable}, Watchdog Limit)
-def exportOperatorSummary(exportDir):
+def exportOperatorSummary(exportDir, descriptorEnableStatus):
     
     # Operator Summary: Dict {OperatorName, Enable/Disable}
     operatorSummary = {}
 
     # Export Operator Summary
-    with open(exportDir + OPERATOR_SUMMARY_FILENAME + OPERATOR_SUMMARY_FILE_EXTENSION, 'w', encoding='UTF8', newline='') as csvfile:
+    with open(exportDir + USB_SUMMARY_FILENAME + USB_SUMMARY_FILE_EXTENSION, 'w', encoding='UTF8', newline='') as csvfile:
         fileWriter = csv.writer(csvfile)
 
+        # Descriptor Enable Status
         # Write Headers
-        fileWriter.writerow([OPERATOR_SUMMARY_HEADER_OPERATOR, OPERATOR_SUMMARY_HEADER_STATUS])
+        fileWriter.writerow([USB_SUMMARY_HEADER_DESCRIPTOR, USB_SUMMARY_HEADER_DESCRIPTOR_STATUS])
+
+        # For each Descriptor
+        for desc in descriptorEnableStatus:
+            fileWriter.writerow([desc, DescriptorEnableStatusEnum.getDescriptorEnableStatusStringValue(descriptorEnableStatus.get(desc))])
+        
+        # Delimiter
+        fileWriter.writerow(["", ""])
+        fileWriter.writerow(["", ""])
+
+        # Write Headers
+        fileWriter.writerow([USB_SUMMARY_HEADER_OPERATOR, USB_SUMMARY_HEADER_OPERATOR_STATUS])
 
         # inUse Operators
         inUseOperators = 0
@@ -764,8 +796,8 @@ def exportOperatorSummary(exportDir):
 
         # Operators in Use & Operators Available Summary
         fileWriter.writerow(["", ""])
-        fileWriter.writerow([OPERATOR_SUMMARY_OPERATOR_INUSE_TITLE, inUseOperators])
-        fileWriter.writerow([OPERATOR_SUMMARY_OPERATOR_AVAILABLE_TITLE, VerificationOperatorEnum.getVerificationOperatorNumber()])
+        fileWriter.writerow([USB_SUMMARY_OPERATOR_INUSE_TITLE, inUseOperators])
+        fileWriter.writerow([USB_SUMMARY_OPERATOR_AVAILABLE_TITLE, VerificationOperatorEnum.getVerificationOperatorNumber()])
 
         # Compute Operator Watchdog (common for all Operators)
         # Overall Watchdog Limit = Largest Verification Number of Value Part x Watchdog Limit per Verification
@@ -794,7 +826,7 @@ def exportOperatorSummary(exportDir):
 
         # Operator Watchdog Limit
         watchdogLimit = largestVerifNumber * VerificationValue.getOperatorWatchdogLimit()
-        fileWriter.writerow([OPERATOR_SUMMARY_WATCHDOG_LIMIT_TITLE, watchdogLimit])
+        fileWriter.writerow([USB_SUMMARY_WATCHDOG_LIMIT_TITLE, watchdogLimit])
 
     # Return: (Dict {OperatorName, Enable/Disable}, Watchdog Limit)
     return (operatorSummary, watchdogLimit)
