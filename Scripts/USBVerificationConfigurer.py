@@ -35,7 +35,7 @@ from SourceFileManager import SourceFileManager
 ###########################################
 
 hints = "Hints:\n"\
-        "add verification value(s) with specific operator\t\"add  usb_descriptor usb_field operator value [and/or operator value] ... \"\n"\
+        "add verification value(s) with specific operator\t\"add usb_descriptor usb_field operator value [and/or operator value] ... \"\n"\
         "remove verification value(s) mathing value\t\t\"remove usb_descriptor usb_field value [operator]\"\n"\
         "import verification values from file\t\t\t\"import path_to_file\"\n"\
         "export verification values\t\t\t\t\"export [directory_path]\"\n"\

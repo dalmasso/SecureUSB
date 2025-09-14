@@ -7,6 +7,7 @@
 
 import re
 import math
+
 from FieldFormatEnum import FieldFormatEnum
 from VerificationLevelEnum import VerificationLevelEnum
 from VerificationOperatorEnum import VerificationOperatorEnum

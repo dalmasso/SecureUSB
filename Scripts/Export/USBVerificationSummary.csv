@@ -1,3 +1,13 @@
+Descriptors,Status
+Device Descriptor,DISABLE
+Configuration Descriptor,DISABLE
+Interface Descriptor,DISABLE
+HID Descriptor,DISABLE
+Endpoint Descriptor,DISABLE
+Device Qualifier Descriptor,DISABLE
+Other Speed Descriptor,DISABLE
+,
+,
 Operators,Status
 EQUALS,DISABLE
 NOT_EQUALS,DISABLE

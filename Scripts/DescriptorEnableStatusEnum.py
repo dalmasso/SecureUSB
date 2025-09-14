@@ -8,9 +8,9 @@
 from enum import Enum
 
 class DescriptorEnableStatusEnum(Enum):
-    ENABLE = [0, "Verification Enable"]
-    DEPENDENCY = [1, "Read-only"]
-    DISABLE = [2, "Verification Disable"]
+    ENABLE = [0, "ENABLE"]
+    DEPENDENCY = [1, "READ-ONLY"]
+    DISABLE = [2, "DISABLE"]
 
     #############################################
     ## Public Descriptor Enable Status Methods ##

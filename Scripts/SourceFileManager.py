@@ -7,7 +7,6 @@
 
 import os
 import shutil
-import tempfile
 
 # Verification Operator & Value
 from VerificationOperatorEnum import VerificationOperatorEnum
@@ -21,6 +20,7 @@ class SourceFileManager:
 
     # VHDL ROM Source File Configs
     VHDL_DUAL_PORT_ROM_TEMPLATE = "DualPortROM.vhd"
+    VHDL_DUAL_PORT_ROM_TEMPORARY = "DualPortROM_temp.vhd"
     VHDL_DUAL_PORT_ROM_MEM_ADDR_LENGTH_PATTERN = "MEMORY_ADDR_LENGTH: INTEGER := "
     VHDL_DUAL_PORT_ROM_MEM_DATA_LENGTH_PATTERN = "MEMORY_DATA_LENGTH: INTEGER := "
     VHDL_DUAL_PORT_ROM_START_PATTERN = "-- Start ROM Values"
@@ -29,6 +29,7 @@ class SourceFileManager:
 
     # VHDL USB Verifier Wrapper File Configs
     VHDL_USB_VERIFIER_WRAPPER_FILE_NAME = "USBVerifierWrapper.vhd"
+    VHDL_USB_VERIFIER_WRAPPER_TEMPORARY_FILE_NAME = "USBVerifierWrapper_temp.vhd"
     VHDL_USB_VERIFIER_ASSIGNEMENT = "=> "
     VHDL_USB_VERIFIER_VALUE_ALIGNEMENT = "			"
     VHDL_USB_VERIFIER_VALUE_SEPARATOR = ","
@@ -106,14 +107,13 @@ class SourceFileManager:
                 formatedMemoryValues.append(self.VHDL_DUAL_PORT_ROM_VALUE_ALIGNEMENT + "\"" + validMemoryValues[i] + "\"" + "," + "\n")
 
         # Create Temporary Memory Source File to update
-        fd, temporaryFile = tempfile.mkstemp()
-        os.close(fd)
+        temporaryFileName = self.exportDirectory + operatorName + self.VHDL_DUAL_PORT_ROM_TEMPORARY
 
         # Open Memory Source File (Original & Temporary Files)
         enableUpdate = False
         skipOldValue = False
         memoryFileName = self.exportDirectory + operatorName + self.VHDL_DUAL_PORT_ROM_TEMPLATE
-        with open(memoryFileName, "r") as originalFile, open(temporaryFile, "w") as updateFile:
+        with open(memoryFileName, "r") as originalFile, open(temporaryFileName, "w") as updateFile:
             # Read Original File
             for line in originalFile:
 
@@ -140,7 +140,7 @@ class SourceFileManager:
                     enableUpdate = False
         
         # Replace Original File with the Updated one
-        os.replace(temporaryFile, memoryFileName)
+        os.replace(temporaryFileName, memoryFileName)
 
     ### Configure USB Verifier Source File ###
     ### Operator Config Input: Dict { Operator: (List[(Descriptor, USB Field, Index, Counter)], Required Memory Address Bit Length, Max Index, Max Counter, Total Index)}
@@ -243,12 +243,11 @@ class SourceFileManager:
 
         # Update USB Verifier Wrapper Source File
         # Create Temporary Memory Source File to update
-        fd, temporaryFile = tempfile.mkstemp()
-        os.close(fd)
+        temporaryFileName = self.exportDirectory + self.VHDL_USB_VERIFIER_WRAPPER_TEMPORARY_FILE_NAME
 
         # Open USB Verifier Wrapper Source File (Original & Temporary Files)
         fileName = self.exportDirectory + self.VHDL_USB_VERIFIER_WRAPPER_FILE_NAME
-        with open(fileName, "r") as originalFile, open(temporaryFile, "w") as updateFile:
+        with open(fileName, "r") as originalFile, open(temporaryFileName, "w") as updateFile:
             # Read Original File
             for line in originalFile:
 
@@ -277,4 +276,4 @@ class SourceFileManager:
                     updateFile.write(line)
 
         # Replace Original File with the Updated one
-        os.replace(temporaryFile, fileName)
+        os.replace(temporaryFileName, fileName)
